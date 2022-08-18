@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from crypt import methods
 from flask import Flask, redirect, render_template, url_for,request
 from forms import *
-
+from flask_migrate import Migrate
 
 
 app=Flask(__name__)
@@ -12,6 +12,7 @@ app.config['SECRET_KEY']= 'ADKADKFJ'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 
 db = SQLAlchemy(app)
+migrate= Migrate(app, db)
 
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -47,6 +48,14 @@ def four():
         # Handle POST Request here
         return render_template('phone.html')
     return render_template('phone.html')
+
+
+@app.route('/blog')
+def blog():
+    if request.method=='POST':
+        # Handle POST Request here
+        return render_template('blog.html')
+    return render_template('blog.html')
 
     
 @app.route('/signup', methods=['GET', 'POST'])
@@ -88,6 +97,6 @@ def six():
     return render_template('venue.html', names=names)
 
 
-
-
-
+if __name__ == '__main__':
+    #DEBUG is SET to TRUE. CHANGE FOR PROD
+    app.run(port=50000,debug=True)
