@@ -642,3 +642,83 @@ body {
     height: 50vmax;
   }
 }
+
+
+/* Box styles */
+.box {
+  --color: white;
+  --bg-color: crimson;
+
+  direction: var(--direction, ltr);
+  position: relative;
+  overflow: hidden;
+  height:70%;
+
+  padding: var(--space-sm);
+  color: var(--color, white);
+  
+}
+
+.box::before {
+  content: "";
+  position: relative;
+  background: black;
+  opacity: 0.4;
+  z-index: -1;
+  transition: opacity 200ms ease-out;
+}
+
+.box img {
+  position: relative;
+  inline-size: 100%;
+  height: auto;
+  z-index: -2;
+}
+
+.tag {
+  padding: var(--space);
+  color: var(--color);
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  background-color: var(--bg-color);
+}
+
+/* Transitions */
+.box {
+  transition: border-color 200ms ease;
+}
+
+.box:hover {
+  border-color: transparent;
+}
+
+.box .tagline {
+  opacity: 0;
+}
+
+.box .title,
+.box .tagline,
+.box::before {
+  transition: opacity 200ms ease;
+}
+
+.box:hover .title,
+.box:hover .tagline,
+.box:hover::before {
+  opacity: 0;
+}
+
+.box:hover .tagline {
+  opacity: 1;
+}
+
+.img {
+  transition: transform 200ms ease-out;
+}
+
+.box:hover .img {
+  transform: scale(1.05);
+}
+
+
+

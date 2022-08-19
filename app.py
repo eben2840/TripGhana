@@ -57,6 +57,13 @@ def blog():
         return render_template('blog.html')
     return render_template('blog.html')
 
+@app.route('/seven')
+def seven():
+    if request.method=='POST':
+        # Handle POST Request here
+        return render_template('debit.html')
+    return render_template('debit.html')
+
     
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -95,6 +102,7 @@ def six():
     names=Course.query.all()
     print(names)
     return render_template('venue.html', names=names)
+
 
 
 if __name__ == '__main__':
