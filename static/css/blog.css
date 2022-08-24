@@ -719,6 +719,34 @@ body {
 .box:hover .img {
   transform: scale(1.05);
 }
+#SGJNDSFLGJDNSADFASDF
+
+
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.social li
+{
+  list-style: none;
+  display: flex;
+}
+.social li a
+{
+  display: flex;
+  margin-right: 5px;
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover
+{
+  color: blue;
+  transform: scale(0.5) translateY(-15px);
+}
 
 
 

@@ -113,7 +113,7 @@ body {
       rgba(240, 240, 240, 0.144),
       rgba(255, 255, 255, 0.336)
     ),
-    url("https://i.postimg.cc/wT3TQS3V/header-image2.jpg");
+    url("https://tourismnotes.com/wp-content/uploads/2018/08/park-hotel-zante-tsilivi-049.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -642,4 +642,32 @@ body {
     height: 50vmax;
   }
 }
+#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.social li
+{
+  list-style: none;
+  display: flex;
+}
+.social li a
+{
+  display: flex;
+  margin-right: 5px;
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover
+{
+  color: blue;
+  transform: scale(0.5) translateY(-15px);
+}
+
 
