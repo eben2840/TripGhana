@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/form.css')}}">
+        <link rel="stylesheet" type="text/css" href="try.css">
+    </head>
+    <body>
+
+  <div class="id">
+    <section class="header">
+    <div class="first">
+      <img src="https://www.iconbolt.com/iconsets/ionicons-outline/person-circle.svg" class="img-eye">
+    <div class="">
+    <h3>Ebenezer Aggrey Mills</h3>
+    <h4>known</h4>
+    </div>
+    
+     <div class="top-row">
+        <h1><b>Fill out this Form</b></h1>
+     </div>
+
+      </div>
+
+      
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Added</th>
+      <th>Action</th>
+    </tr>
+
+<tr>
+  <td>{{task.content}}</td>
+  <td>{{task.date_created.date()}}</td>
+  <td>
+    <a href="">Delete</a>
+    <br>
+    <a href="">Update</a>
+  </td>
+</tr>
+  </table>
+
+<form action="/" method="POST">
+  <input type="text" name="content" id="content">
+  <input type="submit" value="Add Task">
+   </div>
+    </div>
+    </div>
+
+   </section>
+
+
+  </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+</body>
+</html>
