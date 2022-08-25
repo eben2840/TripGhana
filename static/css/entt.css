@@ -18,7 +18,7 @@ display: flex;
 
 h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 22vmin;
+  font-size: 18vmin;
   line-height: 20vmin;
     
 
@@ -150,7 +150,8 @@ section #text span {
  margin-left: 90px;
  box-shadow: 0 0 5px #1b86f2;
  cursor: pointer;
-margin-left: 300px;
+ margin-left: 200px;
+text-align: center;
 
 }
 
