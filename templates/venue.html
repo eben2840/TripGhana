@@ -29,12 +29,15 @@
               <span class="line line3"></span>
           </div>
           <ul class="menu-items">
-            <li><a href="/second">About</a></li>
+            
               <li><a href="#food">Hotel</a></li>
               <li><a href="#food-menu">Restaurants</a></li>
               <li><a href="#testimonials">Resorts</a></li>
+              <li><a href="/second">About</a></li>
+              <li><a href="/third">Events</a></li>
               <li><a href="/blog">Promotions</a></li>
-              <a href="/four" class="btn btn-primary">Destinations</a>
+              <li><a href="/seven">Our Team</a></li>
+             
            
            
               
@@ -50,7 +53,7 @@
         <h1 class="main-title" id="home" style="color:#fff;">Get out there</h1>
         <p style="color:#fff;">
           Best of the Best tours, attractions & activities you won’t want to miss.</p>
-        <a href="/third" class="btn btn-primary">Gallery</a>
+        <a href="/third" class="btn btn-primary">Explore More</a>
       </div>
     </section>
 
@@ -457,11 +460,40 @@ We are openend every day from 9.00 AM until 6.00 PM.
             </ul>
         </div>
       </section>
-        <i class="fas fa-copyright" style="margin: 50px 510px">copyright TripGhana 2022 Created by Kalitex Creatives</i>
-  </body>
+            
+	  <i class="fas fa-copyright" style="margin-left:90px">copyright TripGhana 2022 Created by Kalitex Creatives</i>  </body>
   <!-- 
     .................../ JS Code for smooth scrolling /...................... -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+  
+            // Store hash
+            var hash = this.hash;
+  
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  
 </html>
