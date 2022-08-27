@@ -451,8 +451,7 @@ body {
 
 /* ......../ media query /.......... */
 
-@media screen and (max-width: 40rem)
-  {
+@media (max-width: 768px) {
   .navbar {
     opacity: 0.95;
   }

@@ -203,7 +203,7 @@ img {
 }
 
 .gallery-image {
-    width: 370px;
+    width: 340px;
     height: 370px;
    
     object-fit: cover;
