@@ -47,6 +47,27 @@ body {
   transition: background 0.3s ease-in-out;
 }
 
+.btni {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+
+.btni-primary {
+  color: #fff;
+  background: #094b65;
+}
+
+.btni-primary:hover {
+  background: #117964;
+  transition: background 0.3s ease-in-out;
+}
 /* ............/navbar/............ *
 
 /* desktop mode............/// */
@@ -210,7 +231,10 @@ body {
   text-transform: uppercase;
   color: #555;
 }
-
+.More{
+  text-align: center;
+  padding: 10px;
+}
 .food-container {
   display: flex;
   justify-content: space-between;

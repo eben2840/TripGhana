@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restraunt</title>
+    <title>TripGhana</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -33,10 +33,10 @@
               <span class="line line3"></span>
           </div>
           <ul class="menu-items">
-            <li ><a href="/six" >Home</a></li>
-            <li><a href="/second">About</a></li>
-            <li><a href="/third">Events</a></li>
-            <li><a href="/blog">Promotions</a></li>
+            <li ><a href="/hom" >Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/event">Events</a></li>
+            <li><a href="/promotion">Promotions</a></li>
             
                          </ul>
           <h1 class="logo"><b>TripGhana.com</b></h1>
@@ -48,19 +48,15 @@
 
     </section>
 
-    <section id="about" >
+    <section id="about" id="showcase" data-aos="fade-up"
+    data-aos-duration="3000">
       <div class="about-wrapper container">
         <div class="about-text">
           <p class="small">Our Team</p>
-          <h2>Meet Our Brilliant Team</h2>
+          <h2>Danny Darpoh Junior</h2>
           <p>
-Here at Kalitex-Creatives, We are made up of five<br>team players resourced with comtempoary skills in <br>
-<br>~Web Developer<br>
-~Mobile Developer<br>
-~Graphics and Video Designer<br>
-~UI/UX Developer <br>
-~Marketing Strategist.  <ul class="social">
-	Follow Us:
+"We bring you the best of Events,<br> Promotions and  Amazing Places <br> you wouldn't want to miss out on " <br>
+  <ul class="social">
               <li><a href="https://gh.linkedin.com/in/ohene-ebenezer-aggrey-mills-aa8670237"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a>
               <a href="https://gh.linkedin.com/in/ohene-ebenezer-aggrey-mills-aa8670237"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a>
               <a href="https://gh.linkedin.com/in/ohene-ebenezer-aggrey-mills-aa8670237"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
@@ -68,10 +64,34 @@ Here at Kalitex-Creatives, We are made up of five<br>team players resourced with
           </p>
         </div>
         <div class="about-img">
-          <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEFtoARVwLdLQ/profile-displayphoto-shrink_200_200/0/1657144071320?e=2147483647&v=beta&t=SYI7LH4BUuOvFs1JUV2LlaKghlHddGmdJkmK4tvXI00" alt="food" />
+          <img src="{{url_for('static', filename='images/danny.jpeg')}}" alt="food" />
+          
 
+          
 		</div>
       </div>
+      <section id="about"id="showcase" data-aos="fade-up"
+      data-aos-duration="3000" >
+        <div class="about-wrapper container">
+          <div class="about-text">
+            <p class="small">Co-Founder/CTO</p>
+            <h2>Ebenezer Aggrey-Mills</h2>
+            <p>
+  
+              "We are here for all your chilling trips,<br> join us make we trip together"
+              <ul class="social">
+                <li><a href="https://instagram.com/promotemee_?r=nametag"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a>
+                <a href="https://instagram.com/promotemee_?r=nametag"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a>
+                <a href="https://instagram.com/promotemee_?r=nametag"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+              </ul>
+            </p>
+          </div>
+          <div class="about-img">
+            <img src="{{url_for('static', filename='images/me.jpeg')}}"  alt="food" />
+          </div>
+        </div>
+      </section>
+      
     </section>
 
  

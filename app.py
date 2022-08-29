@@ -25,15 +25,15 @@ def home():
         return render_template('ent.html')
     return render_template('ent.html')
 
-@app.route('/second')
-def second():
+@app.route('/about')
+def about():
     if request.method=='POST':
         # Handle POST Request here
         return render_template('head.html')
     return render_template('head.html')
 
-@app.route('/third')
-def third():
+@app.route('/event')
+def event():
     if request.method=='POST':
         # Handle POST Request here
         return render_template('photo.html')
@@ -47,15 +47,15 @@ def four():
     return render_template('phone.html')
 
 
-@app.route('/blog')
-def blog():
+@app.route('/promotion')
+def promotion():
     if request.method=='POST':
         # Handle POST Request here
         return render_template('blog.html')
     return render_template('blog.html')
 
-@app.route('/seven')
-def seven():
+@app.route('/ourteam')
+def outteam():
     if request.method=='POST':
         # Handle POST Request here
         return render_template('debit.html')
@@ -94,8 +94,8 @@ def update(id):
     return render_template('signup.html', form=form)
 
     
-@app.route('/six')
-def six():
+@app.route('/hom')
+def hom():
     names=Course.query.all()
     print(names)
     return render_template('venue.html', names=names)
