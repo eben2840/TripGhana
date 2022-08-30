@@ -100,6 +100,13 @@ def hom():
     print(names)
     return render_template('venue.html', names=names)
 
+@app.route('/hotel')
+def hotel():
+    return render_template('hotel.html')
+
+@app.route('/rest')
+def rest():
+    return render_template('rest.html')
 
 
 if __name__ == '__main__':
