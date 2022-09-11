@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0, minimum-sale=1" />
     <title>TripGhana</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/venue.css')}}">
     <link
@@ -478,18 +478,26 @@ We are openend every day from 9.00 AM until 6.00 PM.
         <div class="contact-img">
           <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
         </div>
-        <div class="about-text">
-          <h2>We've Got You All Covered</h2>
-          
-            TripGhana.com is a rapidly-growing global online company, We are here to help you plan the perfect trip. Whether you're going on holiday, taking a business trip, or looking to set up a corporate travel account here in Ghana, TripGhana.com is here to help you travel through Ghana at ease.<br><br>
-           
-           <ul class="social">
-              <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a>
-              <a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a>
-              <a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
-            </ul>
+
+        <form action="" method='POST'>
+          {{ form.hidden_tag() }}
+        <div class="form-group">
+          <label for=""></label>
+          {{form.name (class="form-style", placeholder="name")}}
+          {{form.comment (class="form-style", placeholder="Coment")}}
+										   <input type="submit" value="Submit" class="submit-btn">
         </div>
-         
+        {%for user in persons%}
+        
+ 
+        <h3>{{user.name}}</h3>
+        <p>{{user.comment}}<br><a href="/delete/{{user.id}}">delete</a>
+        </a></p>
+
+{% endfor %}
+      </form>
+        
+     
       </section>
             
 	  <i class="fas fa-copyright" style="margin-left:90px">copyright TripGhana 2022 Created by Kalitex Creatives</i>  </body>

@@ -47,6 +47,27 @@ body {
   transition: background 0.3s ease-in-out;
 }
 
+.btni {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+
+.btni-primary {
+  color: #fff;
+  background: #094b65;
+}
+
+.btni-primary:hover {
+  background: #117964;
+  transition: background 0.3s ease-in-out;
+}
 /* ............/navbar/............ *
 
 /* desktop mode............/// */
@@ -113,7 +134,7 @@ body {
       rgba(240, 240, 240, 0.144),
       rgba(255, 255, 255, 0.336)
     ),
-    url("https://media.istockphoto.com/vectors/meet-the-team-green-label-vector-id498570815?k=20&m=498570815&s=612x612&w=0&h=rV2ndFJEEK2y_-rX2imvqgbD65PKpEkQMm36cY0Httk=");
+    url("https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2022/04/12/1329/MUMGH-P0765-Inner-Courtyard-Hotel-Exterior-Evening.jpg/MUMGH-P0765-Inner-Courtyard-Hotel-Exterior-Evening.16x9.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -210,7 +231,10 @@ body {
   text-transform: uppercase;
   color: #555;
 }
-
+.More{
+  text-align: center;
+  padding: 10px;
+}
 .food-container {
   display: flex;
   justify-content: space-between;
@@ -642,10 +666,13 @@ body {
     height: 50vmax;
   }
 }
-#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+
+
 
 .social
 {
+  margin-top: 100px;
   position: absolute;
   z-index: 10;
   bottom: 20px;
