@@ -2,9 +2,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial scale=1.0, minimum-sale=1" />
+    <meta name="viewport" content="width=device-width" />
     <title>TripGhana</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/venue.css')}}">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -13,14 +12,17 @@
       referrerpolicy="no-referrer"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="venue.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blog.css')}}">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  </head>
+
+   </head><img src="" alt="">
   <body>
     <script>
       AOS.init();
     </script>
-    <nav class="navbar">
+    <nav class="navbar" >
       <div class="navbar-container container">
           <input type="checkbox" name="" id="">
           <div class="hamburger-lines">
@@ -29,493 +31,97 @@
               <span class="line line3"></span>
           </div>
           <ul class="menu-items">
-            
-              <li><a href="#food">Hotel</a></li>
-              <li><a href="#food-menu">Restaurants</a></li>
-              <li><a href="#testimonials">Resorts</a></li>
+              <li ><a href="/hom" >Home</a></li>
               <li><a href="/about">About</a></li>
               <li><a href="/event">Events</a></li>
-              <li><a href="/promotion">Promotions</a></li>
               <li><a href="/ourteam">Our Team</a></li>
-             
-           
-           
               
-         
-          </ul>
-          
-          <h1 class="logo">MyTripGhana.com</h1>
+             
+                       </ul>
+          <h1 class="logo">TripGhana.com</h1>
       </div>
   </nav>
     <section class="showcase-area" id="showcase" data-aos="fade-up"
     data-aos-duration="3000">
+
       <div class="showcase-container">
-        <h1 class="main-title" id="home" style="color:#fff;">Get out there</h1>
-        <p style="color:#fff;">
-          Best of the Best tours, attractions & activities you won’t want to miss.</p>
-        <a href="/event" class="btn btn-primary">Events</a>
-      </div>
+        
     </section>
 
-    </section>
-    <section id="food" data-aos="fade-down"
-    data-aos-easing="linear"
-    data-aos-duration="1500">
-    <h2 class="food-menu-heading">Hotels</h2>
-     
-      <div class="food-container container">
-        <div class="food-type fruite">
-          <div class="img-container">
-            <img src="https://images.trvl-media.com/hotels/2000000/1640000/1632500/1632468/3d7d5dac.jpg?impolicy=resizecrop&rw=670&ra=fit" alt="error" />
-            <div class="img-content">
-              <h3>FiestaRoyale</h3>
-              <a
-                href="https://fiestahospitality.com/"
-                class="btn btn-primary"
-                target="blank"
-                > more</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="food-type vegetable">
-          <div class="img-container">
-            <img src="https://images.trvl-media.com/hotels/15000000/14650000/14648000/14648000/85d0ac50_z.jpg" alt="error" />
-            <div class="img-content">
-              <h3>Agoo</h3>
-              <a
-                href="https://agoo-hostel.business.site/?utm_source=gmb&utm_medium=referral"
-                class="btn btn-primary"
-                target="blank"
-                >more</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="food-type grin">
-          <div class="img-container">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/70/2e/95/superior-room.jpg?w=900&h=-1&s=1" alt="error" />
-            <div class="img-content">
-              <h3>LaBeachHotel</h3>
-              <a
-                href="https://labadibeachhotelgh.com/"
-                class="btn btn-primary"
-                target="blank"
-                > more</a>
-            </div>
-          </div>
-      
-
+    <section id="about" >
+      <div class="about-wrapper container">
+        <div class="about-text">
+          <p class="small">Promotion! Promotion!  </p>
+          <h2>Promote your product</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ab
+            eos omnis, nobis dignissimos perferendis et officia architecto,
+            fugiat possimus eaque qui ullam excepturi suscipit aliquid optio,
+            maiores praesentium soluta alias asperiores saepe commodi
+            consequatur? Perferendis est placeat facere aspernatur!
+          <ul class="social">
+            <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a>
+            <a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a>
+            <a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+          </ul>
+          </p>
           
         </div>
-       
+        <div class="about-img">
+          <img src="https://www.webfx.com/wp-content/uploads/2021/10/hello-fresh-social-media-ad.png"/>
+        </div>
       </div>
-      
-      <div class="More">
-              
-              <a
-                href="/hotel"
-                class="btn btni-primary"
-                target="blank"
-                >Explore More</a
-              >
-      </div>
-        
-      
-      
     </section>
 
-    <section id="food-menu" data-aos="fade-up"
-    data-aos-duration="3000">
-      <h2 class="food-menu-heading">Restaurants</h2>
-      <div class="food-menu-container container">
-        <div class="food-menu-item">
-          <div class="food-img">
-            <img src="https://i.postimg.cc/HL8S8qnq/k.jpg" alt="" />
-          </div>
-          <div class="food-description">
-            <h2 class="food-titile"> Bôndai Restaurant & Bar</h2>
-            <p>#No13<br>
-             A restaurant, specializing in healthy Mediterranean and Asian food.
-            <p class="food-price">Price:GHS 25 - GHS 900</p>
-            <a
-                href="https://bondaigh.com/"
-                class="btn btn-primary"
-                target="blank"
-                >Directions</a
-              >
-          </div>
-        </div>
+		<article class="box" style="--bg-color: deepskyblue;">
+		  <img class="img" src='https://www.webfx.com/wp-content/uploads/2021/10/hello-fresh-social-media-ad.png' width="800" height="450" alt=''>
+		  <h2 class="title"><a href="#0" aria-label="Learn more Sunset Beach">Sunset Beach</a></h2>
+		  <p class="tagline">Dip your toes in the ocean</p>
+		  <div class="tag">Beach</div>
+		  <div class="actions">
+			<button class="btn" title="Save as favorite">
+			  <svg data-icon="heart" viewBox="0 0 512 512">
+				<path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+			  </svg>
+			</button>
+			<button class="btn" title="Share this trip">
+			  <svg data-icon="share" viewBox="0 0 512 512">
+				<path d="M503.691 189.836L327.687 37.851C312.281 24.546 288 35.347 288 56.015v80.053C127.371 137.907 0 170.1 0 322.326c0 61.441 39.581 122.309 83.333 154.132 13.653 9.931 33.111-2.533 28.077-18.631C66.066 312.814 132.917 274.316 288 272.085V360c0 20.7 24.3 31.453 39.687 18.164l176.004-152c11.071-9.562 11.086-26.753 0-36.328z" />
+			  </svg>
+			</button>
+		  </div>
+		</article>
 
-        <div class="food-menu-item">
-          <div class="food-img">
-            <img
-              src="https://i.postimg.cc/Zn2jVjW9/tt.jpg"
-              alt="error"
-            />
-          </div>
-          <div class="food-description">
-            <h2 class="food-titile">Bloombar</h2>
-            <p>#No11<br>
-              31 of 42 Bars in Accra<br>  
-              196 of 302 Restaurants in Accra
-            <p class="food-price">Price:GHS 10 - GHS 850</p>
-            <a
-                href="https://www.instagram.com/bloombargh/"
-                class="btn btn-primary"
-                target="blank"
-                >learn more</a
-              >
-          </div>
+    <section id="about" >
+      <div class="about-wrapper container">
+        <div class="about-text">
+          <p class="small">Promotion! Promotion!  </p>
+          <h2>Promote your product</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ab
+            eos omnis, nobis dignissimos perferendis et officia architecto,
+            fugiat possimus eaque qui ullam excepturi suscipit aliquid optio,
+            maiores praesentium soluta alias asperiores saepe commodi
+            consequatur? Perferendis est placeat facere aspernatur!
+          </p>
+          <ul class="social">
+            <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a>
+            <a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a>
+            <a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+          </ul>
         </div>
-        <div class="food-menu-item">
-          <div class="food-img">
-            <img src="https://i.postimg.cc/XqrXnkQk/jjj.jpg" alt="" />
-          </div>
-          <div class="food-description">
-            <h2 class="food-titile">Dima3nsa</h2>
-            <p>#No16<br>
-              BAR • GRILL • LOUNGE
-              11:00 AM - 11:00 PM
-              MONDAY TO SUNDAY
-            </p>
-            <p class="food-price">Price:GHS 15 - GHS 100</p>
-            <a
-                href="https://www.instagram.com/dimaensa_/"
-                class="btn btn-primary"
-                target="blank"
-                >Explore More</a
-              >
-          </div>
-        </div>
-        <div class="food-menu-item">
-          <div class="food-img">
-            <img src="https://media.timeout.com/images/102870563/750/422/image.jpg" alt="" />
-          </div>
-          <div class="food-description">
-            <h2 class="food-titile">TimeOut</h2>
-            <p>#No27<br>
-              Located in the hip, creative, and entrepreneurial enclave around Osu Ako Adjei Park
-            </p>
-            <p class="food-price">Price: GHS 15 - GHS 100</p>
-            <a
-                href="https://www.timeout.com/accra/restaurants"
-                class="btn btn-primary"
-                target="blank"
-                >Explore More</a
-              >
-          </div>
-        </div>
-        <div class="food-menu-item">
-          <div class="food-img">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-p/1c/00/1c/81/photo0jpg.jpg" alt="" />
-          </div>
-          <div class="food-description">
-            <h2 class="food-titile">
-              Organic food cafe</h2>
-            <p>#No47<br>
-              Market, Top Floor Rebublic Bank, Madina<br>
-              
-              .10:00AM - 8:30PM
-              
-            </p>
-            <p class="food-price">Price:GHS 15 - GHS 100</p>
-            <a
-                href="https://en.wikipedia.org/wiki/Grain"
-                class="btn btn-primary"
-                target="blank"
-                >learn more</a
-              >
-          </div>
-        </div>
-
-        <div class="food-menu-item">
-          <div class="food-img">
-            <img src="https://viennacity.com.gh/wp-content/uploads/2022/08/VC_NIGHTCLUB_CIRCLE__F9A7674.jpg" alt="" />
-          </div>
-          <div class="food-description">
-            <h2 class="food-titile">Vienna city</h2>
-            <p>#No29<br>
-              located at Kwame Nkrumah Circle opposite G.C.B Tower next to the Barclays Bank.
-            </p>
-            <p class="food-price">Price:GHS 50 - GHS 850</p>
-            <a
-                href="https://viennacity.com.gh/accra/"
-                class="btn btn-primary"
-                target="blank"
-                >Explore More</a
-              >
-          </div>
-        </div>
-         <div class="food-menu-item">
-          <div class="food-img">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-s/0a/a6/7b/8c/photo5jpg.jpg" alt="" />
-          </div>
-          <div class="food-description">
-            <h2 class="food-titile">Asanka Local
-            </h2>
-            <p>
-             #No74<br>
-              African, Soups
-              Lunch, Dinner
-            </p>
-            <p class="food-price">Price:GHS 10 - GHS 200</p>
-            <a
-                href="https://maps.google.com/maps?saddr=&daddr=18th+Lane+Osu%2C+Accra+Ghana@5.56117,-0.18007"
-                class="btn btn-primary"
-                target="blank"
-                >Directions</a
-              >
-          </div>
-        </div>
-        <div class="food-menu-item">
-          <div class="food-img">
-            <img src="https://i.postimg.cc/NGK1s6yn/jj.jpg" alt="" />
-          </div>
-
-          <div class="food-description">
-            <h2 class="food-titile">Bosphorus</h2>
-            <p>
-              #No32<br>
-              Turkish, Middle Eastern
-SPECIAL DIETS:<br>
-Halal, Vegetarian Friendly
-    </p>
-            <p class="food-price">Price:GHS 45 - GHS 300</p>
-            <a
-                href="https://maps.google.com/maps?saddr=&daddr=Labone+Ndabaningi+Sithole+Avenue%2C+Near+Coffee+shop%2C+Labone%2C+Accra+094522+Ghana@5.569844,-0.168802"
-                class="btn btn-primary"
-                target="blank"
-                >Directions</a
-              >
-          </div>
+        <div class="about-img">
+          <img src="https://www.webfx.com/wp-content/uploads/2021/10/hello-fresh-social-media-ad.png"/>
         </div>
       </div>
-      <div class="More">
-              
-        <a
-          href="/rest"
-          class="btn btni-primary"
-          target="blank"
-          >Explore More</a
-        >
-</div>
-    </section>
-    <section id="testimonials"data-aos="fade-up"
-    data-aos-duration="1000">
-      <h2 class="testimonial-title"> 5 Star Resorts</h2>
-      <div class="testimonial-container container">
-        <div class="testimonial-box">
-          <div class="customer-detail">
-            <div class="customer-photo">
-              <img src="https://i.postimg.cc/W3Fhv796/132529729.jpg" alt="" />
-              <p class="customer-name">Hillburi</p>
-            </div>
-          </div>
-          <div class="star-rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </div>
-          <p class="testimonial-text">
-            Take a break from the everyday<br> world and discover a mixture of laid-back informality and up market comfort, creating a refreshing and unique outing experience. </p>
-            <a
-            href="https://hillburi.com/" class="btn btn-primary"
-            target="blank"
-            >Explore</a
-          >
-        </div>
-        <div class="testimonial-box">
-          <div class="customer-detail">
-            <div class="customer-photo">
-              <img
-                src="https://i.postimg.cc/qvJqRrb7/612051.jpg"
-                alt=""
-              />
-              <p class="customer-name">Chill River</p>
-            </div>
-          </div>
-          <div class="star-rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            
-          </div>
-          <p class="testimonial-text">
-            At The Chill River Resort, you can look forward to free English breakfast, a free daily manager's reception, and a terrace. </p>
-          <a
-          href=" https://thechillgh.com/" class="btn btn-primary"
-          target="blank"
-          >Explore</a
-        >
-         
-        </div>
-        <div class="testimonial-box">
-          <div class="customer-detail">
-            <div class="customer-photo">
-              <img src="https://aximbeach.com/wp-content/uploads/2022/04/aximbeach-resort-gallery-1shot-112-01-1024x684.png" alt="" />
-              <p class="customer-name">aximbeach</p>
-            </div>
-          </div>
-          <div class="star-rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </div>
-          <p class="testimonial-text">
-          The suite can accommodate a <br>minimum of four guests, consisting of two extra spacious twin rooms (which can be converted to doubles), each with its own bathroom.
-
-
-          </p>
-          <a
-          href=" https://aximbeach.com/" class="btn btn-primary"
-          target="blank"
-          >Explore</a
-        >
-        </div>
-      </div>
-       <section id="testimonials">
-
-      <div class="testimonial-container container">
-        <div class="testimonial-box">
-          <div class="customer-detail">
-            <div class="customer-photo">
-              <img src="https://lh3.googleusercontent.com/p/AF1QipMsJv3SdTchTG6yQ0NlJJwYLMAPqkc4G5uC2KNP=w296-h202-n-k-rw-no-v1" alt="" />
-              <p class="customer-name">The Royal Senchi</p>
-            </div>
-          </div>
-          <div class="star-rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </div>
-          <p class="testimonial-text">
-            Relaxed riverfront hotel offering an outdoor pool, a gym & a spa, plus dining & 2 bars.
-          </p>
-    
-        <a
-          href="http://www.theroyalsenchi.com/" class="btn btn-primary"
-          target="blank"
-          >Explore</a
-        >
-        </div>
-        <div class="testimonial-box">
-          <div class="customer-detail">
-            <div class="customer-photo">
-              <img
-                src="https://lh5.googleusercontent.com/p/AF1QipPN6mTZAotJjzbvaQlDV6jxC7oBRBwNGf5mSznK=w325-h182-k-no"
-                alt=""
-              />
-              <p class="customer-name">Sajuna Beach</p>
-            </div>
-          </div>
-          <div class="star-rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </div>
-          <p class="testimonial-text">
-            Sajuna Beach is located between Senchi and Atimpoku
-on the Akosombo road.
-We are openend every day from 9.00 AM until 6.00 PM.
-
- 
-          </p>
-          <a
-          href="     http://sajunabeachclub.com/" class="btn btn-primary"
-          target="blank"
-          >Explore</a
-        >
-     
-        </div>
-        <div class="testimonial-box">
-          <div class="customer-detail">
-            <div class="customer-photo">
-              <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/08/5e/62/aa.jpg" alt="" />
-              <p class="customer-name">Shai Hills Camp, GA</p>
-            </div>
-          </div>
-          <div class="star-rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </div>
-          <p class="testimonial-text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-            voluptas cupiditate aspernatur odit doloribus non.
-          </p>
-          <a
-          href="    https://shai-hills-resource-reserve.business.site/" class="btn btn-primary"
-          target="blank"
-          >Explore</a
-        >
-        </div>
-      </div>
-      <div class="More">
-              
-        <a
-          href="https://agoo-hostel.business.site/?utm_source=gmb&utm_medium=referral"
-          class="btni btni-primary"
-          target="blank"
-          >Explore More</a
-        >
-</div>
     </section>
 
-    <section id="contact"data-aos="fade-up"
-    data-aos-duration="1000">
-      <div class="contact-container container">
-        <div class="contact-img">
-          <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
-        </div>
-
-        
-     
-      </section>
-            
-	  <i class="fas fa-copyright" style="margin-left:90px">copyright TripGhana 2022 Created by Kalitex Creatives</i>  </body>
+  
+  </body>
   <!-- 
     .................../ JS Code for smooth scrolling /...................... -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        // Add smooth scrolling to all links
-        $("a").on("click", function (event) {
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-  
-            // Store hash
-            var hash = this.hash;
-  
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              800,
-              function () {
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              }
-            );
-          } // End if
-        });
-      });
-    </script>
+    
+	  <i class="fas fa-copyright" style="margin-left:90px">copyright TripGhana 2022 Created by Kalitex Creatives</i>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- 
+  
 </html>
