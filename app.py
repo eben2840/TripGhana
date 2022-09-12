@@ -99,7 +99,12 @@ def comment():
     persons=Course.query.order_by(Course.id.desc()).all()
     print(persons)
     return render_template("comment.html", persons=persons)
+
+@app.route('/heads')
+def heads():
+    return render_template("heads.html")
  
+
 
 @app.route('/hom', methods=['POST','GET'])
 def hom():
@@ -137,4 +142,4 @@ def rest():
 
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD
-    app.run(port=5000,debug=True)
+    app.run(port=2000,debug=True)
