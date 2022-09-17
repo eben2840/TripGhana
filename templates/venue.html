@@ -135,9 +135,11 @@
           </div>
           <div class="food-description">
             <h2 class="food-titile"> Bôndai Restaurant & Bar</h2>
-            <p>#No13<br>
+            <p>#No13<br> 
+            
+          
              A restaurant, specializing in healthy Mediterranean and Asian food.
-            <p class="food-price">Price:GHS 25 - GHS 900</p>
+            <p class="food-price">Price:GHS 25 - GHS 300</p>
             <a
                 href="https://bondaigh.com/"
                 class="btn btn-primary"
@@ -159,7 +161,7 @@
             <p>#No11<br>
               31 of 42 Bars in Accra<br>  
               196 of 302 Restaurants in Accra
-            <p class="food-price">Price:GHS 10 - GHS 850</p>
+            <p class="food-price">Price:GHS 20 - GHS 850</p>
             <a
                 href="https://www.instagram.com/bloombargh/"
                 class="btn btn-primary"
@@ -479,23 +481,7 @@ We are openend every day from 9.00 AM until 6.00 PM.
           <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
         </div>
 
-        <form action="" method='POST'>
-          {{ form.hidden_tag() }}
-        <div class="form-group">
-          <label for=""></label>
-          {{form.name (class="form-style", placeholder="name")}}
-          {{form.comment (class="form-style", placeholder="Coment")}}
-										   <input type="submit" value="Submit" class="submit-btn">
-        </div>
-        {%for user in persons%}
-        
- 
-        <h3>{{user.name}}</h3>
-        <p>{{user.comment}}<br><a href="/delete/{{user.id}}">delete</a>
-        </a></p>
-
-{% endfor %}
-      </form>
+    
         
      
       </section>
