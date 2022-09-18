@@ -481,12 +481,40 @@ We are openend every day from 9.00 AM until 6.00 PM.
           <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
         </div>
 
-    
-        
+      
+
+<form action='' method="post">
+  {{form.hidden_tag()}}
+
+  <h2>Tell Us What You Think</h2>
+ 
+  <p class="text-muted" style="margin-bottom: 0;">Please fill this form :</p>
+  <br>
+
+  <div class="form-floating mb-3" >
+    {{form.email(class="form-control",placeholder="Email",id="floatingInput")}}
+  
+  </div>
+
+  <textarea class="form-control" name="comment" id="" rows="3" placeholder="Comment"></textarea>
+
+
+
+
+  <button class="btn" style="color: #fff; background:#117964; border: none;" type="submit ">Send</button>
+              
+</form>
+
+
+
+
+
+
+
      
       </section>
             
-	  <i class="fas fa-copyright" style="margin-left:90px">copyright TripGhana 2022 Created by Kalitex Creatives</i>  </body>
+	  <i class="fas fa-copyright" style="margin-left:60px; margin-top:40px">copyright MyTripGhana 2022 Created by Kalitex Creatives</i>  </body>
   <!-- 
     .................../ JS Code for smooth scrolling /...................... -->
 

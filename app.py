@@ -13,11 +13,11 @@ migrate= Migrate(app, db)
 
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(), nullable=False)
+    email = db.Column(db.String(), nullable=True)
     comment = db.Column(db.String(), nullable=True)
     
     def __repr__(self):
-        return f"Course('{self.id}', {self.name}', {self.comment}')"
+        return f"Course('{self.id}', {self.email}', {self.comment}')"
 
 
 @app.route('/',methods=['GET','POST'])
@@ -110,13 +110,13 @@ def heads():
 def hom():
     form = RegistrationForm()
     if request.method=='POST':
-        print(form.name.data)
+        print(form.email.data)
         print(form.comment.data)
-        newentry=Course(name=form.name.data, comment=form.comment.data)
+        newentry=Course(email=form.email.data, comment=form.comment.data)
         db.session.add(newentry)
         db.session.commit()
         print("successful")
-        return redirect("/comment")
+        return redirect("/hom   ")
     return render_template("venue.html", form=form)
 
 @app.route("/delete/<int:id>")
