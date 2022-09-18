@@ -103,8 +103,15 @@ def comment():
 @app.route('/heads')
 def heads():
     return render_template("heads.html")
- 
 
+@app.route('/form')
+def form():
+    return render_template("form.html")
+  
+@app.route('/index')
+def index():
+    return render_template("index.html")
+  
 
 @app.route('/hom', methods=['POST','GET'])
 def hom():
