@@ -1,5 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, redirect, render_template, url_for,request
+from flask_login import login_required,login_user,logout_user,current_user,UserMixin, LoginManager
 from forms import *
 from flask_migrate import Migrate
 
@@ -11,9 +12,23 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 migrate= Migrate(app, db)
 
+login_manager = LoginManager(app)
+login_manager.login_view = "login"
+login_manager.login_message_category = "info"
+migrate = Migrate(app, db)
+from forms import *
+
+@login_manager.user_loader
+def load_user(user_id):
+    return Course.query.get(int(user_id))
+
+
+
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(), nullable=True)
+    name = db.Column(db.String(), nullable=True)
+    
     comment = db.Column(db.String(), nullable=True)
     
     def __repr__(self):
@@ -104,14 +119,31 @@ def comment():
 def heads():
     return render_template("heads.html")
 
+@app.route('/blogg')
+def blogg():
+    return render_template("blogg.html")
+
 @app.route('/form')
 def form():
     return render_template("form.html")
   
-@app.route('/index')
+@app.route('/index' , methods=['POST', 'GET'])
 def index():
-    return render_template("index.html")
-  
+    form = RegistrationForm()
+    if request.method=='POST':
+        print(form.name.data)
+     
+        newentry=Course(name=form.name.data)
+        db.session.add(newentry)
+        db.session.commit()
+        print("successful")
+        return redirect("/hom")
+    persons=Course.query.order_by(Course.id.desc()).all()
+    print(persons)
+    
+    
+    return render_template("index.html", form=form, persons=persons)
+   
 
 @app.route('/hom', methods=['POST','GET'])
 def hom():
@@ -123,8 +155,12 @@ def hom():
         db.session.add(newentry)
         db.session.commit()
         print("successful")
-        return redirect("/hom   ")
-    return render_template("venue.html", form=form)
+        return redirect("/hom")
+    persons=Course.query.order_by(Course.id.desc()).all()
+    print(persons)
+    print(current_user)
+    
+    return render_template("venue.html", form=form, persons=persons, current_user=current_user)
 
 @app.route("/delete/<int:id>")
 def delete(id):

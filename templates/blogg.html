@@ -4,166 +4,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial scale=1.0, minimum-sale=1" />
     <title>TripGhana</title>
+
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/venue.css')}}">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+   
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="venue.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
-    <script>
-      AOS.init();
-    </script>
-    <nav class="navbar">
-      <div class="navbar-container container">
-          <input type="checkbox" name="" id="">
-          <div class="hamburger-lines">
-              <span class="line line1"></span>
-              <span class="line line2"></span>
-              <span class="line line3"></span>
-          </div>
-          <ul class="menu-items">
-            
-              <li><a href="#food">Hotel</a></li>
-              <li><a href="#food-menu">Restaurants</a></li>
-              <li><a href="#testimonials">Resorts</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/event">Events</a></li>
-              <li><a href="/promotion">Promotions</a></li>
-              <li><a href="/ourteam">Our Team</a></li>
-             
-           
-           
-              
-         
-          </ul>
-          
-          <h1 class="logo">MyTripGhana.com</h1>
-      </div>
-  </nav>
 
-    <section class="showcase-area" id="showcase" data-aos="fade-up"
-    data-aos-duration="3000">
-      <div class="showcase-container">
-        <h1 class="main-title" id="home" style="color:#fff;">Get out there</h1>
-        <p style="color:#fff;text-align:center;">
-          Best of the Best tours, attractions & activities you won’t want to miss.</p>
-        <a href="/event" class="btn btn-primary">Events</a>
-      </div>
-    </section>
 
-    
-    <section id="food" data-aos="fade-down"
-    data-aos-easing="linear"
-    data-aos-duration="1500">
-    <h2 class="food-menu-heading">Hotels</h2>
-     
-      <div class="food-container container">
-        <div class="food-type fruite">
-          <div class="img-container">
-            <img src="{{url_for('static', filename='images/danny.jpeg')}}" alt="food" />
-            
-            <div class="img-content">
-              <h3>FiestaRoyale</h3>
-              <a
-                href="https://fiestahospitality.com/"
-                class="btn btn-primary"
-                target="blank"
-                > more</a
-              >
-            </div>
-            
-          </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/70/2e/95/superior-room.jpg?w=900&h=-1&s=1" class="d-block w-100" alt="...">
         </div>
-
-
-
-        <div class="food-type grin">
-          <div class="img-container">
-            <img src="{{url_for('static', filename='images/danny.jpeg')}}" alt="food" />
-            <div class="img-content">
-              <h3>LaBeachHotel</h3>
-              <a
-                href="https://labadibeachhotelgh.com/"
-                class="btn btn-primary"
-                target="blank"
-                > more</a>
-            </div>
-          </div>
-      
-
-          
+        <div class="carousel-item">
+          <img src="https://images.trvl-media.com/hotels/2000000/1640000/1632500/1632468/3d7d5dac.jpg?impolicy=resizecrop&rw=670&ra=fit" class="d-block w-100" alt="...">
         </div>
-       
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
       </div>
-      
-      <div class="More">
-              
-              <a
-                href="/hotel"
-                class="btn btni-primary"
-                target="blank"
-                >Explore More</a
-              >
-      </div>
-        
-      
-      
-    </section>
-
-  
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </body>
  
-    <section id="contact"data-aos="fade-up"
-    data-aos-duration="1000">
-      <div class="contact-container container">
-        <div class="contact-img">
-          <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
-        </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
-      
-     
-      </section>
-            
-              
-      <i class="fas fa-copyright" style="margin-left:60px; margin-top:40px">copyright MyTripGhana 2022 Created by Kalitex Creatives</i>  </body>
-  <!-- 
-    .................../ JS Code for smooth scrolling /...................... -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        // Add smooth scrolling to all links
-        $("a").on("click", function (event) {
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-  
-            // Store hash
-            var hash = this.hash;
-  
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              800,
-              function () {
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              }
-            );
-          } // End if
-        });
-      });
-    </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- 
 </html>

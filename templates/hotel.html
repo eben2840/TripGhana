@@ -362,7 +362,15 @@
       <div class="More">
       </div>
         
-      
+      {%for user in persons%}
+        
+    
+      <h3>{{user.email}}</h3>
+      <p>{{user.comment}}<br><a href="/delete/{{user.id}}">delete</a>
+      </a></p>
+ 
+
+{% endfor %}
       
     </section>
      
