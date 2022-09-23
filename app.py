@@ -149,9 +149,9 @@ def hom():
         return redirect("/hom")
     persons=Course.query.order_by(Course.id.desc()).all()
     print(persons)
-    print(current_user)
+   
     
-    return render_template("venue.html", form=form, persons=persons, current_user=current_user)
+    return render_template("venue.html", form=form, persons=persons)
 
 @app.route("/delete/<int:id>")
 def delete(id):
