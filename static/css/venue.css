@@ -53,6 +53,7 @@ body {
   text-decoration: none;
   border-radius: 50px;
   cursor: pointer;
+  text-align: center;
   outline: none;
   margin-top: 1em;
   text-transform: uppercase;
