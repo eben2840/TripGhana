@@ -322,9 +322,9 @@ body {
 
 .food-menu-container img {
   display: block;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  border-radius: 2%;
   object-fit: cover;
   object-position: center;
 }
