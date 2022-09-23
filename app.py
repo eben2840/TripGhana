@@ -1,6 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, redirect, render_template, url_for,request
-from flask_login import login_required,login_user,logout_user,current_user,UserMixin, LoginManager
+
 from forms import *
 from flask_migrate import Migrate
 
@@ -12,15 +12,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 migrate= Migrate(app, db)
 
-login_manager = LoginManager(app)
-login_manager.login_view = "login"
-login_manager.login_message_category = "info"
-migrate = Migrate(app, db)
-from forms import *
-
-@login_manager.user_loader
-def load_user(user_id):
-    return Course.query.get(int(user_id))
 
 
 
