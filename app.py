@@ -1,3 +1,4 @@
+from enum import unique
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, redirect, render_template, url_for,request
 
@@ -17,8 +18,8 @@ migrate= Migrate(app, db)
 
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(), nullable=True)
-    name = db.Column(db.String(), nullable=True)
+    email = db.Column(db.String(), nullable=True, unique=True)
+    name = db.Column(db.String(), nullable=True, unique=True)
     
     comment = db.Column(db.String(), nullable=True)
     
