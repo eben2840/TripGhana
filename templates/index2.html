@@ -17,6 +17,37 @@
     <body>
 
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<!--
+<div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    The trip of your dreams doesn’t need a Hollywood-sized budget or years of planning. Simply join a small group of like-minded travelers, and start to experience all the things that make our world worth exploring.
+  </div>
+</div>
+-->
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <form action='' method="post" style="
 text-align: center;
@@ -45,11 +76,40 @@ padding: 10px;
 
 
 <button type="submit" style="align:center; border-radius: 40px; box-shadow: 0 2px 10px -3px #117964;
-width: 50%;
+width: 70%;
 margin: 20px auto 20px auto;
 display: block;
 padding: 10px;
 " class="btn btn-primary">Done</button>
+
+
+
+<button type="submit" style="align:center; border-radius: 40px; box-shadow: 0 2px 10px -3px #117964;
+width: 70%;
+margin: 20px auto 20px auto;
+display: block;
+padding: 10px;
+"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">See more</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="text-align:left;">
+        If you are experiencing any issues with our platform, have a suggestion for a new feature,
+        or would like to share your thoughts on anything else, 
+        please <a href="">click here</a> to get in touch.
+      </div>
+    
+      <div class="modal-footer">
+       
+       
+      </div>
+    </div>
+  </div>
 </div>
 
 </form>
