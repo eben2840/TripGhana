@@ -110,6 +110,25 @@ def comment():
 def heads():
     return render_template("heads.html")
 
+
+
+@app.route('/index2', methods=['POST', 'GET'])
+def index2():
+    form = RegistrationForm()
+    if request.method=='POST':
+        print(form.name.data)
+     
+        newentry=Course(name=form.name.data)
+        db.session.add(newentry)
+        db.session.commit()
+        print("successful")
+        return redirect("/hom")
+    persons=Course.query.order_by(Course.id.desc()).all()
+    print(persons)
+    
+    
+    return render_template("index2.html", form=form, persons=persons)
+
 @app.route('/blogg')
 def blogg():
     return render_template("blogg.html")
