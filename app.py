@@ -20,8 +20,8 @@ class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(), nullable=True, unique=True)
     name = db.Column(db.String(), nullable=True, unique=True)
-    
     comment = db.Column(db.String(), nullable=True)
+    budget =db.Column(db.String())
     
     def __repr__(self):
         return f"Course('{self.id}', {self.email}', {self.comment}')"
@@ -118,8 +118,9 @@ def index2():
     form = RegistrationForm()
     if request.method=='POST':
         print(form.name.data)
+        print(form.budget.data)
      
-        newentry=Course(name=form.name.data)
+        newentry=Course(name=form.name.data,budget=form.budget.data)
         db.session.add(newentry)
         db.session.commit()
         print("successful")

@@ -60,17 +60,23 @@ padding: 10px;
 ">Start By Telling Us Your name.</h6>
   <div class="input-group has-validation" >
    
-    <input type="text"  style="border-radius: 40px; text-align:center; box-shadow: 0 2px 10px -3px #117964;
+    <input type="text" name='name' style="border-radius: 40px; text-align:center; box-shadow: 0 2px 10px -3px #117964;
     width: 80%;
     height: 50px;
     margin: 10px auto 2px ;
-    border: 1px solid #D9D9D9; margin-bottom:300px;"class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"  placeholder="Please Enter Your Name" required>
+    border: 1px solid #D9D9D9; "class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"  placeholder="Please Enter Your Name" required>
     <div class="invalid-feedback">
       Please choose a username.
     </div>
   </div>
 </div>
 
+{{form.budget(class="form-control",id="floatingInput", style="border-radius: 40px; text-align:center; box-shadow: 0 2px 10px -3px #117964;
+width: 80%;
+height: 50px;
+margin: 10px auto 2px ;
+border: 1px solid #D9D9D9;margin-bottom:250px;" ) }}
+  
 
 
 
@@ -84,12 +90,12 @@ padding: 10px;
 
 
 <!--model-->
-<button type="submit" style="align:center; border-radius: 40px; box-shadow: 0 2px 10px -3px #117964;
+<button type="" style="align:center; border-radius: 40px; box-shadow: 0 2px 10px -3px #117964;
 width: 70%;
 margin: 20px auto 20px auto;
 display: block;
 padding: 10px;
-"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">See more</button>
+"class="" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">See more</button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
