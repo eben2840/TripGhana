@@ -765,7 +765,7 @@ button{
 			margin:  0 20px  0 0;
 			border-radius: 10px;
 			position: relative;
-			left: 0px;
+			left: 10px;
 			transition: 0.5s;
 
     }
