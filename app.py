@@ -112,6 +112,16 @@ def heads():
     return render_template("heads.html")
 
 
+@app.route('/login')
+def login():
+    return render_template("login.html")
+
+
+
+@app.route('/signinn')
+def signinn():
+    return render_template("signinn.html")
+
 
 @app.route('/index2', methods=['POST', 'GET'])
 def index2():
@@ -124,7 +134,7 @@ def index2():
         db.session.add(newentry)
         db.session.commit()
         print("successful")
-        return redirect("/hom")
+        return redirect("/signinn")
     persons=Course.query.order_by(Course.id.desc()).all()
     print(persons)
     
