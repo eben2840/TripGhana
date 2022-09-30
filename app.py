@@ -116,6 +116,9 @@ def heads():
 def login():
     return render_template("login.html")
 
+@app.route('/sign', methods=["POST","GET"])
+def sign():
+    return render_template("sign.html")
 
 
 @app.route('/signinn' , methods=["POST","GET"])
