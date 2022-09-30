@@ -112,13 +112,13 @@ def heads():
     return render_template("heads.html")
 
 
-@app.route('/login')
+@app.route('/login', methods=["POST","GET"])
 def login():
     return render_template("login.html")
 
 
 
-@app.route('/signinn')
+@app.route('/signinn' , methods=["POST","GET"])
 def signinn():
     return render_template("signinn.html")
 
