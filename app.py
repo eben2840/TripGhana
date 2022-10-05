@@ -1,4 +1,5 @@
 from enum import unique
+from turtle import title
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, redirect, render_template, url_for,request
 
@@ -28,7 +29,7 @@ class Course(db.Model):
 
 
 @app.route('/',methods=['GET','POST'])
-def home():
+def homee():
     if request.method=='POST':
         # Handle POST Request here
         return render_template('ent.html')
@@ -63,7 +64,7 @@ def promotion():
         return render_template('blog.html')
     return render_template('blog.html')
 
-@app.route('/ourteam')
+@app.route('/security')
 def outteam():
     if request.method=='POST':
         # Handle POST Request here
@@ -126,7 +127,7 @@ def signinn():
     return render_template("signinn.html")
 
 
-@app.route('/index2', methods=['POST', 'GET'])
+@app.route('/budget', methods=['POST', 'GET'])
 def index2():
     form = RegistrationForm()
     if request.method=='POST':
@@ -137,7 +138,7 @@ def index2():
         db.session.add(newentry)
         db.session.commit()
         print("successful")
-        return redirect("/signinn")
+        return redirect("/home")
     persons=Course.query.order_by(Course.id.desc()).all()
     print(persons)
     
@@ -152,8 +153,8 @@ def blogg():
 def form():
     return render_template("form.html")
   
-@app.route('/index' , methods=['POST', 'GET'])
-def index():
+@app.route('/welcome' , methods=['POST', 'GET'])
+def welcome():
     form = RegistrationForm()
     if request.method=='POST':
         print(form.name.data)
@@ -162,16 +163,16 @@ def index():
         db.session.add(newentry)
         db.session.commit()
         print("successful")
-        return redirect("/hom")
+        return redirect("/home")
     persons=Course.query.order_by(Course.id.desc()).all()
     print(persons)
     
     
-    return render_template("index.html", form=form, persons=persons)
+    return render_template("welcome.html", form=form, persons=persons, title="welcome")
    
 
-@app.route('/hom', methods=['POST','GET'])
-def hom():
+@app.route('/home', methods=['POST','GET'])
+def home():
     form = RegistrationForm()
     if request.method=='POST':
         print(form.email.data)
@@ -180,7 +181,7 @@ def hom():
         db.session.add(newentry)
         db.session.commit()
         print("successful")
-        return redirect("/hom")
+        return redirect("/home")
     persons=Course.query.order_by(Course.id.desc()).all()
     print(persons)
    
