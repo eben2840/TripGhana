@@ -1,5 +1,4 @@
-from enum import unique
-from turtle import title
+
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, redirect, render_template, url_for,request
 
@@ -168,7 +167,7 @@ def welcome():
     print(persons)
     
     
-    return render_template("welcome.html", form=form, persons=persons, title="welcome")
+    return render_template("welcome.html", form=form, persons=persons)
    
 
 @app.route('/home', methods=['POST','GET'])
