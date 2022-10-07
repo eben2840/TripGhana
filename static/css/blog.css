@@ -754,8 +754,8 @@ sectio1 .sigment{
     width: 150px;
     
     box-shadow:0 2px 10px -3px #117964; 
-  background-color:  #f7fae7;
-    ;
+  background-color: none;
+    border: 1px solid;
   height: 6vh;
   text-align: center;
   justify-content: space-between;
