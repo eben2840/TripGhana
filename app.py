@@ -34,13 +34,33 @@ def homee():
         return render_template('ent.html')
     return render_template('ent.html')
 
-@app.route('/cart',methods=['GET','POST'])
-def cart():
+@app.route('/base',methods=['GET','POST'])
+def base():
+    if request.method=='POST':
+        # Handle POST Request here
+        return render_template('base.html')
+    return render_template('base.html')
+
+@app.route('/centralmall',methods=['GET','POST'])
+def centralmall():
     if request.method=='POST':
         # Handle POST Request here
         return render_template('about.html')
     return render_template('about.html')
 
+@app.route('/shop',methods=['GET','POST'])
+def shop():
+    if request.method=='POST':
+        # Handle POST Request here
+        return render_template('shop.html')
+    return render_template('shop.html')
+
+@app.route('/product',methods=['GET','POST'])
+def product():
+    if request.method=='POST':
+        # Handle POST Request here
+        return render_template('product.html')
+    return render_template('product.html')
 
 @app.route('/about')
 def about():
@@ -64,8 +84,8 @@ def four():
     return render_template('phone.html')
 
 
-@app.route('/promotion')
-def promotion():
+@app.route('/blog')
+def blog():
     if request.method=='POST':
         # Handle POST Request here
         return render_template('blog.html')

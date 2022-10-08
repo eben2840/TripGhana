@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+
+  
+  <section id="search">
+    <div class="container">
+      <input type="search" id="site-search" aria-label="Search products" placeholder="Search Products">
+    </div>
+    
+  </section><! - End Search - >
+  
+  <section id="carousel">
+    <div class="container carousel-outer">
+
+      <nav class="carousel-nav center">
+        <span class="active">&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+      </nav>
+
+      <div class="carousel-item">
+
+        <div class="container carousel-image"></div>
+          <div class="container content-wrap">
+            <div class="carousel-contents">
+              <h1>Title</h1>
+              <h2>Subtitle</h2>
+                <nav class="carousel-nav card">
+                  <span class="active">&nbsp;</span>
+                  <span>&nbsp;</span>
+                  <span>&nbsp;</span>
+                  <span>&nbsp;</span>
+                </nav>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><! - End Hero Carousel - >
+  
+  <section id="recent">
+    <div class="container narrow">
+      <h2 class="section-title">Recently Viewed</h2>
+    </div>
+    <div class="container narrow"> 
+      <div class="slider">
+        <a href="#0" class="product-card shadow-1">
+          <div class="card-inner">
+            <div class="card-image"></div>
+            <div class="card-categories">
+                    
+              <span class="category red"><span>Sale</span></span>
+              <span class="category blue"><span>Refurbished</span></span>
+              <span class="category green"><span>New</span></span> 
+              
+            </div>
+            <div class="card-title">Product Name Lorem Ipsum Dolor Sed Un Ipsum</div>
+            <div class="card-price">4,000,000 Points</div><div class="original-price">Was 5,000,000 Points</div>
+            <div class="card-id">Product ID: 193940203</div>
+          </div>
+        </a>
+        <a href="#0" class="product-card shadow-1"> <img src="{{url_for('static', filename='images/central mall/men/112.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+        </a>
+        <a href="#0" class="product-card shadow-1"> <img src="{{url_for('static', filename='images/central mall/men/112.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+        </a>
+        <a href="#0" class="product-card shadow-1">    <img src="{{url_for('static', filename='images/central mall/men/111.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+        </a>
+        <a href="#0" class="product-card shadow-1"></a>
+        <a href="#0" class="product-card shadow-1"></a>
+        <a href="#0" class="product-card shadow-1"></a>
+        <a href="#0" class="product-card shadow-1"></a>
+        <a href="#0" class="product-card shadow-1"></a>
+        <a href="#0" class="product-card shadow-1"></a>
+        <a href="#0" class="product-card shadow-1"></a>
+      </div>
+      <div class="slider-nav">
+        <ul id="slider-navigation">
+          <li class="previous"><a href="#0"><svg width="12px" height="20px" viewBox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>arrow-1-right@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.01416664,21.925 C6.78999997,21.925 6.56666664,21.835 6.40333331,21.6566667 C6.09499997,21.3191667 6.11749997,20.7933334 6.45416664,20.4841667 L15.7208334,11.9675 L6.45416664,3.45166662 C6.11749997,3.14166662 6.09499997,2.61666662 6.40333331,2.27916662 C6.71249997,1.94166662 7.23666664,1.91833328 7.57333331,2.22833328 L17.505,11.3558333 C17.6758334,11.5133333 17.7733334,11.7358333 17.7733334,11.9675 C17.7733334,12.2 17.6758334,12.4225 17.505,12.5791667 L7.57333331,21.7075 C7.41416664,21.8533334 7.21416664,21.925 7.01416664,21.925 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-/-arrow-1-right" transform="translate(-6.000000, -2.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="arrow-1-right" fill="#000000" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg></a></li>
+          <li class="next"><a href="#0"><svg width="12px" height="20px" viewBox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>arrow-1-right@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.01416664,21.925 C6.78999997,21.925 6.56666664,21.835 6.40333331,21.6566667 C6.09499997,21.3191667 6.11749997,20.7933334 6.45416664,20.4841667 L15.7208334,11.9675 L6.45416664,3.45166662 C6.11749997,3.14166662 6.09499997,2.61666662 6.40333331,2.27916662 C6.71249997,1.94166662 7.23666664,1.91833328 7.57333331,2.22833328 L17.505,11.3558333 C17.6758334,11.5133333 17.7733334,11.7358333 17.7733334,11.9675 C17.7733334,12.2 17.6758334,12.4225 17.505,12.5791667 L7.57333331,21.7075 C7.41416664,21.8533334 7.21416664,21.925 7.01416664,21.925 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-/-arrow-1-right" transform="translate(-6.000000, -2.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="arrow-1-right" fill="#000000" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </section><! - End Product Slider - >
+  
+  <section id="category-cards">
+    <div class="container narrow">
+      <div id="section-header">
+        <h2 class="section-title">Trending Categories</h2>
+        <a href="#0">View More +</a>
+      </div>
+    </div>
+    <div class="container narrow">
+      <div class="slider">
+        <a href="#0" class="category-card shadow-1">
+          <div class="card-inner">
+            <div class="card-image"></div>
+            <div class="card-title">Category Name </div>
+          </div>
+        </a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+      </div>
+    </div>
+  </section><! - End Category Slider - >
+  
+  <section id="product-grid">
+    <div class="container narrow">
+      <div id="section-header">
+        <h2 class="section-title">Featured Products</h2>
+        <a href="#0">View More +</a>
+      </div>
+    </div>
+    
+    <div class="container narrow">
+      <div class="product-grid">
+        
+          <a href="#0" class="flex-col-one product-card shadow-1"></a>
+        
+        <div class="flex-col-one four-up">
+          <a href="#0" class="product-card shadow-1"></a>
+          <a href="#0" class="product-card shadow-1"></a>
+          <a href="#0" class="product-card shadow-1"></a>
+          <a href="#0" class="product-card shadow-1"></a>
+          <a href="#0" class="product-card shadow-1"></a>
+          <a href="#0" class="product-card shadow-1"></a>
+          
+        </div></div>
+      </div>
+    </div>
+  </section> <! - End Product Grid - >
+  
+<section id="category-cards">
+    <div class="container narrow">
+      <div id="section-header">
+        <h2 class="section-title">Featured Categories</h2>
+        <a href="#0">View More +</a>
+      </div>
+    </div>
+    <div class="container narrow">
+      <div class="slider">
+        <a href="#0" class="category-card shadow-1">
+          <div class="card-inner">
+            <div class="card-image"></div>
+            <div class="card-title">Category Name</div>
+          </div>
+        </a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+        <a href="#0" class="category-card shadow-1"></a>
+      </div>
+    </div>
+  </section>
+   
+  <section id="footer">
+      <div class="container narrow">
+        <nav id="footer-nav">
+          <ul class="menu horizontal">
+            <li><a href="#0">Footer link</a></li>
+            <li><a href="#0">Footer link</a></li>
+            <li><a href="#0">Footer link</a></li>
+            <li><a href="#0">Footer link</a></li>
+            <li><a href="#0">Footer link</a></li>
+          </ul>
+        </nav>
+      </div>
+  </section>  
+
+  <section id="help">
+    <a class="help-button inactive tra-1 bounce" href="#0">Help</a>
+  </section>
+  
+
+  
+
+
+{%endblock body%}
