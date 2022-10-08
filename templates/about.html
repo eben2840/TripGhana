@@ -1,560 +1,597 @@
+<!-- Created by Abhinav-->
+
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!--Font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
-            rel="stylesheet"
-        />
-
-        <!--Icon-->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-            integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-
-        <!--main css-->
-        <link rel="stylesheet" href="index.css" />
-        <link rel="stylesheet" type="text/css" href="about.css">
-
-        <title>mytripghana</title>
+<html>
+<head>
+    <title>Central Mall</title>
+    <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
-    <body>
-        <section class="Nav-bar">
-            <div class="fix-widht">
-                <div class="wrap-menu clear">
-                    <div class="menu-logo left">
-                        <a href="#">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/white-logo.svg"  />
-                        </a>
-                    </div>
-                  
-                    <div class="menu-side-bar">
-                        <a href="#">
-                            <i class="fas fa-bars"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="Banner-section">
-            <div class="fix-widht">
-                <div class="wraper-banner clear">
-                    <div class="banner-text left">
-                        <h1>Book A Trip To Your Favorite Destination At Ease!!</h1>
-                        <p>We are a digital agency that helps brands to achieve their business outcomes. We see technology as a tool to create amazing things.</p>
-                        <a class="banner-btn" href="#">GET STARTED</a>
-                        <i class="fas fa-play"></i>
-                        <span><a href="#">Watch Intro</a></span>
-                    </div>
-                    <div class="banner-image right">
-            <img
-              src="https://i.postimg.cc/Zn2jVjW9/tt.jpg"
-              alt="error"
-            />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="Story-section">
-            <div class="fix-widht">
-                <div class="wrap-story clear">
-                    <div class="story-image left">
-                        <img src="https://demo.ayroui.com/templates/business-template/assets/images/about/about-img1.jpg" alt="story-image" />
-                    </div>
-
-                    <div class="story-contain right">
-                        <h3>OUR STORY</h3>
-                        <h1>Our team comes with the experience and knowledge</h1>
-                        <div class="story-tab">
-                            
-                                <input type="radio" id="item-1" name="tb" />
-                                <input type="radio" id="item-2" name="tb" />
-                                <input type="radio" id="item-3" name="tb" />
-
-                                <label for="item-1">Who We Are</label>
-                                <label for="item-2">Our Vision</label>
-                                <label for="item-3">Our History</label>
-
-                                
-    
-                            <div class="all-comon">
-                                <div class="Who-We-Are common">
-                                    <p>
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                                        distribution of letters, look like readable English.<br />
-                                        <br />
-    
-                                        There are many variations of passages of Lorem Ipsum available, but the majority have in some form, by injected humour.
-                                    </p>
-                                </div>
-                                
-                                <div class="Our-Vision common">
-                                    <p>
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                                        distribution of letters, look like readable English.<br />
-                                        <br />
-    
-                                        There are many variations of passages of Lorem Ipsum available, but the majority have in some form, by injected humour.
-                                    </p>
-                                </div>
-    
-                                <div class="Our-History common">
-                                    <p>
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                                        distribution of letters, look like readable English.<br />
-                                        <br />
-    
-                                        There are many variations of passages of Lorem Ipsum available, but the majority have in some form, by injected humour.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="Service-section">
-            <div class="fix-widht">
-                <div class="service-header-text center">
-                    <span>Services</span>
-                    <h2>Our Best Services</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-
-                <div class="wrap-service-contain clear">
-                    <div class="service-contaian left">
-                        <i class="fas fa-capsules"></i>
-                        <h2>Refreshing Design</h2>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor dolore magna.</p>
-                    </div>
-
-                    <div class="service-contaian left">
-                        <i class="fab fa-bootstrap"></i>
-                        <h2>Solid Bootstrap 5</h2>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor dolore magna.</p>
-                    </div>
-
-                    <div class="service-contaian left">
-                        <i class="fas fa-code"></i>
-                        <h2>100+ Components</h2>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor dolore magna.</p>
-                    </div>
-
-                    <div class="service-contaian left">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <h2>Speed Optimized</h2>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor dolore magna.</p>
-                    </div>
-
-                    <div class="service-contaian left">
-                        <i class="fas fa-layer-group"></i>
-                        <h2>Fully Customizable</h2>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor dolore magna.</p>
-                    </div>
-
-                    <div class="service-contaian left">
-                        <i class="fas fa-sync"></i>
-                        <h2>Regular Updates</h2>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor dolore magna.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="Promo-section">
-            <div class="fix-widht">
-                <div class="service-header-text center">
-                    <span>Our Intro Video</span>
-                    <h2>Watch Our Promo Video</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-
-                <div class="promo-contain">
-                    <img src="https://demo.ayroui.com/templates/business-template/assets/images/video/video-bg.png" alt="promo-contian-imag" />
-                    <a href="https://youtu.be/r44RKWyfcFw">
-                        <i class="fas fa-play"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="Portfolio-section">
-            <div class="fix-widht">
-                <div class="service-header-text center">
-                    <span>Our Portfolio</span>
-                    <h2>Our Recent Works</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-                <div class="portfolio-menu">
-                    <ul>
-                        <li><a href="#">ALL WORK</a></li>
-                        <li><a href="#">BRANDING</a></li>
-                        <li><a href="#">MARKETING</a></li>
-                        <li><a href="#">PLANNING</a></li>
-                        <li><a href="#">RESEARCH</a></li>
-                    </ul>
-                </div>
-
-                <div class="wrap-portfolio-image clear">
-                    <div class="portfolio-image left">
-                        <a href="#"><img src="https://demo.ayroui.com/templates/business-template/assets/images/portfolio/pf1.jpg" alt="" /> </a>
-                        <h2>Graphics Design</h2>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
-
-                    <div class="portfolio-image left">
-                        <a href="#">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/portfolio/pf2.jpg" alt="" />
-                        </a>
-                        <h2>Web Development</h2>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
-
-                    <div class="portfolio-image left">
-                        <a href="#">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/portfolio/pf3.jpg" alt="" />
-                        </a>
-                        <h2>App Development</h2>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
-
-                    <div class="portfolio-image left">
-                        <a href="#">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/portfolio/pf4.jpg" alt="" />
-                        </a>
-                        <h2>Digital Marketing</h2>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
-
-                    <div class="portfolio-image left">
-                        <a href="#">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/portfolio/pf5.jpg" alt="" />
-                        </a>
-                        <h2>SEO Services</h2>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
-
-                    <div class="portfolio-image left">
-                        <a href="#">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/portfolio/pf6.jpg" alt="" />
-                        </a>
-                        <h2>Product Design</h2>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="Pricing-section">
-            <div class="fix-widht">
-                <div class="service-header-text center">
-                    <span>Pricing</span>
-                    <h2>Pricing & Plans</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-                <div class="wrap-pricing-table clear">
-                    <div class="pricing-table-contain left">
-                        <h4>Starter</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
-                        <h1><sup>$</sup>0<span>/mo</span></h1>
-                        <div class="pricing-btn">
-                            <a href="#">START FREE TRAIL</a>
-                        </div>
-                        <div class="pricing-text">
+<body>
+    <div class="main" id="main">
+            <div class="nav-bar">
+                <div class="nav-logo">
+                     <p><i class="fa fa-shopping-cart"></i>  CentralMall</p>
+                   </div>
+                       <div class="nav-links" id="nav-links">
+                            <i class="fa fa-close"onclick="closeNav()"></i>
                             <ul>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Cras justo odio.</li>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Dapibus ac facilisis in.</li>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Morbi leo risus.</li>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Excepteur sint occaecat velit.</li>
+                                  <a href="#"><li>home</li></a>
+                                  <a href="#services"><li>services</li></a>
+                                  <a href="#products"><li>products</li></a>
+                                  <a href="#contact"><li>contact</li></a>
                             </ul>
-                        </div>
-                    </div>
-
-                    <div class="pricing-table-contain left">
-                        <h4>Starter</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
-                        <h1><sup>$</sup>0<span>/mo</span></h1>
-                        <div class="pricing-btn">
-                            <a href="#">START FREE TRAIL</a>
-                        </div>
-                        <div class="pricing-text">
-                            <ul>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Cras justo odio.</li>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Dapibus ac facilisis in.</li>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Morbi leo risus.</li>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Excepteur sint occaecat velit.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="pricing-table-contain left">
-                        <h4>Starter</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
-                        <h1><sup>$</sup>0<span>/mo</span></h1>
-                        <div class="pricing-btn">
-                            <a href="#">START FREE TRAIL</a>
-                        </div>
-                        <div class="pricing-text">
-                            <ul>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Cras justo odio.</li>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Dapibus ac facilisis in.</li>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Morbi leo risus.</li>
-                                <li><i class="far fa-check-circle all-circle-logo"></i> Excepteur sint occaecat velit.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                       <div class="btn1">sign in</div>
+                  </div>
+                   <i class="fa fa-bars"onclick="show()"></i>
             </div>
-        </section>
-
-        <section class="Team-section">
-            <div class="fix-widht">
-                <div class="service-header-text center">
-                    <span>Our Team</span>
-                    <h2>Our Creative Team</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-                <div class="wraper-team-section clear">
-                    <div class="inner-team-contain left">
-                        <img src="https://demo.ayroui.com/templates/business-template/assets/images/team/team-1.jpg" alt="" />
-                        <div class="inner-text">
-                            <h2>Jeffery Riley</h2>
-                            <p>Art Director</p>
-                        </div>
-                    </div>
-
-                    <div class="inner-team-contain left">
-                        <img src="https://demo.ayroui.com/templates/business-template/assets/images/team/team-2.jpg" alt="" />
-                        <div class="inner-text">
-                            <h2>Riley Beata</h2>
-                            <p>Web Developer</p>
-                        </div>
-                    </div>
-
-                    <div class="inner-team-contain left">
-                        <img src="https://demo.ayroui.com/templates/business-template/assets/images/team/team-3.jpg" alt="" />
-                        <div class="inner-text">
-                            <h2>Mark Alone</h2>
-                            <p>UX Designer</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="title">
+        <h1>UPTO<span>  50%</span> OFF<br><span>ONLINE</span> AND IN <span>STORE</span><br>Enjoy online shopping.</h1>
+        <button type="button"class="btn">Explore</button>
+      </div>
+            <div class="pic_background">
+              <img src="https://freepngimg.com/thumb/running%20shoes/15-nike-running-shoes-png-image.png" alt="">
+               <!--<img src="https://i.ibb.co/VmyDWkV/image1.jpg"alt="image1"class="pic">-->
             </div>
-        </section>
+            <div class="down"><i class="fa fa-angle-double-down"></i></div>
+    </div>
+    <section id="servicess">
+    <div class="product_headings">
+        
+    </div>
+    <div id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 service-item"id="one"data-aos="fade-up">
+          <div class="service-icon"><i class="fa fa-truck"></i></div>
+          <h4 class="service-title"><a href="#one">easy delivery</a></h4>
+          <p class="service-description"> Very Cheap and Safe</p>
+        </div>
 
-        <section class="Testimonail-1">
-            <div class="fix-widht">
-                <div class="wraper-testimonial-1 center">
-                    <h1>We love to make perfect solutions for your business</h1>
-                    <p>
-                        Why I say old chap that is, spiffing off his nut cor blimey guvnords geeza bloke knees up bobby, sloshed arse William cack Richard. Bloke fanny around chesed of bum bag old lost the pilot say there spiffing off his
-                        nut.
-                    </p>
-                    <div class="testimonial-1-btn">
-                        <a href="#">GET STARTED</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="col-md-4 service-item"id="two"data-aos="fade-up">
+          <div class="service-icon"><i class="fa fa-refresh"></i></div>
+          <h4 class="service-title"><a href="#two">return policy</a></h4>
+          <p class="service-description"> 7-days Return Policy</p>
+        </div>
 
-        <section class="Testimonial-section-2">
-            <div class="fix-widht">
-                <div class="service-header-text center">
-                    <span>Customer Reviews</span>
-                    <h2>Our Testimonials</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-                <div class="wraper-testimonial-2 clear">
-                    <div class="contain-1-testimonial-2 left">
-                        <p>On the other hand denoun with righteous and disliks men who are beguiled demorae momentc blinded by desire that can</p>
-                        <img src="https://demo.ayroui.com/templates/business-template/assets/images/testimonial/author-1.jpg" alt="" />
-                        <h2>Musharof Chowdhury</h2>
-                        <span>Web Entrepreneur</span>
-                    </div>
-                    <div class="contain-2-testimonial-2 right">
-                        <p>On the other hand denoun with righteous and disliks men who are beguiled demorae momentc blinded by desire that can</p>
-                        <img src="https://demo.ayroui.com/templates/business-template/assets/images/testimonial/author-2.jpg" alt="" />
-                        <h2>David Warner</h2>
-                        <span>Web Developer</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="col-md-4 service-item"id="three"data-aos="fade-up">
+          <div class="service-icon"><i class="fa fa-database"></i></div>
+          <h4 class="service-title"><a href="#three">secure payment</a></h4>
+          <p class="service-description"> Pay on Delivery Deals.</p>
+        </div>
 
-        <section class="Latest-news-section">
-            <div class="fix-widht">
-                <div class="service-header-text center">
-                    <span>latest news</span>
-                    <h2>Latest News & Blog</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-                <div class="wraper-latest-news clear">
-                    <div class="inner-latest-news left">
-                        <img src="https://demo.ayroui.com/templates/business-template/assets/images/blog/1.jpg" alt="" />
+        <div class="col-md-4 service-item"id="four"data-aos="fade-up">
+          <div class="service-icon"><i class="fa fa-phone"></i></div>
+          <h4 class="service-title"><a href="#four">realiability</a></h4>
+          <p class="service-description"> Available 24/7.</p>
+        </div>
+        
+        <div class="col-md-4 service-item"id="five"data-aos="fade-up">
+          <div class="service-icon"><i class="fa fa-shopping-bag"></i></div>
+          <h4 class="service-title"><a href="#five">shopping</a></h4>
+          <p class="service-description"> Everything Right here.</p>
+        </div>
 
-                        <div class="latest-news-text">
-                            <h1>Make your team a Design driven company</h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                        </div>
-                    </div>
+        <div class="col-md-4 service-item"id="six"data-aos="fade-up">
+          <div class="service-icon"><i class="fa fa-paper-plane"></i></div>
+          <h4 class="service-title"><a href="#six">discounts</a></h4>
+          <p class="service-description">Discount Every Week.</p>
+        </div>
 
-                    <div class="inner-latest-news left">
-                        <img src="https://demo.ayroui.com/templates/business-template/assets/images/blog/1.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+  </section>
 
-                        <div class="latest-news-text">
-                            <h1>Make your team a Design driven company</h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                        </div>
-                    </div>
 
-                    <div class="inner-latest-news left">
-                        <img src="https://demo.ayroui.com/templates/business-template/assets/images/blog/1.jpg" alt="" />
 
-                        <div class="latest-news-text">
-                            <h1>Make your team a Design driven company</h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="Brand-area-section">
-            <div class="fix-widht">
-                <div class="service-header-text center">
-                    <span>Meet our Clients</span>
-                    <h2>Our Awesome Clients</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-                <div class="baba">
-                    <div class="wraper-brand-area clear">
-                        <div class="brand-logo left">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/client-logo/graygrids.svg" alt="" />
-                        </div>
-
-                        <div class="brand-logo left">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/client-logo/uideck.svg" alt="" />
-                        </div>
-
-                        <div class="brand-logo left">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/client-logo/ayroui.svg" alt="" />
-                        </div>
-
-                        <div class="brand-logo left">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/client-logo/lineicons.svg" alt="" />
-                        </div>
-
-                        <div class="brand-logo left">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/client-logo/tailwindtemplates.svg" alt="" />
-                        </div>
-
-                        <div class="brand-logo left">
-                            <img src="https://demo.ayroui.com/templates/business-template/assets/images/client-logo/ecomhtml.svg" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="Contact-section">
-            <div class="fix-widht">
-                <div class="wraper-contact-section clear">
-                    <div class="address-contact">
-                        <i class="fas fa-phone"></i>
-                        <h1>Contact</h1>
-                        <h4>0984537278623</h4>
-                        <p>yourmail@gmail.com</p>
-                    </div>
-
-                    <div class="address-contact">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h1>Contact</h1>
-                        <h4>0984537278623</h4>
-                        <p>yourmail@gmail.com</p>
-                    </div>
-
-                    <div class="address-contact">
-                        <i class="fas fa-stopwatch"></i>
-                        <h1>Contact</h1>
-                        <h4>0984537278623</h4>
-                        <p>yourmail@gmail.com</p>
-                    </div>
-
-                    <div class="contact-form right">
-                        <form action="#">
-                            <h3>Get in Touch</h3>
-                            <h1>Ready to Get Started</h1>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus quiblanditiis praesentium</p>
-                            <input class="all-input" type="text" placeholder="Name" required/>
-                            <input class="all-input" type="mail" placeholder="Email" required/>
-                            <input class="all-input" type="text" placeholder="Phone" required/>
-                            <input class="all-input" type="text" placeholder="Subject" required/>
-                            <textarea class="all-input-textare" rows="" cols="" placeholder="Type Message"></textarea>
-                            
-                                <div class="btn-form">
-                                    <a class="form-btn" href="#">SEND MESSAGE</a>
-                                </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="Map-section">
-            <div class="wraper-map">
-                <object style="border:0; height: 500px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7887109309127!2d-77.44196278417968!3d38.95165507956235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU3JzA2LjAiTiA3N8KwMjYnMjMuMiJX!5e0!3m2!1sen!2sbd!4v1545420879707"></object>
-            </div>
-        </section>
-        <footer class="Footer-section">
-            <div class="fix-widht">
-                <div class="wraper-footer-section clear">
-                    <div class="footer-1 left">
-                        <img class="footer-1-logo" src="https://demo.ayroui.com/templates/business-template/assets/images/logo.svg" alt="footer-image">
-                        <p> Making the world a better place through constructing elegant hierarchies. <br> <br>
-
-                            © 2024 Ayro UI. <br> Designed and Developed by <span>Ayro UI</span> </p>
+      <!--END OF features-->
+      
+      <div class="arrival-heading">
+        <strong>Campus Deals</strong><br>
+    </div>
+      <section class="sale" id="one"data-aos="fade-up">
+        <div class="sale-box sale-1" id="one"data-aos="fade-up">
+            <a href="#" class="shop-now" style="margin:auto;">Campus Canta</a>
+            <img src="https://img.freepik.com/free-vector/super-sale-background-with-offer_23-2148902858.jpg?w=2000" alt="">
+        </div>
+        <div class="sale-box sale-1" id="two"data-aos="fade-up">
+            <a href="#" class="shop-now">Day Discounts</a>
+            <img src="https://media.istockphoto.com/vectors/biggest-sale-banner-or-poster-design-with-4080-discount-offer-and-vector-id1176999930?k=20&m=1176999930&s=170667a&w=0&h=X3JqqnL_plSA883GOAV-0VrfRTZPFXQE5M68P5xiahc=" alt="">
+        </div>
+        <div class="sale-box sale-1" id="three"data-aos="fade-up">
+            <a href="#" class="shop-now">Monthly Donkomi</a>
+            
+            <img src="https://www.pngitem.com/pimgs/m/47-479351_clip-art-discount-banners-discount-sale-logo-png.png" alt="">
+        </div>
+    </section>
+   
+      <!--PRODUCTS-->
+      <section class="new-arrival">
+          <div class="arrival-heading">
+              <strong>SUPER SEALS BONANZA</strong>
+          </div>
+          <div class="product-container">
+              <div class="product-box" style="box-shadow:0px 5px 10px 0px #aaa;" id="one"data-aos="fade-up">
+                  <div class="product-img">
+                      <a href="#" class="add-cart">SNEAKERS</a>
+                      <img src="https://freepngimg.com/thumb/running%20shoes/15-nike-running-shoes-png-image.png" alt="">
+                  </div>
+                  <div class="product-details">
+                      <a href="#" class="p-name">BUDGET</a>
+                      <span class="p-price">   GH₵50-200</span>
+                  </div>
+              </div>
+  
+              <div class="product-box" style="box-shadow:0px 5px 10px 0px #aaa;"id="two"data-aos="fade-up">
+                  <div class="product-img">
+                      <a href="#" class="add-cart">MENS WEAR</a>
+                      <img src="  " alt="">
+                  </div>
+                  <div class="product-details">
+                      <a href="#" class="p-name">BUDGET</a>
+                      <span class="p-price">   GH₵30-150</span>
+                  </div>
+              </div>
+  
+              <div class="product-box"style="box-shadow:0px 5px 10px 0px #aaa;" id="three"data-aos="fade-up">
+                  <div class="product-img">
+                      <a href="#" class="add-cart">WOMEN WEAR</a>
+                      <img src=" " alt="">
+                  </div>
+                  <div class="product-details" >
+                      <a href="#" class="p-name">BUDGET</a>
+                      <span class="p-price">   GH₵30-150</span>
+                  </div>
+              </div>
+  
+              <div class="product-box" style="box-shadow:0px 5px 10px 0px #aaa;" id="four"data-aos="fade-up">
+                  <div class="product-img">
+                      <a href="#" class="add-cart">BAGS</a>
                     
-                    </div>
-                    <div class="footer-2 left">
-                        <h2>Solutions</h2>
-                        <ul>
-                            <li>Marketing</li>
-                            <li>Analytics</li>
-                            <li>Commerce</li>
-                            <li>Insights</li>
-                        </ul>
-                    </div>
-                    <div class="footer-3 left">
-                        <h2>Support</h2>
-                        <ul>
-                            <li>Pricing</li>
-                            <li>Documentation</li>
-                            <li>Guides</li>
-                            <li>API Status</li>
-                        </ul>
-                    </div>
-                    <div class="footer-4 left">
-                        <h2>Subscribe</h2>
-                        <p>Subscribe to our newsletter for the latest updates</p>
-                        <input class="footer-input" type="Email" placeholder="Email address" required>
-                    </div>
-                </div>
+                      <img src="  https://ae01.alicdn.com/kf/HTB1KQxrgpooBKNjSZPhq6A2CXXaq/Nesitu-High-Quality-Vintage-Army-Green-Yellow-Coffee-Grey-Canvas-Women-Men-s-Backpack-14-Laptop.jpg_Q90.jpg_.webp" alt="">
+                  </div>
+                  <div class="product-details" >
+                      <a href="#" class="p-name">BUDGET</a>
+                      <span class="p-price">   GH₵30-100</span>
+                  </div>
+              </div>
+  
+  
+  
+  <!--first-->
+  
+  <div class="text-muted" style="text-align:left; padding-top:10px;">
+      <a href="/budget"> <button class="button-solid-black" style="margin-right: 24px; margin-bottom: 24px; height:50px; width:300px;background: #094b65; color: #fff; border: none; border-radius: 10px; padding:10px;"><h5>Discount GH₵75-120</h5> <i class="fas fa-arrow-right"></i></button>
+  </a></div>
+  <sectio data-aos="fade-down"
+  data-aos-easing="linear"
+  data-aos-duration="500" style=" height:60vh;" >
+    <div class="product" style=" height:30vh; object-fit:cover; width:30vh;  ">
+      <picture>
+        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIlaM6ruIMTzRR-6Q2HPAZFfBRsFTi-Yr3iQ&usqp=CAU">  <a href="https://bridgeviewgh.com/venue"><img src=" https://img1.cohimg.net/is/image/Coach/c1059_jis2k_a0?$plpMob$"  style=" height:30vh; object-fit:cover; " alt=""></a>
+      </a><br><br>
+    </picture>
+    <div class="detail">
+        <s style="text-decoration: line-through;">GH₵ 120</s>
+      <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+      
+      
+       				
+  </div>
+    
+    </div>
+    <div class="product" style=" height:30vh; object-fit:cover;  width:30vh;  ">
+      <picture>
+    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIlaM6ruIMTzRR-6Q2HPAZFfBRsFTi-Yr3iQ&usqp=CAU">  <a href="https://bridgeviewgh.com/venue">  <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIlaM6ruIMTzRR-6Q2HPAZFfBRsFTi-Yr3iQ&usqp=CAU"  style=" height:30vh; object-fit:cover; " alt=""></a>
+      </a>
+    </picture>
+      <div class="detail">
+       
+        <s style="text-decoration: line-through;">GH₵ 120</s>
+        <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+                                    
+  </div>
+    
+    </div> <div class="product" style=" height:30vh; object-fit:cover; width:30vh;    ">
+      <picture>
+  <img src="https://ae01.alicdn.com/kf/HTB1KQxrgpooBKNjSZPhq6A2CXXaq/Nesitu-High-Quality-Vintage-Army-Green-Yellow-Coffee-Grey-Canvas-Women-Men-s-Backpack-14-Laptop.jpg_Q90.jpg_.webp" style=" height:30vh; object-fit:cover; " alt="">
+      </a>
+      </picture>
+     
+      <div class="detail">
+       
+  
+      
+        
+        <s style="text-decoration: line-through;">GH₵ 120</s>
+      <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+      							
+  </div>
+    
+    </div> <div class="product" style=" height:30vh; object-fit:cover; width:30vh;   ">
+      <picture>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTczuudkZ2wOK7XvsUZJ7M2lHFc3rH0FU_DpQ&usqp=CAU"  style=" height:30vh; object-fit:cover; " alt="">
+      </a>
+      </picture>
+      <div class="detail">
+        
+    
+      
+        <s style="text-decoration: line-through;">GH₵ 120</s>
+        <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+                                    
+  </div>
+    
+    </div> 
+  
+  <div class="product" style=" height:30vh; object-fit:cover; width:30vh;   ">
+  <picture>
+   <a href="https://www.google.com.gh/maps/dir/5.7711202,0.0819187/Peace+Holiday+Resort,+Big+Ada/@5.8346477,0.2121234,11z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x10210195b26060f9:0x896772b6147bfddb!2m2!1d0.6233353!2d5.7951317!3e0?hl=en"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIlaM6ruIMTzRR-6Q2HPAZFfBRsFTi-Yr3iQ&usqp=CAU "  style=" height:30vh; object-fit:cover; "alt="">
+   </a>
+  </picture>
+  <div class="detail">
+    
+    
+  
+      
+    <s style="text-decoration: line-through;">GH₵ 120</s>
+      <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+      					
+  </div>
+  
+  </div>
+  
+  <div class="product" style=" height:30vh; object-fit:cover; width:30vh;   ">
+  <picture>
+  <a href="https://www.google.com.gh/maps/dir/5.7711202,0.0819187/Aqua+Safari+Resort,+Agorkpo+St,+Ada+Foah/@5.8346477,0.2105003,11z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x102102182056aaf5:0x23fbaeafa265fbcb!2m2!1d0.6187924!2d5.8253385!3e0?hl=en"><img src="https://cdn.shopify.com/s/files/1/2388/7315/products/Screen_Shot_2018-11-11_at_5.47.41_PM_300x300.png?v=1571710820"  style=" height:30vh; object-fit:cover; " alt="">
+  </a></picture>
+  <div class="detail">
+  
+    
+    <s style="text-decoration: line-through;">GH₵ 120</s>
+    <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+                                
+  </div>
+  
+  </div>
+  
+  
+  </sectio>
+  
+  
+  
+  
+  
+  <!---street Jeans-->
+  
+  <div class="text-muted" style="text-align:left; padding-top:10px;">
+             <a href="/budget"> <button class="button-solid-black" style="margin-right: 24px; margin-bottom: 24px; height:50px; width:300px;background: #094b65; color: #fff; border: none; border-radius: 10px; padding:10px;"><h5>Street Jeans GH₵70-120 </h5><i class="fas fa-arrow-right"></i></button>
+      </a></div>
+  
+  <sectio data-aos="fade-down"
+  data-aos-easing="linear"
+  data-aos-duration="500" style=" height:60vh;" >
+  
+    <div class="product" style=" height:30vh; object-fit:cover; width:30vh;  ">
+      <picture>
+          <img src="{{url_for('static', filename='images/central mall/men/112.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+    
+      </a><br><br>
+    </picture>
+    <div class="detail">
+        <s style="text-decoration: line-through;">GH₵ 120</s>
+        <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+                      
+  </div>
+    
+    </div>
+    <div class="product" style=" height:30vh; object-fit:cover;  width:30vh;  ">
+      <picture>
+          <img src="{{url_for('static', filename='images/central mall/men/111.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+       </a>
+    </picture>
+      <div class="detail">
+       
+         
+        <s style="text-decoration: line-through;">GH₵ 120</s>
+        <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+                              
+  </div>
+    
+    </div> <div class="product" style=" height:30vh; object-fit:cover; width:30vh;    ">
+      <picture>
+          <img src="{{url_for('static', filename='images/central mall/5.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+     </a>
+      </picture>
+     
+      <div class="detail">
+       
+  
+      
+        <s style="text-decoration: line-through;">GH₵ 120</s>
+        <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+                                      
+  </div>
+    
+    </div> <div class="product" style=" height:30vh; object-fit:cover; width:30vh;   ">
+      <picture>
+          <img src="{{url_for('static', filename='images/central mall/men/113.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+     </a>
+      </picture>
+      <div class="detail">
+        
+    
+      
+        <s style="text-decoration: line-through;">GH₵ 120</s>
+        <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+                                   
+  </div>
+    
+    </div> 
+  
+  <div class="product" style=" height:30vh; object-fit:cover; width:30vh;   ">
+  <picture>
+      <img src="{{url_for('static', filename='images/central mall/9.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+  </a>
+  </picture>
+  <div class="detail">
+    
+    
+  
+    <s style="text-decoration: line-through;">GH₵ 120</s>
+    <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+                              
+  </div>
+  
+  </div>
+  
+  <div class="product" style=" height:30vh; object-fit:cover; width:30vh;   ">
+  <picture>
+      <img src="{{url_for('static', filename='images/central mall/7.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+  </a></picture>
+  <div class="detail">
+  
+    <s style="text-decoration: line-through;">GH₵ 120</s>
+    <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+      
+      
+                              
+  </div>
+  
+  </div>
+  
+  
+  </sectio>
+  
+  
+  
+      <!--men wear BOXX-->
+  
+    
+  <div class="text-muted" style="text-align:left; padding-top:10px;">
+      <a href="/budget"> <button class="button-solid-black" style="margin-right: 24px; margin-bottom: 24px; height:50px; width:300px;background: #094b65; color: #fff; border: none; border-radius: 10px; padding:10px;"><h5>Men's Wear GH₵75-120 </h5><i class="fas fa-arrow-right"></i></button>
+  </a></div>
+      <sectio data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="500" style=" height:60vh;" >
+        <div class="product" style=" height:30vh; object-fit:cover; width:30vh;  ">
+          <picture>
+              <img src="{{url_for('static', filename='images/central mall/men/hood.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+      </a><br><br>
+        </picture>
+        <div class="detail">
+         
+            <s style="text-decoration: line-through;">GH₵ 120</s>
+            <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+            
+          
+                         
+      </div>
+        
+        </div>
+        <div class="product" style=" height:30vh; object-fit:cover;  width:30vh;  ">
+          <picture>
+              <img src="{{url_for('static', filename='images/central mall/men/polo.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+          </a>
+        </picture>
+          <div class="detail">
+            <s style="text-decoration: line-through;">GH₵ 120</s>
+      <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+      
+          
+                                 
+      </div>
+        
+        </div> <div class="product" style=" height:30vh; object-fit:cover; width:30vh;    ">
+          <picture>
+              <img src="{{url_for('static', filename='images/central mall/men/track.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+          </a>
+          </picture>
+         
+          <div class="detail">
+           
+            <s style="text-decoration: line-through;">GH₵ 120</s>
+            <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+            
+          
+                                          
+      </div>
+        
+        </div> <div class="product" style=" height:30vh; object-fit:cover; width:30vh;   ">
+          <picture>
+              <img src="{{url_for('static', filename='images/central mall/men/5.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+          </a>
+          </picture>
+          <div class="detail">
+            
+        
+            <s style="text-decoration: line-through;">GH₵ 120</s>
+            <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+                                     
+      </div>
+        
+        </div> 
+      
+      <div class="product" style=" height:30vh; object-fit:cover; width:30vh;   ">
+      <picture>
+          <img src="{{url_for('static', filename='images/central mall/men/3.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+      </a>
+      </picture>
+      <div class="detail">
+        
+        
+      
+          
+        <s style="text-decoration: line-through;">GH₵ 120</s>
+        <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+        
+                        
+      </div>
+      
+      </div>
+      
+      <div class="product" style=" height:30vh; object-fit:cover; width:30vh;   ">
+      <picture>
+          <img src="{{url_for('static', filename='images/central mall/men/2.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+      </a></picture>
+      <div class="detail">
+      
+        
+        <s style="text-decoration: line-through;">GH₵ 120</s>
+        <h6  style="background:red; width:100px;color:#fff; border-radius:0 0 10px; padding: 10px;">GH₵ 120</h6>
+        
+                             
+      </div>
+      
+      </div>
+      
+      
+      </sectio>
+   
+
+    <div class="center-div text-center"id="this"data-aos="zoom-in">
+        <a href="#this">Load More &rarr;</a>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <div class="product_headings">
+        
+    </div>
+    <!--start-->
+    <div class="subcribe-latest"data-aos="zoom-in">
+      <div class="subscribe text-center">
+        <h3>get update from anywhere</h3>
+        <p>subscribe to CentralMall for latest Promotions</p>
+        <form>
+          <input type="email" placeholder="enter your email " style="text-transform: capitalize;">
+          <div class="btn">subscribe</div>
+        </form>
+      </div>
+    </div>
+    
+    <!--end-->
+    <div class="row">
+      <div class="column left">
+        <h3>contact us</h3>
+        <div class="first"data-aos="fade-up-right">
+              <div class="con">
+               <div class="office"><i class="fa fa-paper-plane"></i></div>
+              <h5>head office<br><span>Central University</span></h5>
+             </div>
+          </div>
+          <div class="first"data-aos="fade-up-left">
+              <div class="con">
+               <div class="office"><i class="fa fa-phone"></i></div>
+              <h5>Reach Out<br><span>024 134 8011(whatsApp) <br>024 559 5389</span></h5>
+             </div>
+          </div>
+          <div class="first"data-aos="fade-up-right">
+              <div class="con">
+               <div class="office"><i class="fa fa-envelope"></i></div>
+              <h5>mail service<br><span style="text-transform: none;">ebenmills200@gmail.com</span></h5>
+             </div>
+          </div>
+      </div>
+
+      <div class="column middle">
+        <h3>gallery</h3>
+        <div class="gallery">
+              <figure class="gallery__item gallery__item-1"data-aos="fade-up">
+            <img src="https://i.ibb.co/BsFL9XH/Screenshot-20200331-160708.png"class="gallery__img">
+              </figure>
+              <figure class="gallery__item gallery__item-2"data-aos="fade-up">
+               <img src="https://i.ibb.co/XbQ7ByH/Screenshot-20200401-074843.png"class="gallery__img">
+              </figure>
+               <figure class="gallery__item gallery__item-3"data-aos="fade-up">
+               <img src="https://i.ibb.co/QFvmCzF/Screenshot-20200331-160358.png"class="gallery__img">
+              </figure>
+              <figure class="gallery__item gallery__item-4"data-aos="fade-up">
+               <img src="https://i.ibb.co/nbBQMty/Screenshot-20200331-181008.png"class="gallery__img">
+              </figure>
+              <figure class="gallery__item gallery__item-5"data-aos="fade-up">
+                <img src="https://i.ibb.co/XLyrhmb/Screenshot-20200331-180118.png"class="gallery__img">
+              </figure>
+              <figure class="gallery__item gallery__item-6"data-aos="fade-up">
+                <img src="https://i.ibb.co/Hq2rVnb/Screenshot-20200331-212725.png"class="gallery__img">
+              </figure>
+              <figure class="gallery__item gallery__item-7"data-aos="fade-up">
+                <img src="https://i.ibb.co/2YMfnM5/bag.png"class="gallery__img">
+              </figure>
+               <figure class="gallery__item gallery__item-8"data-aos="fade-up">
+               <img src="https://i.ibb.co/wSWcF09/watch.png"class="gallery__img">
+              </figure>
             </div>
-        </footer>
-    </body>
-</html>
+      </div>
+
+      <div class="column right">
+        <h3>quick links</h3>
+        <ul class="links text-center"data-aos="zoom-out">
+           <li><a href="#">home</a></li>
+            <li><a href="#servicess">services</a></li>
+              <li><a href="#products">products</a></li>
+              <li><a href="#offers">offers</a></li>
+              <li><a href="#manufactures">wholesalers</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+      </div>
+    </div>
+  </section>
+  <section id="footer">
+  <div class="container">
+        
+    <i class="fas fa-copyright" style="margin-left:60px; margin-top:40px">copyright 2022 Created by Kalitex Creatives</i> </body>
+
+  </div>
+</section>
+<a href="#main" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<div class="loader">
+    <div class="text">Central Mall</div>
+    <div class="load"></div>
+</div>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+   eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('2 k=O.D("C-B");3 z(){k.n.t="-y"}3 d(){k.n.t="0"}$(\'#u\').v(\'w.E.5\',3(e){2 $e=$(e.A);2 b=$e.G();2 9=4;2 l=$(\'.5-g\').H;7(b>=l-(9-1)){2 q=9-(l-b);I(2 i=0;i<q;i++){7(e.J=="F"){$(\'.5-g\').m(i).p(\'.5-o\')}f{$(\'.5-g\').m(0).p(\'.5-o\')}}}});$(3(){$(\'.a-8-c\').h();$(j).6(3(){2 6=$(j).L();7(6<=r){$(\'.a-8-c\').h()}f{$(\'.a-8-c\').d()}7(6<=r){$(\'.s\').d()}f $(\'.s\').h()});$(j).M(3(){$(".N").K("x")})})',51,51,'||var|function||carousel|scroll|if|to|itemsPerSlide|back|idx|top|show||else|item|hide||window|sh|totalItems|eq|style|inner|appendTo|it|100|down|right|carouselExample|on|slide|slow|200px|closeNav|relatedTarget|links|nav|getElementById|bs|left|index|length|for|direction|fadeOut|scrollTop|load|loader|document'.split('|'),0,{}))
+AOS.init({
+    easing: 'ease-out',
+    duration: 400, 
+    
+    
+});
+  </script>
 
 
+</body>
+</html> 

@@ -34,6 +34,14 @@ def homee():
         return render_template('ent.html')
     return render_template('ent.html')
 
+@app.route('/cart',methods=['GET','POST'])
+def cart():
+    if request.method=='POST':
+        # Handle POST Request here
+        return render_template('about.html')
+    return render_template('about.html')
+
+
 @app.route('/about')
 def about():
     if request.method=='POST':
