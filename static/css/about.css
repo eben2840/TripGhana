@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Poppins', sans-serif;
   box-sizing:border-box;
 }
 .down{
@@ -139,14 +139,14 @@ html,body{
   margin: 150px 230px;
 }
 .title h1{
-  font-size: 30px;
+  font-size: 50px;
   white-space: nowrap;
   line-height: 50px;
   font-weight: bold;
 }
 .title span{
   color:deepskyblue;
-  font-size: 40px;
+  font-size: 70px;
 }
 .title .btn{
   background:deepskyblue;
@@ -748,7 +748,9 @@ z-index:12;
       margin: 100px 10px;
   }
   .pic_background img{
-      margin: 0 90px;
+      margin: 0 20px;
+      width: 300px;
+      height: 100%;
   }
   .title{
       float:left;
@@ -758,12 +760,12 @@ z-index:12;
       margin-right: 500px;
   }
   .title h1{    
-      font-size: 30px;
+      font-size: 25px;
       line-height: 30px;
       
   }
   .title span{
-      font-size: 20px;
+      font-size: 40px;
   }
   .title .btn{
       padding:7px 17px; 
@@ -1055,7 +1057,7 @@ transform:translate(-50%,-50%);
   left: 25px;
   color: white;
   font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: monospace;
   font-weight: 900;
   display: none;
 }
@@ -1308,3 +1310,264 @@ a:hover {
 
 
 -----------------
+
+#con {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 200px;
+  height: auto;
+}
+
+#con2 {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: auto;
+}
+
+#con3 {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: auto;
+}
+.con4{
+	width: 75%;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: auto;
+}
+h4 {
+  width: 90%;
+  position: absolute;
+  font-size: 30px;
+  padding: 20px;
+  margin-top: 120px;
+  color: #fff;
+}
+.f-title{
+	text-align: center;
+	margin-top: 30px;
+	font-size: 30px;
+	font-family: 'Rock Salt', cursive;
+	-webkit-animation:colorchange 5s infinite alternate;
+}
+.zayn_1 {
+  position: relative;
+  margin-top: -150px;
+  background: url(http://i.huffpost.com/gen/1960925/images/o-COOLEST-CITIES-IN-AMERICA-facebook.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 3px solid rgba(255,162,52,0.8);
+  width: 100%;
+  height: 280px;
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px 0px rgba(46,61,73,0.9);
+  transition: all 0.3s ease;
+	
+}
+
+.zayn_2 {
+  position: relative;
+  margin-top: 1px;
+  background: url(https://i.ytimg.com/vi/fwoDwajwqdo/maxresdefault.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 3px solid rgba(2,204,186,0.8);
+  width: 49%;
+  height: 300px;
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px 0px rgba(46,61,73,0.9);
+  transition: all 0.3s ease;
+}
+
+.zayn_3 {
+  position: relative;
+  float: right;
+  margin-top: -304px;
+  background: url(https://i.ytimg.com/vi/kD0jh_S975M/maxresdefault.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 3px solid rgba(169,81,237,0.8);
+  width: 49%;
+  height: 300px;
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px 0px rgba(46,61,73,0.9);
+  transition: all 0.3s ease;
+}
+
+.zayn_4 {
+  position: relative;
+  margin-top: 1px;
+  background: url(http://www.lolwot.com/wp-content/uploads/2015/02/top-16-coolest-buildings-in-the-world.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 3px solid rgba(255,84,131,0.8);
+  width: 100%;
+  height: 280px;
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px 0px rgba(46,61,73,0.9);
+  transition: all 0.3s ease;
+}
+
+.new {
+  color: #fff;
+  z-index: 1;
+  position: relative;
+  left: 2%;
+  top: 8%;
+  padding: 15px;
+  background: linear-gradient(to right, #02b3e4 0%, #02ccba 100%);
+  border-radius: 50px 120px 120px;
+}
+.zayn_form{
+	position: relative;
+  margin-top: -150px;
+  background:#fafafa;
+  border-bottom: 3px solid rgba(255,162,52,0.8);
+  width: 100%;
+  height: 280px;
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px 0px rgba(46,61,73,0.9);
+  transition: all 0.3s ease;
+}
+/*
+.form-title{
+	position: relative;
+	text-align: center;
+	margin-bottom: 40px;
+}
+ input{
+	 margin-top: 50px;
+	 margin-left: 95px;
+	 width: 50%;
+    display: inline-block;
+    text-align: center;
+    border-radius: 7px;
+    background: rgba(238, 238, 238, 1);
+    padding: 1em 1em;
+    outline: none;
+    border: none;
+    color: rgba(2, 204, 186, 0.4);
+    transition: 0.3s linear;
+}
+::placeholder {
+    color: rgba(2, 204, 186, 0.9);
+}
+input:focus {
+    background: rgba(2, 204, 186, 0.4);
+}
+*/
+.date-1 {
+  color: #fff;
+  z-index: 1;
+  background: #b24592;
+ /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b24592, #f15f79);
+ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b24592, #f15f79);
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: absolute;
+  left: 80%;
+  top: 3%;
+  padding: 9px;
+  border-radius: 50px 120px 120px;
+}
+
+.date {
+  color: #fff;
+  z-index: 1;
+  background: #b24592;
+ /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b24592, #f15f79);
+ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b24592, #f15f79);
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: absolute;
+  left: 71%;
+  top: 3%;
+  padding: 9px;
+  border-radius: 50px 120px 120px;
+}
+
+.pop {
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  left: 2%;
+  top: 3%;
+  padding: 15px;
+  background: linear-gradient(to right, #fa3350 0%, #fa3380 100%);
+  border-radius: 50px 120px 120px;
+}
+
+.lat {
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  left: 2%;
+  top: 3%;
+  padding: 15px;
+  background: linear-gradient(to right, deeppink 0%, #fa3380 100%);
+  border-radius: 50px 120px 120px;
+}
+
+.free {
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  left: 2%;
+  top: 3%;
+  padding: 15px;
+  background: linear-gradient(to right, deepskyblue 0%, skyblue 100%);
+  border-radius: 50px 120px 120px;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(000,000,000, 0.6);
+  border-radius: 6px;
+}
+
+
+
+@media only screen and (max-width: 840px) {
+    
+  h4 {
+    font-size: 24px;
+  }
+
+  .zayn_2 {
+    position: relative;
+    width: 100%;
+  }
+
+  .zayn_3 {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .zayn_4 {
+    position: relative;
+    width: 100%;
+    margin-top: 360px;
+  }
+
+  .date {
+    left: 70%;
+  }
+
+  .date-1 {
+    left: 70%;
+  }
+}
