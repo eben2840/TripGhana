@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   box-sizing:border-box;
 }
 .down{
@@ -39,6 +39,7 @@ html,body{
   content: '';
   position: absolute;
   height: 150px;
+  
   width: 150px;
   border-radius:0 0 150px 0;
   background: deepskyblue;
@@ -53,6 +54,7 @@ html,body{
   line-height: 25px;
   border-top: 2px solid lightskyblue;
   box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
+  
 }
 .nav-bar .fa-close,.nav-bar .fa-bars{
   display: none;
@@ -122,7 +124,7 @@ html,body{
 .pic_background{
   height: 50vh;
   width: 20%;
-  background:lightblue;
+ 
   position: relative;
   margin: 100px 150px;
 }
@@ -696,13 +698,14 @@ z-index:12;
       top: 10px;
   }
   .nav-logo p{
-      font-size: 25px;
+      font-size: 17px;
       margin: 0 70px;
   }
   .nav-bar .fa-close,.nav-bar .fa-bars{
       display: block;
       color:#000;
       margin: 10px 25px;
+      position:fixed;
       font-size: 22px;
       cursor: pointer;
   }
@@ -734,33 +737,38 @@ z-index:12;
       margin-left: 20px;
   }
   .main:before{
-      height: 90px;
-      width: 90px;
+      height: 100px;
+      width: 100px;
       top: 0;
       left: 0;
   }
 .pic_background{
-      width:30vw;
+      width:50vw;
       height: 40vh;
       margin: 100px 10px;
   }
   .pic_background img{
-      margin: 50px 30px;
+      margin: 0 90px;
   }
   .title{
-      float: right;
-      font-size:15px;
-      margin: 150px 10px 0px 0px;
+      float:left;
+    font-size:15px;
+      margin: auto;
+      padding:90px 10px 0;
+      margin-right: 500px;
   }
   .title h1{    
-      font-size: 15px;
+      font-size: 30px;
       line-height: 30px;
+      
   }
   .title span{
       font-size: 20px;
   }
   .title .btn{
       padding:7px 17px; 
+    width: 150px;
+    height: 50px;
   }
 .product_line{
       font-size: 18px;
@@ -1047,7 +1055,7 @@ transform:translate(-50%,-50%);
   left: 25px;
   color: white;
   font-size: 20px;
-  font-family: monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   display: none;
 }
