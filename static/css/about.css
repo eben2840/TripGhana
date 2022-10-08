@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Display', sans-serif;
   box-sizing:border-box;
 }
 .down{
@@ -139,14 +139,14 @@ html,body{
   margin: 150px 230px;
 }
 .title h1{
-  font-size: 50px;
+  font-size: 30px;
   white-space: nowrap;
   line-height: 50px;
   font-weight: bold;
 }
 .title span{
   color:deepskyblue;
-  font-size: 70px;
+  font-size: 40px;
 }
 .title .btn{
   background:deepskyblue;
@@ -748,9 +748,8 @@ z-index:12;
       margin: 100px 10px;
   }
   .pic_background img{
-      margin: 0 20px;
-      width: 300px;
-      height: 100%;
+      margin: 0 90px;
+      
   }
   .title{
       float:left;
@@ -1057,7 +1056,7 @@ transform:translate(-50%,-50%);
   left: 25px;
   color: white;
   font-size: 20px;
-  font-family: monospace;
+  font-family: 'Plus Jakarta Display', sans-serif;
   font-weight: 900;
   display: none;
 }
@@ -1349,7 +1348,7 @@ h4 {
 	text-align: center;
 	margin-top: 30px;
 	font-size: 30px;
-	font-family: 'Rock Salt', cursive;
+	font-family: 'Plus Jakarta Display', sans-serif;
 	-webkit-animation:colorchange 5s infinite alternate;
 }
 .zayn_1 {
