@@ -1,19 +1,116 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<section id="search">
-  <div class="container">
-    <input type="search" id="site-search" aria-label="Search products" placeholder="Search Products">
+
+
+<section id="recent">
+  <div class="container narrow">
+    <h2 class="section-title"><b>YhaasClothing</b></h2>
   </div>
-  
-</section><! - End Search - >
+  <div class="container narrow"> 
+    <div class="slider">
+      <a href="#0" class="product-card shadow-1">
+        <div class="card-inner">
+          <div class="card-image"></div>
+          <div class="card-categories">
+              <!--
+            <span class="category red"><span> Sale</span></span>
+            <span class="category blue"><span>Refurbished</span></span>-->
+            <span class="category red"><span>PreOrder</span></span><br><br><br><br>
+           <div class="card-title">Phone Numbers<br>0264258450<br>0264258450<br>0555733350</div>
+          </div>
+          <div class="card-title">Price Range</div>
+        <div class="card-price">GH₵ 70-120<div class="original-price">GH₵ 210</div></div>
+          <div class="card-id"><h6>Coupon ID: centralmall</h6></div>
+        </div>
+      </a>
+      <a href="#0" class="product-card shadow-1"> <img src="{{url_for('static', filename='images/central mall/men/112.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+          <div class="card-title">Quality Recently Viewed</div>
+          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/hood.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+             <div class="card-title">Quality Recently Viewed</div> 
+             <div class="card-id">Coupon ID: centralmall</div>
+          </div>
+         
+      </a>
+      <a href="#0" class="product-card shadow-1"> <img src="{{url_for('static', filename='images/central mall/men/1.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+        <div class="card-title">Quality Recently Viewed</div>
+        <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/polo.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+           <div class="card-title">Quality Recently Viewed</div> 
+           <div class="card-id">Coupon ID: centralmall</div>
+        </div>
+      </a>
+
+      <a href="#0" class="product-card shadow-1">  <img src="{{url_for('static', filename='images/central mall/men/114.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+        <div class="card-title">Quality Recently Viewed</div>
+        <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/track.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+           <div class="card-title">Quality Recently Viewed</div> 
+           <div class="card-id">Coupon ID: centralmall</div>
+        </div>
+      </a>
+      <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j7.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+        <div class="card-title">Quality Recently Viewed</div>
+        <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/5.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+           <div class="card-title">Quality Recently Viewed</div> 
+           <div class="card-id">Coupon ID: centralmall</div>
+        </div>
+      </a>
+
+      <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j6.jpg')}}"style=" height:30vh;width:100%;  object-fit:cover; "  alt="food" />  
+        <div class="card-title">Quality Recently Viewed</div>
+        <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/3.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+           <div class="card-title">Quality Recently Viewed</div> 
+           <div class="card-id">Coupon ID: centralmall</div>
+        </div>
+        </a>
+
+      <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j1.jpg')}}"style=" height:30vh;width:100%;  object-fit:cover; "  alt="food" />  
+        <div class="card-title">Quality Recently Viewed</div>
+        <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+           <div class="card-title">Quality Recently Viewed</div> 
+           <div class="card-id">Coupon ID: centralmall</div>
+        </div>
+      </a>
+
+      <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+        <div class="card-title">Quality Recently Viewed</div>
+        <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/4.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+           <div class="card-title">Quality Recently Viewed</div> 
+           <div class="card-id">Coupon ID: centralmall</div>
+        </div>
+      </a>
+
+      <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/111.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+        <div class="card-title">Quality Recently Viewed</div>
+        <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/01.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+           <div class="card-title">Quality Recently Viewed</div> 
+           <div class="card-id">Coupon ID: centralmall</div>
+        </div>
+      </a>
+
+      <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j3.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+        <div class="card-title">Quality Recently Viewed</div>
+        <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/03.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+           <div class="card-title">Quality Recently Viewed</div> 
+           <div class="card-id">Coupon ID: centralmall</div>
+        </div>
+        </a>
+
+      <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+        <div class="card-title">Quality Recently Viewed</div>
+        <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/02.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+           <div class="card-title">Quality Recently Viewed</div> 
+           <div class="card-id">Coupon ID: centralmall</div>
+        </div>
+      </a>
+    </div>
 
 
    
       <!--PRODUCTS-->
       <section class="new-arrival">
           <div class="arrival-heading">
-              <strong>SUPER SEALS BONANZA</strong>
+              <strong>SUPER SEALS SURPRISE</strong>
+              <div class="down"><i class="fa fa-angle-double-down"></i></div>.
           </div>
           <div class="product-container">
               <div class="product-box" style="box-shadow:0px 5px 10px 0px #aaa;" id="one"data-aos="fade-up">
@@ -22,286 +119,129 @@
                       <img src="https://freepngimg.com/thumb/running%20shoes/15-nike-running-shoes-png-image.png" alt="">
                   </div>
                   <div class="product-details">
-                      <a href="#" class="p-name">BUDGET</a>
-                      <span class="p-price">   GH₵50-200</span>
+                      <a href="#" class="p-name">Click On It</a>
+                      <span class="p-price">   GH₵20</span>
                   </div>
               </div>
   
   
-             
+            </section>
   
   
   <!--first-->
   
   
 
+
+  <section id="recent">
+    <div class="container narrow">
+      <h2 class="section-title"><b>YhaasClothing</b></h2>
+    </div>
+    <div class="container narrow"> 
+      <div class="slider">
+        <a href="#0" class="product-card shadow-1">
+          <div class="card-inner">
+            <div class="card-image"></div>
+            <div class="card-categories">
+                <!--
+              <span class="category red"><span> Sale</span></span>
+              <span class="category blue"><span>Refurbished</span></span>-->
+              <span class="category red"><span>PreOrder</span></span><br><br>
+             <div class="card-title">Get Best Deals, Millions of Unique Item. Shop for Top brands Health & Beauty Products, Optimum Quality. Fast delivery. Wide Range of products. </div>
+            </div>
+            <div class="card-title">Phone Numbers:<br>0264258450<br>0264258450<br>0555733350</div>
+           
+          <div class="card-price">GH₵ 70-120<div class="original-price">GH₵ 210</div></div>
+            <div class="card-id"><h6>Coupon ID: centralmall</h6></div>
+          </div>
+        </a>
+        <a href="#0" class="product-card shadow-1"> <img src="{{url_for('static', filename='images/central mall/men/112.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+            <div class="card-title">Quality Recently Viewed</div>
+            <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/hood.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+               <div class="card-title">Quality Recently Viewed</div> 
+               <div class="card-id">Coupon ID: centralmall</div>
+            </div>
+           
+        </a>
+        <a href="#0" class="product-card shadow-1"> <img src="{{url_for('static', filename='images/central mall/men/1.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+          <div class="card-title">Quality Recently Viewed</div>
+          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/polo.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+             <div class="card-title">Quality Recently Viewed</div> 
+             <div class="card-id">Coupon ID: centralmall</div>
+          </div>
+        </a>
+
+        <a href="#0" class="product-card shadow-1">  <img src="{{url_for('static', filename='images/central mall/men/114.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+          <div class="card-title">Quality Recently Viewed</div>
+          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/track.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+             <div class="card-title">Quality Recently Viewed</div> 
+             <div class="card-id">Coupon ID: centralmall</div>
+          </div>
+        </a>
+        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j7.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+          <div class="card-title">Quality Recently Viewed</div>
+          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/5.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+             <div class="card-title">Quality Recently Viewed</div> 
+             <div class="card-id">Coupon ID: centralmall</div>
+          </div>
+        </a>
+
+        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j6.jpg')}}"style=" height:30vh;width:100%;  object-fit:cover; "  alt="food" />  
+          <div class="card-title">Quality Recently Viewed</div>
+          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/3.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+             <div class="card-title">Quality Recently Viewed</div> 
+             <div class="card-id">Coupon ID: centralmall</div>
+          </div>
+          </a>
+
+        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j1.jpg')}}"style=" height:30vh;width:100%;  object-fit:cover; "  alt="food" />  
+          <div class="card-title">Quality Recently Viewed</div>
+          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+             <div class="card-title">Quality Recently Viewed</div> 
+             <div class="card-id">Coupon ID: centralmall</div>
+          </div>
+        </a>
+
+        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+          <div class="card-title">Quality Recently Viewed</div>
+          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/4.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+             <div class="card-title">Quality Recently Viewed</div> 
+             <div class="card-id">Coupon ID: centralmall</div>
+          </div>
+        </a>
+
+        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/111.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+          <div class="card-title">Quality Recently Viewed</div>
+          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/01.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+             <div class="card-title">Quality Recently Viewed</div> 
+             <div class="card-id">Coupon ID: centralmall</div>
+          </div>
+        </a>
+
+        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j3.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
+          <div class="card-title">Quality Recently Viewed</div>
+          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/03.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+             <div class="card-title">Quality Recently Viewed</div> 
+             <div class="card-id">Coupon ID: centralmall</div>
+          </div>
+          </a>
+
+        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
+          <div class="card-title">Quality Recently Viewed</div>
+          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/02.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
+             <div class="card-title">Quality Recently Viewed</div> 
+             <div class="card-id">Coupon ID: centralmall</div></a>
+          </div>
+        </a>
+      </div>
+
+
+
+
+
+
+
+
   
-  <section id="recent">
-    <div class="container narrow">
-      <h2 class="section-title"><b>Yhaa'sClothing</b></h2>
-    </div>
-    <div class="container narrow"> 
-      <div class="slider">
-        <a href="#0" class="product-card shadow-1">
-          <div class="card-inner">
-            <div class="card-image"></div>
-            <div class="card-categories">
-                <!--
-              <span class="category red"><span> Sale</span></span>
-              <span class="category blue"><span>Refurbished</span></span>-->
-              <span class="category green"><span>Sale</span></span><br><br><br><br>
-             <div class="card-title">Phone Numbers<br>0264258450<br>0264258450<br>0555733350</div>
-             
-             
-           
-            </div>
-            <div class="card-title">Price Range</div>
-          <div class="card-price">GH₵ 70-120<div class="original-price">GH₵ 210</div></div>
-            <div class="card-id"><h6>Coupon ID: centralmall</h6></div>
-          </div>
-        </a>
-        <a href="#0" class="product-card shadow-1"> <img src="{{url_for('static', filename='images/central mall/men/112.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-            <div class="card-title">Quality Recently Viewed</div>
-            <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/hood.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-               <div class="card-title">Quality Recently Viewed</div> 
-               <div class="card-id">Coupon ID: centralmall</div>
-            </div>
-           
-        </a>
-        <a href="#0" class="product-card shadow-1"> <img src="{{url_for('static', filename='images/central mall/men/1.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/polo.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-
-        <a href="#0" class="product-card shadow-1">  <img src="{{url_for('static', filename='images/central mall/men/114.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/track.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j7.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/5.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j6.jpg')}}"style=" height:30vh;width:100%;  object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/3.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-          </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j1.jpg')}}"style=" height:30vh;width:100%;  object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/4.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/111.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/01.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j3.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/03.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-          </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/02.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-      </div>
-
-
-
-
-<!--mediaone-->
-<section id="category-cards">
-  <div class="container narrow">
-    <div id="section-header">
-      <h2 class="section-title"><b>Super Sale</b></h2>
-      <a href="#0">Pre Order +</a>
-    </div>
-  </div>
-  <div class="container narrow">
-    <div class="slider">
-      <a href="#0" class="category-card shadow-1">
-        <div class="card-inner">
-          <div class="card-image"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu1.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
-              <div class="card-title">Wig Stand - GH₵10</div>
-              <div class="original-price">GH₵ 15</div></div>
-        </div>
-      </a>
-      
-      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu10.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
-          <div class="card-title">Bag set - GH₵70</div>
-          <div class="original-price">GH₵ 85</div></a>
-      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu2.jpg')}}"style=" height:30vh; width:100%;  object-fit:cover; "  alt="food" /> 
-          <div class="card-title">Two Piece - GH₵150</div>
-          <div class="original-price">GH₵ 165</div>
-      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu3.jpg')}}"style=" height:30vh; width:100%;  object-fit:cover; "  alt="food" /> 
-          <div class="card-title">Yakki straight - GH₵650</div>
-          <div class="original-price">GH₵ 700</div>
-      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu4.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
-          <div class="card-title">Ladies Bag - GH₵65</div>
-          <div class="original-price">GH₵ 74</div>
-      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu5.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
-          <div class="card-title">Short Bodycon - GH₵90</div>
-       <div class="original-price">GH₵ 100</div>
-      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu6.jpg')}}"style=" height:30vh; width:100%;  object-fit:cover; "  alt="food" /> 
-          <div class="card-title">EGO Heel - GH₵150</div>
-          <div class="original-price">GH₵ 160</div>
-      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu7.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
-          <div class="card-title">Lacoste(Men) - GH₵60</div>
-          <div class="original-price">GH₵ 70</div>
-      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu8.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
-          <div class="card-title">Lacoste(Men) - GH₵60</div>
-          <div class="original-price">GH₵ 70</div>
-      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu9.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
-          <div class="card-title">Lacoste(Men) - GH₵60</div>
-          <div class="original-price">GH₵ 70</div>
-     
-      </div>
-  </div>
-</section>
-<!--endofmedia-->
-
-
-
-
-  <section id="recent">
-    <div class="container narrow">
-      <h2 class="section-title"><b>Yhaa'sClothing</b></h2>
-    </div>
-    <div class="container narrow"> 
-      <div class="slider">
-        <a href="#0" class="product-card shadow-1">
-          <div class="card-inner">
-            <div class="card-image"></div>
-            <div class="card-categories">
-                <!--
-              <span class="category red"><span> Sale</span></span>
-              <span class="category blue"><span>Refurbished</span></span>-->
-              <span class="category red"><span>PreOrder</span></span><br><br><br><br>
-             <div class="card-title">Phone Numbers<br>0264258450<br>0264258450<br>0555733350</div>
-            </div>
-            <div class="card-title">Price Range</div>
-          <div class="card-price">GH₵ 70-120<div class="original-price">GH₵ 210</div></div>
-            <div class="card-id"><h6>Coupon ID: centralmall</h6></div>
-          </div>
-        </a>
-        <a href="#0" class="product-card shadow-1"> <img src="{{url_for('static', filename='images/central mall/men/112.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-            <div class="card-title">Quality Recently Viewed</div>
-            <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/hood.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-               <div class="card-title">Quality Recently Viewed</div> 
-               <div class="card-id">Coupon ID: centralmall</div>
-            </div>
-           
-        </a>
-        <a href="#0" class="product-card shadow-1"> <img src="{{url_for('static', filename='images/central mall/men/1.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/polo.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-
-        <a href="#0" class="product-card shadow-1">  <img src="{{url_for('static', filename='images/central mall/men/114.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/track.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j7.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/5.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j6.jpg')}}"style=" height:30vh;width:100%;  object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/3.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-          </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j1.jpg')}}"style=" height:30vh;width:100%;  object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/4.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/111.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/01.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/j3.jpg')}}"style=" height:30vh; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/03.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-          </a>
-
-        <a href="#0" class="product-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/2.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
-          <div class="card-title">Quality Recently Viewed</div>
-          <div class="product-card shadow" style="height:30vh;"><img src="{{url_for('static', filename='images/central mall/men/02.jpeg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />   
-             <div class="card-title">Quality Recently Viewed</div> 
-             <div class="card-id">Coupon ID: centralmall</div>
-          </div>
-        </a>
-      </div>
-
-
-
-      <div class="center-div text-center"id="this"data-aos="zoom-in">
-        <a href="/shop">Load More &rarr;</a>
-    </div>
-  </section>   
 {%endblock body%}
+
