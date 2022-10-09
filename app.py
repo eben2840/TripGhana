@@ -62,6 +62,12 @@ def product():
         return render_template('product.html')
     return render_template('product.html')
 
+@app.route('/contact1',methods=['GET','POST'])
+def contact1():
+    if request.method=='POST':
+        return render_template('contact1.html')
+    return render_template('contact1.html')
+
 @app.route('/about')
 def about():
     if request.method=='POST':

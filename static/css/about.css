@@ -2237,3 +2237,311 @@ h3 {
   visibility: visible;
   transition-delay: 0.4s;
 }
+
+-------------------
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.nav-fostrap {
+	display: flex;
+	align-items: center;
+
+}
+
+.nav-fostrap li:hover a {
+	background: #fff;
+}
+
+.title-mobile {
+	display: none;
+}
+
+.navbar-fostrap{
+	display: none;
+}
+
+@media only screen and (max-width:900px) {
+	.container{
+		width: 100%;
+	}
+
+	.nav-fostrap {
+		background: #fff;
+		width: 200px;
+		height: 100%;
+		display: block;
+		position: fixed;
+		left: -200px;
+		top: 60px;
+		margin: 0;
+		border: 0;
+		border-radius: 0;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	.title-mobile {
+		position: fixed;
+		display: block;
+		top: 10px;
+		font-size: 20px;
+		left: 100px;
+		right: 100px;
+		text-align: center;
+		color: #FFF;
+	}
+	.nav-fostrap.visible {
+		left: 0;
+		transition: left 0.25s ease;
+	}
+
+	.nav-bg-fostrap {
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+		height: 50px;
+		margin: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #03A9F4;
+		padding: 12px 0 0 10px;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	}
+
+	.navbar-fostrap {
+		display: inline-block;
+		vertical-align: middle;
+		height: 50px;
+		cursor: pointer;
+		margin: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 12px;
+	}
+
+	.nav-fostrap ul {
+		flex-direction: column;
+	}
+
+	.nav-fostrap li:hover a {
+		background: #03A9F4;
+		color: #fff !important;
+	}
+
+	.cover-bg {
+		background: rgba(0,0,0,0.5);
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+.fixed-top {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+
+.o-5{
+	opacity: .5;
+}
+
+.card-layer{
+	margin: 70px auto 0;
+	display: flex;
+	width: 1000px;
+}
+
+.card-price{
+	width: 300px;
+	background: url('https://pp.userapi.com/c851524/v851524846/3f7b8/mj2Hk3aTnL4.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #fff;
+	padding: 60px 40px;
+
+	{
+		width: calc(100% - 20px);
+	}
+
+	hr{
+		border: 0.5px solid #44416d;
+		width: 170px;
+		margin-left: 0;
+	}
+
+	.card-mid > *{
+		margin-bottom: 40px;
+	}
+
+	.card-title{
+		font-size: 34px;
+		margin-bottom: 40px;
+		font-weight: 600;
+	}
+
+	.title{
+		font-size: 12px;
+	}
+
+	.number{
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	.summa{
+		font-size: 35px;
+		font-weight: 600;
+	}
+
+	.card-footer{
+		font-size: 10px;
+		color: #a399b1;
+		margin-left: 15px;
+		width: calc(100% - 67px);
+	}
+
+	ul{
+		margin: 0;
+		padding: 0;
+
+	
+	}
+}
+
+.card-pay{
+	width: 350px;
+	background-color: #161b21;
+	padding: 40px;
+	margin: 40px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	title{
+		font-size: 14px;
+		color: #fff;
+		opacity: .5;
+		margin-bottom: 15px;
+	}
+  
+  .check{
+    background: #eb6532;
+  }
+
+	.box-pay-method{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.btn-plus{
+		padding: 5px 10px;
+		background: transparent;
+		border: none;
+		color: #fff;
+		font-size: 30px;
+		cursor: pointer;
+		transition: all .2s ease-in-out;
+
+		&:focus{
+			outline: none;
+		}
+
+		&:hover{
+			color: #eb6532;
+		}
+	}
+
+	.btn-pay{
+		padding: 10px 20px;
+		background: linear-gradient(to right, rgba(113,102,238,1) 0%, rgba(70,62,111,1) 100%);
+		color: #fff;
+		border: none;
+		text-transform: uppercase;
+		border-radius: 5px;
+		font-weight: 600;
+		transition: all .2s ease-in-out;
+
+		&:focus{
+			outline: none;
+		}
+
+		&:hover{
+			opacity: .7;
+		}
+	}
+
+	.card-mid{
+		display: flex;
+		flex-direction: column;
+		width: calc(100% - 60px);
+
+		.title{
+			margin-bottom: 0;
+		}
+
+		> * +*{
+			margin-top: 15px;
+		}
+
+		input{
+			background-color: #212a33;
+			border: 1px solid transparent;
+			border-radius: 5px;
+			padding: 10px 15px;
+			color: #fff;
+
+			&:focus, &:hover{
+				outline: none;
+				border: 1px solid #3d444c;
+			}
+		}
+	}
+
+	.card-footer{
+		font-size: 10px;
+		display: flex;
+
+		> a + a{
+			margin-left: 20px;
+		}
+
+		> a{
+			color: #fff;
+			text-transform: uppercase;
+			opacity: .5;
+			cursor: pointer;
+
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.btn-method{
+  padding: 7px 20px;
+  background: #242831;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all .2s ease-in-out;
+
+  &:focus{
+    outline: none;
+  }
+
+  &:hover{
+    background: #eb6532;
+  }
+}

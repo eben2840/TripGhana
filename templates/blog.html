@@ -1,273 +1,427 @@
+
+
+
 <!DOCTYPE html>
-<html dir="ltr" lang="en" locale="en_us" class="glue-flexbox google">
-  <head>
+<html>
+<head>
+    <title>Central Mall</title>
     <meta charset="utf-8">
-    <script>
-    (function(H){H.className=H.className.replace(/\bgoogle\b/,'google-js')})(document.documentElement);(function(){var a=document.documentElement,b=document.documentElement.style,c=void 0;c=c||b;for(var d='flexWrap WebkitFlexWrap MozFlexWrap OFlexWrap msFlexWrap boxDirection WebkitBoxDirection MozBoxDirection OBoxDirection msBoxDirection'.split(' ').slice(0);0<d.length&&!(d.shift()in c););0<d.length||(a.className=a.className.replace(/\bglue-flexbox\b/,'no-glue-flexbox'))})()
-    </script>
-    <title>
-      Google Ads - Get More Customers With Easy Online Advertising
-    </title>
-    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
-    <meta http-equiv="X-UA-Compatible" content="IE=11">
-    <meta name="description" content="Get more customers on the phone, on your site, and in the door. Online ads on Google can help you reach the right customers and grow your business.">
-    <meta property="og:image" content="https://lh3.googleusercontent.com/nupo3HWMIUeuul9r2IBSfpBo568bL-STG9nA71dUuW97DnhAXFgm2WWjczhTFqRHQZRf5VA-_PmxIZaIAXhOUrzfr5unPjFuW9za=w0">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="1200">
-    <script type="application/ld+json">
-    {"@context": "http://schema.org", "@type": "Organization", "brand": {"@type": "Thing", "name": "Google Ads"}, "description": "Get more customers on the phone, on your site, and in the door. Online ads on Google can help you reach the right customers and grow your business.", "logo": "https://www.google.com/images/branding/product/2x/ads_24dp.png", "name": "Google Ads - Get More Customers With Easy Online Advertising", "sameAs": ["https://twitter.com/googleads/", "https://blog.google/products/ads/", "https://www.youtube.com/user/learnwithgoogle/"], "telephone": "1-844-245-2553", "url": "https://ads.google.com/home/index.html"}
-    </script>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
-    <link href="//www.google.com/images/branding/product/1x/ads_24dp.png" rel="shortcut icon" type="image/png">
-    <link rel="canonical" href="https://ads.google.com/home/">
-    <link rel="stylesheet" href="/home/static/home/css/index.min.css?cache=84f5997">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700|Google+Sans:400,500|Product+Sans:400&amp;lang=">
-    <style>
-    .h-c-phone-card-module {background-image: url(https://lh3.googleusercontent.com/cDtEClAJWxCLEgfSEoFg7_NlHY9Hcu7J3CR5bfa23Mkx3PpBf3wA3wVeiqpL4X-6LdCq5dPAF5P8HmD4uB4a7xUocWRlzH_iZlUax-k=w0);}
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {.h-c-phone-card-module {background-image: url(https://lh3.googleusercontent.com/Tjesc4dP5CrRMyCKwtVk_ckM-TFv976jtlli-B765IdITt6AcLPoRzo6p32g2y8eUE57bM4U1L4kDM9MpRrgq9UXtBI_SIsFurC-=w0);}}@media screen and (min-width: 300px) {.h-c-phone-card-module {background-image: url(https://lh3.googleusercontent.com/cDtEClAJWxCLEgfSEoFg7_NlHY9Hcu7J3CR5bfa23Mkx3PpBf3wA3wVeiqpL4X-6LdCq5dPAF5P8HmD4uB4a7xUocWRlzH_iZlUax-k=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 300px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 300px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 300px), only screen and (min-device-pixel-ratio: 2) and (min-width: 300px), only screen and (min-resolution: 192dpi) and (min-width: 300px), only screen and (min-resolution: 2dppx) and (min-width: 300px) {.h-c-phone-card-module {background-image: url(https://lh3.googleusercontent.com/Tjesc4dP5CrRMyCKwtVk_ckM-TFv976jtlli-B765IdITt6AcLPoRzo6p32g2y8eUE57bM4U1L4kDM9MpRrgq9UXtBI_SIsFurC-=w0);}}@media screen and (min-width: 321px) {.h-c-phone-card-module {background-image: url(https://lh3.googleusercontent.com/Tjesc4dP5CrRMyCKwtVk_ckM-TFv976jtlli-B765IdITt6AcLPoRzo6p32g2y8eUE57bM4U1L4kDM9MpRrgq9UXtBI_SIsFurC-=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 321px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 321px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 321px), only screen and (min-device-pixel-ratio: 2) and (min-width: 321px), only screen and (min-resolution: 192dpi) and (min-width: 321px), only screen and (min-resolution: 2dppx) and (min-width: 321px) {.h-c-phone-card-module {background-image: url(https://lh3.googleusercontent.com/Tjesc4dP5CrRMyCKwtVk_ckM-TFv976jtlli-B765IdITt6AcLPoRzo6p32g2y8eUE57bM4U1L4kDM9MpRrgq9UXtBI_SIsFurC-=w0);}}
-    </style>
-    <style>
-    .hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/XyaWiIe7szdvoKgaLioBDKHVkkrluVyDihYMoGcLiybkUTXUINtmjVtqq60olazOH5RfQgvKiqn78XYNxPO9-SsQ_cfC-jZR0wF8BdM=w0);}
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/XyaWiIe7szdvoKgaLioBDKHVkkrluVyDihYMoGcLiybkUTXUINtmjVtqq60olazOH5RfQgvKiqn78XYNxPO9-SsQ_cfC-jZR0wF8BdM=w0);}}@media screen and (min-width: 300px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/XyaWiIe7szdvoKgaLioBDKHVkkrluVyDihYMoGcLiybkUTXUINtmjVtqq60olazOH5RfQgvKiqn78XYNxPO9-SsQ_cfC-jZR0wF8BdM=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 300px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 300px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 300px), only screen and (min-device-pixel-ratio: 2) and (min-width: 300px), only screen and (min-resolution: 192dpi) and (min-width: 300px), only screen and (min-resolution: 2dppx) and (min-width: 300px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/XyaWiIe7szdvoKgaLioBDKHVkkrluVyDihYMoGcLiybkUTXUINtmjVtqq60olazOH5RfQgvKiqn78XYNxPO9-SsQ_cfC-jZR0wF8BdM=w0);}}@media screen and (min-width: 401px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/XyaWiIe7szdvoKgaLioBDKHVkkrluVyDihYMoGcLiybkUTXUINtmjVtqq60olazOH5RfQgvKiqn78XYNxPO9-SsQ_cfC-jZR0wF8BdM=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 401px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 401px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 401px), only screen and (min-device-pixel-ratio: 2) and (min-width: 401px), only screen and (min-resolution: 192dpi) and (min-width: 401px), only screen and (min-resolution: 2dppx) and (min-width: 401px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/5dWG_86iwanqazJdryShNdm_x_QF1cb6dBa3PoIEW12mI6zRwAh8wpLMPi28rciGLS6NwBkE-AmciN5JpIvrhavEyhDTyyifADe2gw=w0);}}@media screen and (min-width: 551px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/XyaWiIe7szdvoKgaLioBDKHVkkrluVyDihYMoGcLiybkUTXUINtmjVtqq60olazOH5RfQgvKiqn78XYNxPO9-SsQ_cfC-jZR0wF8BdM=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 551px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 551px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 551px), only screen and (min-device-pixel-ratio: 2) and (min-width: 551px), only screen and (min-resolution: 192dpi) and (min-width: 551px), only screen and (min-resolution: 2dppx) and (min-width: 551px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/PoHlo2hze5OWXuQHMtTCu_dLcdTPSr2xsRWWVA--sIGPieM93yZ4YsIROE1nXtJMf0YUJ0kAbtfiN83cY05fl2xPebf19KouZGri=w0);}}@media screen and (min-width: 721px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/XyaWiIe7szdvoKgaLioBDKHVkkrluVyDihYMoGcLiybkUTXUINtmjVtqq60olazOH5RfQgvKiqn78XYNxPO9-SsQ_cfC-jZR0wF8BdM=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 721px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 721px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 721px), only screen and (min-device-pixel-ratio: 2) and (min-width: 721px), only screen and (min-resolution: 192dpi) and (min-width: 721px), only screen and (min-resolution: 2dppx) and (min-width: 721px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/A-CoOFDzzujzcPxbQKC0rDZxOUgsURZI0kYQh2VAeGaFOXjJX9__M8XJ-CRt5DJuQwkdaZQhRCaVGm-I45MZRN_bgcjLNmfVSvyJ=w0);}}@media screen and (min-width: 801px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/5dWG_86iwanqazJdryShNdm_x_QF1cb6dBa3PoIEW12mI6zRwAh8wpLMPi28rciGLS6NwBkE-AmciN5JpIvrhavEyhDTyyifADe2gw=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 801px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 801px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 801px), only screen and (min-device-pixel-ratio: 2) and (min-width: 801px), only screen and (min-resolution: 192dpi) and (min-width: 801px), only screen and (min-resolution: 2dppx) and (min-width: 801px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/A-CoOFDzzujzcPxbQKC0rDZxOUgsURZI0kYQh2VAeGaFOXjJX9__M8XJ-CRt5DJuQwkdaZQhRCaVGm-I45MZRN_bgcjLNmfVSvyJ=w0);}}@media screen and (min-width: 1001px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/5dWG_86iwanqazJdryShNdm_x_QF1cb6dBa3PoIEW12mI6zRwAh8wpLMPi28rciGLS6NwBkE-AmciN5JpIvrhavEyhDTyyifADe2gw=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1001px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1001px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1001px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1001px), only screen and (min-resolution: 192dpi) and (min-width: 1001px), only screen and (min-resolution: 2dppx) and (min-width: 1001px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/8QN_1tYrZu9KsYiYS6bhzAp7VAHIk1ZVJUJpp8YGBn1QnHj01N7cvcuej5UBIkZhVwKM0maS0M-acSe0MUFXU73NpeeezwbMiTqa=w0);}}@media screen and (min-width: 1101px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/PoHlo2hze5OWXuQHMtTCu_dLcdTPSr2xsRWWVA--sIGPieM93yZ4YsIROE1nXtJMf0YUJ0kAbtfiN83cY05fl2xPebf19KouZGri=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1101px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1101px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1101px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1101px), only screen and (min-resolution: 192dpi) and (min-width: 1101px), only screen and (min-resolution: 2dppx) and (min-width: 1101px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/8QN_1tYrZu9KsYiYS6bhzAp7VAHIk1ZVJUJpp8YGBn1QnHj01N7cvcuej5UBIkZhVwKM0maS0M-acSe0MUFXU73NpeeezwbMiTqa=w0);}}@media screen and (min-width: 1441px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/A-CoOFDzzujzcPxbQKC0rDZxOUgsURZI0kYQh2VAeGaFOXjJX9__M8XJ-CRt5DJuQwkdaZQhRCaVGm-I45MZRN_bgcjLNmfVSvyJ=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1441px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1441px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1441px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1441px), only screen and (min-resolution: 192dpi) and (min-width: 1441px), only screen and (min-resolution: 2dppx) and (min-width: 1441px) {.hero-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/8QN_1tYrZu9KsYiYS6bhzAp7VAHIk1ZVJUJpp8YGBn1QnHj01N7cvcuej5UBIkZhVwKM0maS0M-acSe0MUFXU73NpeeezwbMiTqa=w0);}}
-    </style>
-    <style>
-    .success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/GxRo8qWhs2fljnFDeR2mlnHH5oDF4XDh-QiINRl-KjoYNkXvM4YQASvrdGedRz2ISN7322FTxgtroMKQTRgPhM3qviVihfRdIdZCzB8=w0);}
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/GxRo8qWhs2fljnFDeR2mlnHH5oDF4XDh-QiINRl-KjoYNkXvM4YQASvrdGedRz2ISN7322FTxgtroMKQTRgPhM3qviVihfRdIdZCzB8=w0);}}@media screen and (min-width: 300px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/GxRo8qWhs2fljnFDeR2mlnHH5oDF4XDh-QiINRl-KjoYNkXvM4YQASvrdGedRz2ISN7322FTxgtroMKQTRgPhM3qviVihfRdIdZCzB8=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 300px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 300px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 300px), only screen and (min-device-pixel-ratio: 2) and (min-width: 300px), only screen and (min-resolution: 192dpi) and (min-width: 300px), only screen and (min-resolution: 2dppx) and (min-width: 300px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/GxRo8qWhs2fljnFDeR2mlnHH5oDF4XDh-QiINRl-KjoYNkXvM4YQASvrdGedRz2ISN7322FTxgtroMKQTRgPhM3qviVihfRdIdZCzB8=w0);}}@media screen and (min-width: 361px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/GxRo8qWhs2fljnFDeR2mlnHH5oDF4XDh-QiINRl-KjoYNkXvM4YQASvrdGedRz2ISN7322FTxgtroMKQTRgPhM3qviVihfRdIdZCzB8=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 361px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 361px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 361px), only screen and (min-device-pixel-ratio: 2) and (min-width: 361px), only screen and (min-resolution: 192dpi) and (min-width: 361px), only screen and (min-resolution: 2dppx) and (min-width: 361px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/1RqQ8XphFVxld8bJhV98H1TVbvAcKMb5oBu0eju6_xN45znAgGIW27MMQVeDb24sGbRQ--kQwOkXzv7cSWQXT1mF6ABq7E4uC9yu8A=w0);}}@media screen and (min-width: 515px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/GxRo8qWhs2fljnFDeR2mlnHH5oDF4XDh-QiINRl-KjoYNkXvM4YQASvrdGedRz2ISN7322FTxgtroMKQTRgPhM3qviVihfRdIdZCzB8=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 515px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 515px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 515px), only screen and (min-device-pixel-ratio: 2) and (min-width: 515px), only screen and (min-resolution: 192dpi) and (min-width: 515px), only screen and (min-resolution: 2dppx) and (min-width: 515px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/7ktQpM0C8AM7n5ckzKk-LDK9hwt6m5rlsasNWnVvpc0BKKyetOjbvBfE1oXQeGIaFzXGm3frxIFn4ryZ56PZ3Zmn6msXaXWwVp5xGQ=w0);}}@media screen and (min-width: 721px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/1RqQ8XphFVxld8bJhV98H1TVbvAcKMb5oBu0eju6_xN45znAgGIW27MMQVeDb24sGbRQ--kQwOkXzv7cSWQXT1mF6ABq7E4uC9yu8A=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 721px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 721px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 721px), only screen and (min-device-pixel-ratio: 2) and (min-width: 721px), only screen and (min-resolution: 192dpi) and (min-width: 721px), only screen and (min-resolution: 2dppx) and (min-width: 721px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/R_C-V7trnCQgTWnKWSX70zGwXwdXww_PFkrvtgCnRQk0wkvCRpu_K4SqfqFaX5EfyHnICC2kVMOsNzDLPcUn1-CS-c-z6eRthSPdYQ=w0);}}@media screen and (min-width: 1029px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/7ktQpM0C8AM7n5ckzKk-LDK9hwt6m5rlsasNWnVvpc0BKKyetOjbvBfE1oXQeGIaFzXGm3frxIFn4ryZ56PZ3Zmn6msXaXWwVp5xGQ=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1029px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1029px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1029px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1029px), only screen and (min-resolution: 192dpi) and (min-width: 1029px), only screen and (min-resolution: 2dppx) and (min-width: 1029px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/R_C-V7trnCQgTWnKWSX70zGwXwdXww_PFkrvtgCnRQk0wkvCRpu_K4SqfqFaX5EfyHnICC2kVMOsNzDLPcUn1-CS-c-z6eRthSPdYQ=w0);}}@media screen and (min-width: 1441px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/R_C-V7trnCQgTWnKWSX70zGwXwdXww_PFkrvtgCnRQk0wkvCRpu_K4SqfqFaX5EfyHnICC2kVMOsNzDLPcUn1-CS-c-z6eRthSPdYQ=w0);}}
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1441px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1441px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1441px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1441px), only screen and (min-resolution: 192dpi) and (min-width: 1441px), only screen and (min-resolution: 2dppx) and (min-width: 1441px) {.success-story-bgd41d8cd98f00b204e9800998ecf8427e {background-image: url(https://lh3.googleusercontent.com/R_C-V7trnCQgTWnKWSX70zGwXwdXww_PFkrvtgCnRQk0wkvCRpu_K4SqfqFaX5EfyHnICC2kVMOsNzDLPcUn1-CS-c-z6eRthSPdYQ=w0);}}
-    </style>
-  </head>
-  <body gtmid="GTM-N7926KD" class="home">
-    <a aria-hidden="true" name="PageTop" id="PageTop"></a>
-    <div class="glue-header h-c-header h-c-header--product-marketing-one-tier" glue-header-vertical-scroll-threshold="500" glue-header-throttle-timeout="0" gads-multi-tier="" ng-cloak="">
-      <div class="h-c-header__bar">
-        <div class="h-c-header__hamburger h-c-header__hamburger--first-tier">
-          <div class="h-c-header__hamburger-wrapper">
-            <button type="button" class="h-js-header__drawer-toggle-link h-c-header__hamburger-link" aria-controls="h-js-header__drawer" aria-expanded="false" aria-label="Open the navigation drawer"><svg role="img" aria-label="Navigation" class="h-c-header__hamburger-img h-c-header__hamburger-img--standard">
-            <use xlink:href="#h-burger"></use></svg> <svg role="img" aria-label="Navigation" class="h-c-header__hamburger-img h-c-header__hamburger-img--reversed">
-            <use xlink:href="#h-burger"></use></svg></button>
-          </div>
-        </div>
-        <div class="h-c-header__lockup">
-          <div class="h-c-header__company-logo">
-            <a href="../home/" class="h-c-header__company-logo-link" title="Google"><svg role="img" aria-label="Google" class="h-c-header__company-logo-img h-c-header__company-logo-img--standard">
-            <use xlink:href="#h-color-google-logo"></use></svg> <svg role="img" aria-label="Google" class="h-c-header__company-logo-img h-c-header__company-logo-img--reversed">
-            <use xlink:href="#h-white-google-logo"></use></svg></a>
-          </div>
-          <div class="h-c-header__product-logo">
-            <a href="../home/" class="h-c-header__product-logo-link"><span class="h-c-header__product-logo-text">Ads</span></a>
-          </div><a href="#jump-content" class="h-c-header__jump-to-content" data-glue-jump-link=""><span class="h-c-header__jump-to-content-text">Skip to content</span></a>
-        </div>
-        <div class="h-c-header__hamburger h-c-header__hamburger--second-tier">
-          <div class="h-c-header__hamburger-wrapper">
-            <button type="button" class="h-js-header__hamburger-link h-c-header__hamburger-link" aria-controls="h-js-header__drawer" aria-expanded="false" aria-label="Open the navigation drawer"><svg aria-label="Navigation" class="h-c-header__hamburger-img h-c-header__hamburger-img--standard">
-            <use xlink:href="#h-burger"></use></svg> <svg aria-label="Navigation" class="h-c-header__hamburger-img h-c-header__hamburger-img--immersive">
-            <use xlink:href="#h-burger"></use></svg></button>
-          </div>
-        </div>
-        <nav class="h-c-header__nav" style="opacity: 0">
-          <ul class="h-c-header__nav-list">
-            <li class="h-c-header__nav-li" aria-level="1">
-              <span class="h-c-header__nav-li-link h-is-active">Overview</span>
-            </li>
-            <li class="h-c-header__nav-li" aria-level="1">
-              <a href="../home/how-it-works/" class="h-c-header__nav-li-link">How it works</a>
-            </li>
-            <li class="h-c-header__nav-li" aria-level="1">
-              <a href="../home/pricing/" class="h-c-header__nav-li-link">Cost</a>
-            </li>
-            <li class="h-c-header__nav-li" aria-level="1">
-              <a href="../home/faq/" class="h-c-header__nav-li-link">FAQ</a>
-            </li>
-            <li class="h-c-header__nav-li" aria-level="1">
-              <a href="../home/resources/advanced/" class="h-c-header__nav-li-link">Advanced resources</a>
-            </li>
-            <li class="h-c-header__nav-li" aria-level="1">
-              <a href="../home/contact-us/" class="h-c-header__nav-li-link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="h-c-header__cta">
-          <ul class="h-c-header__cta-list">
-            <li class="h-c-header__cta-li h-c-header__cta-li--secondary h-c-header__cta-li--secondary--nomargin h-c-header__cta-li--secondary--has-hover-text">
-              <a href="tel:18442452553" rel="nofollow" class="h-c-header__cta-li-link h-c-link h-c-header__cta-li-link--secondary"><svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--link">
-              <use xlink:href="#call"></use></svg> <span>1-844-245-2553*</span></a> <span class="h-c-header__rollover" rollover-text="">Call for sign up help Mon-Fri, 9am-9pm ET</span>
-            </li>
-            <li class="h-c-header__cta-li h-c-header__cta-li--secondary">
-              <a href="https://ads.google.com/um/signin?subid=us-en-et-g-aw-a-home-awhp_xin1_signin!o2" rel="nofollow" class="h-c-header__cta-li-link h-c-link h-c-header__cta-li-link--secondary"><span>Sign in</span></a>
-            </li>
-            <li class="h-c-header__cta-li h-c-header__cta-li--primary">
-              <a href="https://ads.google.com/um/StartNow?subid=us-en-et-g-aw-a-home-awhp_xin1_top!o2" rel="nofollow" class="h-c-header__cta-li-link h-c-header__cta-li-link--primary">Start now</a>
-            </li>
-          </ul>
-        </div>
-        <div class="h-c-header__bar-underside"></div>
-      </div>
-      <div id="h-js-header__drawer" class="h-c-header__drawer" aria-label="Navigation drawer" tabindex="0">
-        <div class="h-c-header__drawer-content">
-          <div class="h-c-header__drawer-bar">
-            <div class="h-c-header__drawer-lockup">
-              <div class="h-c-header__drawer-company-logo">
-                <div class="h-c-header__drawer-company-logo-link" title="Google">
-                  <svg aria-label="Google" class="h-c-header__drawer-company-logo-img">
-                  <use xlink:href="#h-color-google-logo"></use></svg>
+    </head>
+
+
+
+
+  <body style="opacity: 1;" class="body">
+  <header class="wf-section">
+    <div class="nav-roc__wrapper">
+      <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" data-doc-height="1" role="banner" class="nav-roc w-nav" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+        <div class="container-wide">
+          <div class="navbar-inside"><a href="/" aria-current="page" class="brand w-nav-brand w--current" aria-label="home"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60450aa237463b28cc0054af_willful-wordmark-blue.svg" loading="lazy" width="160" height="46" alt="Willful logo" class="brand__image"></a>
+            <nav role="navigation" class="nav-menu w-nav-menu"><a href="/pricing" class="nav-link w-nav-link"><strong class="bold-text-7">Pricing</strong></a><a href="/team" class="nav-link w-nav-link"><strong>Team</strong></a>
+              <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown" aria-haspopup="true">
+                <div data-w-id="2d811275-8002-cdf2-4b2f-238168d70d1f" class="nav-dropdown__trigger w-dropdown-toggle" id="w-dropdown-toggle-0" aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                  <div class="nav-dropdown__trigger-text">Resources</div>
+                  <div class="nav-dropdown__trigger-icon" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5f01f8ae549ac25bf6f2bf4e_down-arrow-light-blue-20x20.svg" width="20" height="20" loading="lazy" alt="" class="nav-dropdown-trigger-icon-image"></div>
                 </div>
+                <nav class="nav-dropdown__list w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0"><a href="/learn" class="nav-dropdown__list-link w-dropdown-link" tabindex="0" style="outline: initial;">Learn centre</a><a href="/blog" class="nav-dropdown__list-link fr-qc w-dropdown-link" tabindex="0" style="outline: initial;">Blog</a><a href="/support" class="nav-dropdown__list-link w-dropdown-link" tabindex="0" style="outline: initial;">Support</a></nav>
               </div>
-              <div class="h-c-header__drawer-product-logo">
-                <div class="h-c-header__drawer-product-logo-link">
-                  <span class="h-c-header__drawer-product-logo-text">Ads</span>
-                </div>
+              <div class="nav-link-divider"></div><a href="https://app.willful.co/login" class="nav-link hide-on-mobile app-link w-nav-link"><strong>Log in</strong></a>
+              <div class="nav-button-wrapper"><a href="https://app.willful.co/" class="nav-button app-link w-nav-link"><strong class="bold-text-6">Start for free</strong> <span class="button-arrow-right button-arrow-yellow">→</span></a></div>
+              <div class="button-wrapper mobile-nav"><a href="https://app.willful.co/login" class="button-secondary mobile-nav app-link w-button">Log in</a></div>
+            </nav>
+            <div class="nav-mobile-only">
+              <div class="button-wrapper align-right"><a data-w-id="2d811275-8002-cdf2-4b2f-238168d70d3b" href="https://app.willful.co" class="button mobile-nav app-link w-button">Get started <span class="button-arrow-right button-arrow-yellow">→</span></a></div>
+              <div class="menu-button-open w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+                <div class="menu-button-text">Menu</div>
+              </div>
+            </div>
+            <div class="header-divider"></div>
+          </div>
+        </div>
+        <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="section section-blue-hero fixed-nav wf-section">
+      <div class="container-wide">
+        <div class="columns-hero w-row">
+          <div class="hero-first-column w-col w-col-6 w-col-medium-6">
+            <h1>Online wills made easy for Canadians</h1>
+            <ul role="list" class="list-checkmarks">
+              <li class="list-item-checkmarks hero">Create your legal will online for as low as $99</li>
+              <li class="list-item-checkmarks hero">It only takes 20 minutes, start to finish</li>
+              <li class="list-item-checkmarks hero">No notary or lawyer required to create your will</li>
+              <li class="list-item-checkmarks hero">Pay once, update your will for free forever</li>
+            </ul>
+            <div class="button-wrapper"><a data-w-id="61e8c323-9054-d47d-f437-4c2a761aecec" href="https://app.willful.co" class="button app-link w-button">Start for free <span class="button-arrow-right button-arrow-yellow">→</span></a></div>
+          </div>
+          <div class="hero-second-column align-bottom w-col w-col-6 w-col-medium-6">
+            <div class="collection-list-wrapper align-bottom w-dyn-list">
+              <div role="list" class="collection-list w-dyn-items">
+                <div role="listitem" class="collection-item-2 align-bottom w-dyn-item"><img width="588" height="580" loading="lazy" alt="A happy family smiling" src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60ae9ba35dd36d13c2210d02_Willful-hero-5.png" class="hero-image"><img width="508" height="500" loading="lazy" alt="A smiling father playing with his son." src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/6077e5a0f6d39b79dfbbeb1b_willful-hero-4-mobile.jpg" class="hero-image-mobile"></div>
               </div>
             </div>
           </div>
-          <nav class="h-c-header__drawer-nav">
-            <ul class="h-c-header__drawer-nav-list">
-              <li class="h-c-header__drawer-nav-li" aria-level="1">
-                <span class="h-c-header__drawer-nav-li-link h-is-active" aria-controls="content" role="link">Overview</span>
-              </li>
-              <li class="h-c-header__drawer-nav-li" aria-level="1">
-                <a href="../home/how-it-works/" class="h-c-header__drawer-nav-li-link">How it works</a>
-              </li>
-              <li class="h-c-header__drawer-nav-li" aria-level="1">
-                <a href="../home/pricing/" class="h-c-header__drawer-nav-li-link">Cost</a>
-              </li>
-              <li class="h-c-header__drawer-nav-li" aria-level="1">
-                <a href="../home/faq/" class="h-c-header__drawer-nav-li-link">FAQ</a>
-              </li>
-              <li class="h-c-header__drawer-nav-li" aria-level="1">
-                <a href="../home/resources/advanced/" class="h-c-header__drawer-nav-li-link">Advanced resources</a>
-              </li>
-              <li class="h-c-header__drawer-nav-li" aria-level="1">
-                <a href="../home/contact-us/" class="h-c-header__drawer-nav-li-link">Contact</a>
-              </li>
-            </ul>
-          </nav>
         </div>
-        <div class="h-c-header__drawer-cta">
-          <ul class="h-c-header__drawer-cta-list">
-            <li class="h-c-header__drawer-cta-li h-c-header__drawer-cta-li--secondary">
-              <a href="https://ads.google.com/um/signin?subid=us-en-et-g-aw-a-home-awhp_xin1_signin!o2" rel="nofollow" class="h-c-header__drawer-cta-li-link h-c-link h-c-header__drawer-cta-li-link--secondary"><span>Sign in</span></a>
-            </li>
-            <li class="h-c-header__drawer-cta-li h-c-header__drawer-cta-li--secondary">
-              <a href="tel:18442452553" rel="nofollow" class="h-c-header__drawer-cta-li-link h-c-link h-c-header__drawer-cta-li-link--secondary"><svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--link">
-              <use xlink:href="#call"></use></svg> <span>1-844-245-2553*</span></a>
-            </li>
-            <li class="h-c-header__drawer-cta-li h-c-header__drawer-cta-li--primary">
-              <a href="https://ads.google.com/um/StartNow?subid=us-en-et-g-aw-a-home-awhp_xin1_top!o2" rel="nofollow" class="h-c-header__drawer-cta-li-link h-c-header__drawer-cta-li-link--primary" glue-smooth-scroll="" ng-click="headerCtrl.closeDrawer();">Start now</a>
-            </li>
+      </div>
+      <div class="band--yellow">
+        <div class="yellow-highlight">Willful has been featured in:</div>
+      </div>
+      <div class="band--grey">
+        <div class="container-wide">
+          <ul role="list" class="logo-list">
+            <li class="logo-item"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5f7a6ce8d1f2cc3621a2da54_CBC%20logo%20(3).png" width="203" height="107" loading="lazy" alt="CBC logo" class="logo-item__image"></li>
+            <li class="logo-item"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea24b3a42802bc9ee52dca6_the-globe-and-mail.png" width="203" height="107" loading="lazy" alt="The Globe and Mail logo" class="logo-item__image"></li>
+            <li class="logo-item"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/61a8f79e1681fe4f145cbbc0_dragons-den.png" width="203" height="107" loading="lazy" alt="" class="logo-item__image"></li>
+            <li class="logo-item"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea24b3ab6a15ec35b5dbfbb_global-news.png" width="203" height="107" loading="lazy" alt="Global News logo" class="logo-item__image"></li>
+            <li class="logo-item"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea24b3ab6a15e5ddd5dbfbc_toronto-star.png" width="203" height="107" loading="lazy" alt="Toronto Star logo" class="logo-item__image"></li>
+            <li class="logo-item"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea24b3a52307637f5f702b8_CP24.png" loading="lazy" width="203" height="107" alt="CP24 logo." class="logo-item__image"></li>
           </ul>
         </div>
       </div>
-      <div id="h-js-header__drawer-backdrop" class="h-c-header__drawer-backdrop"></div>
     </div>
-    <main id="jump-content" class="main-content content">
-      <div id="content"></div>
-      <div class="pinnable-content">
-        <section class="gads--section section--hero section1 pinned-hero-top section--hero section--split-hero" data-gads-animation-router="" data-size-tween-animation-end-element=".h-c-copy--lead" data-size-tween-element=".gads-search-bar__wrapper" data-size-tween-size-target-element=".gads-search-result-v1" data-track-to-placeholder="" data-track-to-placeholder-el=".phone-container" data-track-to-placeholder-wrapper-el=".gads-ad__phone-card__wrapper" data-tween-to-size="">
-          <div class="h-c-page">
-            <div class="h-c-grid">
-              <div class="h-c-grid__col h-c--text-element h-c-grid__col--4 h-c-grid__col-s--6 h-c-grid__col--offset-1 h-c-grid__col-s--offset-0 h-c-grid__col-l--offset-2 h-c-grid__col--align-middle home-hero-mobile">
-                <div class="inner-wrapper">
-                  <h1 class="h-c-headline h-c-headline--one">
-                    <span>Grow your business with Google Ads</span>
-                  </h1>
-                  <p class="h-c-copy--lead">
-                    <span>Get in front of customers when they’re searching for businesses like yours on Google Search and Maps. Only pay for results, like clicks to your website or calls to your business.</span>
-                  </p><a class="h-c-button h-c-button--primary hero-button--margin" href="https://ads.google.com/um/StartNow?subid=us-en-et-g-aw-a-home-awhp_xin1_hero!o2"><span>Start now</span></a>
-                  <p class="call-time">
-                    <span>Call to get set up by&nbsp;a Google Ads specialist</span>
-                  </p><a href="tel:18442452553"><svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--link h-c-icon--call hero-call-icon">
-                  <use xlink:href="#call"></use></svg><span>1-844-245-2553*</span></a>
-                  <p class="eto-hours">
-                    <span>*Mon-Fri, 9am-9pm ET</span>
-                  </p>
+    <div class="section wf-section">
+      <div class="container-wide">
+        <div class="columns-centred w-row">
+          <div class="w-col w-col-6 w-col-medium-6"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60ae9badca92102c84e96358_Willful-dashboard.png" loading="lazy" height="432" sizes="(max-width: 479px) 79vw, (max-width: 767px) 300px, (max-width: 991px) 35vw, (max-width: 1439px) 23vw, 294px" srcset="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60ae9badca92102c84e96358_Willful-dashboard-p-500.png 500w, https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60ae9badca92102c84e96358_Willful-dashboard.png 1000w" alt="Illustration of Willful dashboard on a laptop" class="image-two-column"></div>
+          <div class="w-col w-col-6 w-col-medium-6">
+            <div class="column-right-padding">
+              <h3 class="no-margin-top"><strong class="bold-text-2">Willful guides you through making your legal will online from the comfort of home.</strong></h3>
+              <p>Canada’s favourite do-it-yourself online will platform breaks down the estate planning process into simple steps, so you can create your last will and testament and power of attorney documents in 20 minutes or less. Willful documents are approved by lawyers in your province so you will enjoy peace of mind knowing your estate plan is legally-secure.</p><a href="https://willful.co/team#legal-advisors" class="link-2">Meet our legal advisors →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="testimonials" class="section wf-section">
+      <div class="container-wide">
+        <div class="columns-default">
+          <div class="column-default">
+            <div class="inner-section text-centre">
+              <div class="section-title">testimonials</div>
+              <h2>What do our customers say?<br></h2>
+            </div>
+          </div>
+        </div>
+        <div data-delay="4000" data-animation="slide" class="slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="true" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="8" data-duration="500" data-infinite="false" role="region" aria-label="carousel">
+          <div class="slider__mask w-slider-mask" id="w-slider-mask-0">
+            <div class="slide w-slide" aria-label="1 of 3" role="group" style="transform: translateX(0px); opacity: 1;">
+              <div class="testimonial-card">
+                <div class="testimonial-copy-group">
+                  <div class="_5-star-rating"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/6036d4b13b0021efd33d6827_five-stars.svg" width="121" height="24" loading="lazy" alt="Five stars. Illustration." class="_5-star-rating-image"></div>
+                  <p class="body text-left author" style="opacity: 1;">We were floored with the process. Simple, efficient, just amazing, thank you Willful for existing.</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-author-image-wrapper"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/607552f043a55520e5e1939d_kelly_chuck.jpg" width="60" height="60" loading="lazy" alt="" class="testimonial-author-image"></div>
+                  <div class="testimonial-author-copy">
+                    <div class="body-small author">Kelly and Chuck D. EA</div>
+                    <div class="body-small light-grey author">Fundraising &amp; SysAdmin</div>
+                  </div>
                 </div>
               </div>
-              <div class="h-c-phone-card-module h-c-grid__col h-c-grid__col-s--4 h-c-grid__col--offset-2 h-c-grid__col--5 h-c-grid__col-l--4 h-c-grid__col-l--offset-1 hero-bg-mobile">
-                <div class="gads-ad__phone-card__wrapper" aria-hidden="true">
-                  <div class="phone-container">
-                    <div class="phone">
-                      <div class="gads-phone__wrapper animation--defer-onload" animation-add-class="">
-                        <!--[if !IE]> -->
-                         <picture class="lazyload-img animation--onload-trigger"><source sizes="990px, (min-width: 1024px) 1264px" data-srcset="https://lh3.googleusercontent.com/csWtrOkqW8-iYd6fNH5_8YIuE2Y0Qpu6t-llEIGPzwYKnaOZqRwhYOus8iKMxEJGyQUrskBzpyB2rm4HM88fu1JHOcHbRCZOvBmavw=w0 1281w, https://lh3.googleusercontent.com/sOvaO_W4_mjyiYE3GzlJ9-epjoEp9JeOe9FpjuQxMuhAy80Ubq6hjeXHI7FwIib7mq5ky4IphfBup4B3IW0ZCKit4ghqCBSXq4Mm=w0 2555w, https://lh3.googleusercontent.com/Fm6e-RdQO5uaSVyJcNH_ZaUz9rr6zVw4879g7fOY86chTe1X-kVF1A43_qIjWv1EkPxPupUJxn9G4eJ_8Q2yXSXW2Qn0O1aMqMNmFBE=w0 641w"> <img class="gads-phone__img" alt="Take advantage of online advertising with Google Ads. Learn how to advertise locally and attract customers when they're searching for products or businesses like yours. Get your pay-per-click ad on Google today." src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="></picture> <!-- <![endif]-->
-                        <!--[if IE]>
-<picture class="animation--onload-trigger ">
-  <img src="https://lh3.googleusercontent.com/sOvaO_W4_mjyiYE3GzlJ9-epjoEp9JeOe9FpjuQxMuhAy80Ubq6hjeXHI7FwIib7mq5ky4IphfBup4B3IW0ZCKit4ghqCBSXq4Mm=w0"
-      class="gads-phone__img "
-      alt=""
-</picture>
-<![endif]-->
-                        <div class="gads-logo__wrapper">
-                          <!--[if !IE]> -->
-                           <picture class="lazyload-img"><source sizes="98px" data-srcset="https://lh3.googleusercontent.com/rcQGmayD_9OzAY1gZL3vRvB3Eq5M9ynAiB2P33LAhb27lsmZSl4DQPpELf5VWLkvKBWPSwAmd5-uXnAsiSMQwMvFaCoQinmY6SFhhQ=w0 98w, https://lh3.googleusercontent.com/Jj0crC4HsePUVxZbEa8Pahhs62AodEDBWMdxXGXJeCRqQ9pUhJ8bqo4eS8DaztCqw0oqnGbZVnn_4BlqW57X5Rn3pnGREGKpAVqnfg=w0 196w"> <img class="google_logo" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="></picture> <!-- <![endif]-->
-                          <!--[if IE]>
-<picture class="">
-  <img src="https://lh3.googleusercontent.com/Jj0crC4HsePUVxZbEa8Pahhs62AodEDBWMdxXGXJeCRqQ9pUhJ8bqo4eS8DaztCqw0oqnGbZVnn_4BlqW57X5Rn3pnGREGKpAVqnfg=w0"
-      class="google_logo "
-      alt=""
-</picture>
-<![endif]-->
-                        </div>
-                        <div class="gads-search-result result_v1" animation-add-class="" animation-name="dummy-results" data-animation-trigger="featured">
-                          <div class="gads-search-result__wrapper">
-                            <div class="gads-search-result-v1 result-1">
-                              <div class="result-line result-line-1"></div>
-                              <div class="result-line result-line-2"></div>
-                              <div class="result-line result-line-3"></div>
-                              <div class="result-line result-line-4"></div>
-                              <div class="result-line result-line-5"></div>
+            </div>
+            <div class="slide w-slide" aria-label="2 of 3" role="group" style="transform: translateX(0px); opacity: 1;">
+              <div class="testimonial-card">
+                <div class="testimonial-copy-group">
+                  <div class="_5-star-rating"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/6036d4b13b0021efd33d6827_five-stars.svg" width="121" height="24" loading="lazy" alt="Five stars. Illustration." class="_5-star-rating-image"></div>
+                  <p class="body text-left author" style="opacity: 1;">As new parents, we had been needing to write our wills and this tool allowed us to do just that, effortlessly, from the comfort of our own home.</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-author-image-wrapper"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/607552ef4d9156b77e4c7e7c_valerie-testimonial.png" width="60" height="60" loading="lazy" alt="" class="testimonial-author-image"></div>
+                  <div class="testimonial-author-copy">
+                    <div class="body-small author">Valerie and Matthew T.</div>
+                    <div class="body-small light-grey author">Early Willful Customers</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide w-slide" aria-label="3 of 3" role="group" style="transform: translateX(0px); opacity: 1;">
+              <div class="testimonial-card">
+                <div class="testimonial-copy-group">
+                  <div class="_5-star-rating"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/6036d4b13b0021efd33d6827_five-stars.svg" width="121" height="24" loading="lazy" alt="Five stars. Illustration." class="_5-star-rating-image"></div>
+                  <p class="body text-left author" style="opacity: 1;">Having a living will could be one of the most important documents you ever create, with Willful it’s never been easier to create one.</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-author-image-wrapper"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/607552eff1ff944d2de044a5_dean.jpg" width="60" height="60" loading="lazy" alt="" class="testimonial-author-image"></div>
+                  <div class="testimonial-author-copy">
+                    <div class="body-small author">Dr. Dean V.</div>
+                    <div class="body-small light-grey author">Emergency Room Doctor</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
+          </div>
+          <div class="slider__left-arrow w-slider-arrow-left" role="button" tabindex="0" aria-controls="w-slider-mask-0" aria-label="previous slide" style="display: none;">
+            <div class="slider__left-arrow-icon w-icon-slider-left"></div>
+          </div>
+          <div class="slider__right-arrow w-slider-arrow-right" role="button" tabindex="0" aria-controls="w-slider-mask-0" aria-label="next slide" style="display: none;">
+            <div class="slider__right-arrow-icon w-icon-slider-right"></div>
+          </div>
+          <div class="slider__nav w-slider-nav w-slider-nav-invert w-round">
+            <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 1" aria-pressed="true" role="button" tabindex="0" style="margin-left: 8px; margin-right: 8px;"></div>
+          </div>
+        </div>
+        <div class="google-rating"><a rel="noopener" href="https://www.google.ca/maps/place/Willful/@43.6435936,-79.4006914,17z/data=!4m7!3m6!1s0x882b35dae370394d:0xb835d8374c18c0a9!8m2!3d43.6435936!4d-79.3985027!9m1!1b1" target="_blank" class="w-inline-block"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/6032de9c8a56271ddcde3fe0_Google%20Rating.svg" loading="lazy" width="162" height="81" alt="4.9 Google rating." class="google-rating-image"></a></div>
+      </div>
+    </div>
+    <div class="section _72px-margin-bottom wf-section">
+      <div class="container-wide">
+        <h3 class="text-centre">Canadians use Willful after important milestones, such as:<br></h3>
+        <div class="four-icon-columns w-row">
+          <div class="four-icon-column w-col w-col-3 w-col-medium-6 w-col-small-6 w-col-tiny-6">
+            <div class="icon-card"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea26c06523076a584f7c628_willful-icon-marriage.svg" width="319" height="250" loading="lazy" alt="Illustration of marriage rings." class="icon-card__image">
+              <div class="icon-card__heading">Recently getting<br>married</div>
+            </div>
+          </div>
+          <div class="four-icon-column w-col w-col-3 w-col-medium-6 w-col-small-6 w-col-tiny-6">
+            <div class="icon-card"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea26c0652f0aa19b3d9ee50_willful-icon-house.svg" width="319" height="250" loading="lazy" alt="Illustration of a house with a light on." class="icon-card__image">
+              <div class="icon-card__heading">Buying their <br>first home</div>
+            </div>
+          </div>
+          <div class="four-icon-column w-col w-col-3 w-col-medium-6 w-col-small-6 w-col-tiny-6">
+            <div class="icon-card"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea26c06329199792e9707f3_willful-icon-baby.svg" width="319" height="250" loading="lazy" alt="Illustration of a baby stroller." class="icon-card__image">
+              <div class="icon-card__heading">The birth of a child</div>
+            </div>
+          </div>
+          <div class="four-icon-column w-col w-col-3 w-col-medium-6 w-col-small-6 w-col-tiny-6">
+            <div class="icon-card"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea26c0695e67d334233ac1c_willful-icon-outdated.svg" width="319" height="250" loading="lazy" alt="An illustration of a calendar." class="icon-card__image">
+              <div class="icon-card__heading">Outdated wills</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="inner-section"><a data-w-id="61e8c323-9054-d47d-f437-4c2a761aed44" href="/learn" class="link-centre">Learn why every adult needs a will <span class="button-arrow-right">→</span></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="section wf-section">
+      <div class="container-wide">
+        <div class="inner-section">
+          <div class="columns-flex">
+            <div class="column-flex"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60404d50b9bbfac62eef785c_how-it-works-1.png" width="338" height="338" loading="lazy" srcset="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60404d50b9bbfac62eef785c_how-it-works-1-p-500.png 500w, https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60404d50b9bbfac62eef785c_how-it-works-1.png 677w" sizes="(max-width: 479px) 82vw, (max-width: 767px) 240px, (max-width: 991px) 33vw, (max-width: 1279px) 23vw, (max-width: 1439px) 22vw, 288.0234375px" alt="" class="image-two-column"></div>
+            <div class="column-flex">
+              <div class="column-right-padding">
+                <div class="section-title">How it works</div>
+                <h3 class="heading-5">We start with a few simple questions</h3>
+                <p>To help us get to know you better, we ask you for a few basic details such as your name, location and what brought you to us. You can then select the plan that best suits your needs and after you create your account, you're only 15 minutes away from the finish line!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-section">
+          <div class="columns-flex">
+            <div class="column-flex reverse-order">
+              <div class="column-left-padding">
+                <h3 class="no-margin-top">We guide you all the way<br></h3>
+                <p class="no-margin-bottom">We worked with experienced estate lawyers to create a seamless experience to help you cover all your bases. You answer the questions, our technology customizes legal documents to best represent your wishes while avoiding common errors and contradictions.</p>
+              </div>
+            </div>
+            <div class="column-flex"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60404d63fa2a85bded5e0c18_how-it-works-2.png" width="353" height="258" loading="lazy" srcset="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60404d63fa2a85bded5e0c18_how-it-works-2-p-500.png 500w, https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60404d63fa2a85bded5e0c18_how-it-works-2.png 676w" sizes="(max-width: 479px) 97vw, (max-width: 767px) 240px, (max-width: 991px) 33vw, (max-width: 1279px) 23vw, (max-width: 1439px) 22vw, 288.0234375px" alt="" class="image-two-column"></div>
+          </div>
+        </div>
+        <div class="inner-section">
+          <div class="columns-flex">
+            <div class="column-flex"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60404d787f62f8715631f842_how-it-works-3.png" width="353" height="258" loading="lazy" srcset="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60404d787f62f8715631f842_how-it-works-3-p-500.png 500w, https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/60404d787f62f8715631f842_how-it-works-3.png 676w" sizes="(max-width: 479px) 99vw, (max-width: 767px) 240px, (max-width: 991px) 33vw, (max-width: 1279px) 23vw, (max-width: 1439px) 22vw, 288.0234375px" alt="" class="image-two-column"></div>
+            <div class="column-flex">
+              <div class="column-right-padding">
+                <h3 class="no-margin-top">You're ready to make it official</h3>
+                <p>You've gone through the Willful platform and have paid to access your documents. Not only are your documents ready to print and sign but you can always edit and update any section, any time! Included are detailed instructions to ensure your documents follow the legal requirements to make them official.</p>
+                <div class="button-wrapper"><a data-w-id="e0a02a29-b42d-5b93-a701-f1601a440207" href="https://app.willful.co" class="button app-link w-button">Start for free <span class="button-arrow-right button-arrow-yellow">→</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section wf-section">
+      <div class="container-wide">
+        <div class="columns-default">
+          <div class="column-default">
+            <div class="inner-section text-centre">
+              <div class="section-title">pricing</div>
+              <h2 class="text-max-width">We keep our pricing simple, find the Willful plan that best suits your needs</h2>
+            </div>
+          </div>
+        </div>
+        <div data-delay="4000" data-animation="slide" class="slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="true" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="4" data-duration="500" data-infinite="false" role="region" aria-label="carousel">
+          <div class="slider__mask w-slider-mask" id="w-slider-mask-1">
+            <div class="slide w-slide" aria-label="1 of 3" role="group" style="transform: translateX(0px); opacity: 1;">
+              <div class="yellow-highlight hide-visually">most popular for couples</div>
+              <div class="new-pricing-card">
+                <div class="volume-pricing-card_wrapper xx-light-grey">
+                  <h3 class="heading-3 white no-margin-top no-margin-bottom"><strong class="bold-text">Essentials</strong></h3>
+                  <p class="body-small no-margin-top spacer-32">Everything you need to create your own legally-valid will</p>
+                  <div class="bundle-price-lockup">
+                    <h2 class="plan-price">$99</h2>
+                    <p class="price-detail blue">CAD</p>
+                  </div>
+                  <div class="volume-icon"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5f7f81378f7ad9102aec772f_essentials-pricing-card-icon.svg" loading="lazy" alt="" class="volume-icon"></div>
+                </div>
+                <div class="pricing-card__content-wrapper">
+                  <div class="pricing-card__details">
+                    <ul role="list" class="list-checkmarks no-margin-bottom">
+                      <li class="list-item-checkmarks">Distribute your assets and property<br></li>
+                      <li class="list-item-checkmarks">Plan for your children and their inheritance</li>
+                      <li class="list-item-checkmarks">Make your final wishes known</li>
+                      <li class="list-item-checkmarks">Free updates as your life changes</li>
+                    </ul>
+                    <div class="documents-included_wrapper">
+                      <div class="documents-included_block">
+                        <div class="body-small text-centre documents-included">1 document included</div>
+                        <div class="tooltip_wrapper">
+                          <div class="tooltip-trigger">
+                            <div class="tooltip-icon w-embed"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21a9 9 0 100-18 9 9 0 000 18z" fill="currentColor"></path>
+                                <path d="M13 10v7h-2v-7h2z" fill="#fff"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 9.25a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z" fill="#fff"></path>
+                              </svg></div>
+                          </div>
+                          <div class="tooltip-content_wrapper" style="transform: translate3d(0px, 24px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 0; display: none;">
+                            <div class="tooltip-heading_wrapper">
+                              <h5 class="no-margin-top">Essentials plan documents included:</h5>
+                              <div class="close-icon_wrapper">
+                                <div class="close-icon w-embed"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 17.381L17.246 6M17.246 17.381L6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg></div>
+                              </div>
                             </div>
-                            <div class="gads-search-result-v1 result-2">
-                              <div class="result-line result-line-1"></div>
-                              <div class="result-line result-line-2"></div>
-                              <div class="result-line result-line-3"></div>
-                              <div class="result-line result-line-4"></div>
-                              <div class="result-line result-line-5"></div>
+                            <ul role="list" class="tooltip-list">
+                              <li class="tooltip-list-item">One last will and testament</li>
+                            </ul>
+                            <div class="tooltip-triangle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide w-slide" aria-label="2 of 3" role="group" style="transform: translateX(0px); opacity: 1;">
+              <div class="yellow-highlight">Most Popular</div>
+              <div>
+                <div class="new-pricing-card">
+                  <div class="volume-pricing-card_wrapper willful-blue">
+                    <h3 class="heading-3 white no-margin-top no-margin-bottom"><strong>Premium</strong></h3>
+                    <p class="body-small no-margin-top spacer-32 xxx-light-blue">Full protection with a legally-valid will and appointed power of attorneys</p>
+                    <div class="bundle-price-lockup">
+                      <h2 class="plan-price white">$149</h2>
+                      <p class="price-detail">CAD</p>
+                    </div>
+                    <div class="volume-icon"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5f7f812a1bc3f08693465818_premium-pricing-card-icon.svg" loading="lazy" alt="Woman on a laptop sitting on a comfortable chair. Illustration." class="volume-icon"></div>
+                  </div>
+                  <div class="pricing-card__content-wrapper">
+                    <div class="pricing-card__details">
+                      <ul role="list" class="list-checkmarks no-margin-bottom">
+                        <li class="list-item-checkmarks">Distribute your assets and property<br></li>
+                        <li class="list-item-checkmarks">Plan for your children and their inheritance</li>
+                        <li class="list-item-checkmarks">Make an emergency medical care plan</li>
+                        <li class="list-item-checkmarks">Property protection in an emergency</li>
+                        <li class="list-item-checkmarks">Make your final wishes known</li>
+                        <li class="list-item-checkmarks">Free updates as your life changes</li>
+                      </ul>
+                      <div class="documents-included_wrapper">
+                        <div class="documents-included_block">
+                          <div class="body-small text-centre documents-included">3 documents included</div>
+                          <div class="tooltip_wrapper">
+                            <div class="tooltip-trigger">
+                              <div class="tooltip-icon w-embed"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21a9 9 0 100-18 9 9 0 000 18z" fill="currentColor"></path>
+                                  <path d="M13 10v7h-2v-7h2z" fill="#fff"></path>
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 9.25a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z" fill="#fff"></path>
+                                </svg></div>
+                            </div>
+                            <div class="tooltip-content_wrapper" style="transform: translate3d(0px, 24px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 0; display: none;">
+                              <div class="tooltip-heading_wrapper">
+                                <h5 class="no-margin-top">Premium plan documents included:</h5>
+                                <div class="close-icon_wrapper">
+                                  <div class="close-icon w-embed"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M6 17.381L17.246 6M17.246 17.381L6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg></div>
+                                </div>
+                              </div>
+                              <ul role="list" class="tooltip-list">
+                                <li class="tooltip-list-item">One last will and testament</li>
+                                <li class="tooltip-list-item">One power of attorney for finance and property</li>
+                                <li class="tooltip-list-item">One power of attorney for healthcare (living will)</li>
+                              </ul>
+                              <div class="tooltip-triangle"></div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="searchbar animation--defer-onload outside_phone" data-animation-add-class="" animation-name="search-bar">
-                      <div class="gads-search-bar__wrapper outside_phone">
-                        <p class="gads-search-bar__type h-u-font-weight-regular type--blinking">
-                          <span data-animation-typer="" data-animation-typer-text="dance classes" animation-name="typer" animation-trigger="search-bar" animation-typer-interval="10">dance classes</span> &nbsp;
-                        </p>
-                        <div class="gads-chrome-search-bar__dots">
-                          <div class="dot"></div>
-                          <div class="dot"></div>
-                          <div class="dot"></div>
-                        </div><svg aria-hidden="true" role="img" class="gads-search-bar__icon">
-                        <use xlink:href="#color-mic"></use></svg>
-                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide w-slide" aria-label="3 of 3" role="group" style="transform: translateX(0px); opacity: 1;">
+              <div class="yellow-highlight">popular for couples</div>
+              <div class="new-pricing-card">
+                <div class="volume-pricing-card_wrapper">
+                  <div class="family-header">
+                    <h3 class="heading-3 white no-margin-top no-margin-bottom"><strong>Family</strong></h3>
+                    <div class="family-savings-tag">
+                      <div class="body-small family-savings-percentage">SAVE 16%</div>
                     </div>
-                    <div class="card card_basic animation--defer-onload" data-animation-add-class="" animation-name="featured" animation-trigger="typer">
-                      <div class="card-wrapper" animation-add-class="" animation-name="featured" animation-trigger="typer">
-                        <div class="gads-card__basic gads--has-shadow">
-                          <p class="gads-card__basic__title h-u-font-weight-regular">
-                            <span class="s1">Ascendance - Kids Dance Classes</span>
-                          </p>
-                          <p class="gads-card__basic__site h-u-font-weight-regular">
-                            <span class="gads-card__basic__site--gadwrap">Ad</span> ascendancestudio.com
-                          </p>
-                          <hr>
-                          <p class="gads-card__basic__description h-u-font-weight-regular">
-                            All Ages and Styles. Try a Free Class Today
-                          </p>
+                  </div>
+                  <p class="body-small no-margin-top spacer-32 xx-light-grey">Legally-valid wills and appointed power of attorneys for you and your loved ones<br></p>
+                  <p class="family-price-intro-detail">Starting at</p>
+                  <div class="bundle-price-lockup">
+                    <h2 class="family-plan-price white">$250</h2>
+                    <p class="price-detail family">CAD</p>
+                  </div>
+                  <p class="family-price-detail">for 2 adults</p>
+                  <div class="volume-icon"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5f7f810958054eef93ffeb1e_bundle-pricing-card-icon.svg" loading="lazy" alt="" class="volume-icon"></div>
+                </div>
+                <div class="pricing-card__content-wrapper">
+                  <div class="pricing-card__details">
+                    <ul role="list" class="list-checkmarks no-margin-bottom">
+                      <li class="list-item-checkmarks">Distribute your assets and property<br></li>
+                      <li class="list-item-checkmarks">Plan for your children and their inheritance</li>
+                      <li class="list-item-checkmarks">Make an emergency medical care plan</li>
+                      <li class="list-item-checkmarks">Property protection in an emergency</li>
+                      <li class="list-item-checkmarks">Make your final wishes known</li>
+                      <li class="list-item-checkmarks">Free updates as your life changes</li>
+                      <li class="list-item-checkmarks">Discounted rate for up to 6 adults<br></li>
+                    </ul>
+                    <div class="documents-included_wrapper">
+                      <div class="documents-included_block">
+                        <div class="body-small text-centre documents-included">3 documents included (per adult)</div>
+                        <div class="tooltip_wrapper">
+                          <div class="tooltip-trigger">
+                            <div class="tooltip-icon w-embed"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21a9 9 0 100-18 9 9 0 000 18z" fill="currentColor"></path>
+                                <path d="M13 10v7h-2v-7h2z" fill="#fff"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 9.25a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z" fill="#fff"></path>
+                              </svg></div>
+                          </div>
+                          <div class="tooltip-content_wrapper" style="transform: translate3d(0px, 24px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 0; display: none;">
+                            <div class="tooltip-heading_wrapper">
+                              <h5 class="no-margin-top">Family plan documents included:</h5>
+                              <div class="close-icon_wrapper">
+                                <div class="close-icon w-embed"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 17.381L17.246 6M17.246 17.381L6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                            <ul role="list" class="tooltip-list">
+                              <li class="tooltip-list-item">One last will and testament per adult</li>
+                              <li class="tooltip-list-item">One power of attorney for finance and property per adult</li>
+                              <li class="tooltip-list-item">One power of attorney for healthcare (living will) per adult</li>
+                            </ul>
+                            <div class="tooltip-triangle"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -275,871 +429,509 @@
                 </div>
               </div>
             </div>
+            <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
           </div>
-        </section>
-        <section class="gads--section section--hero section--full-bleed-hero hero-bg hero-bgd41d8cd98f00b204e9800998ecf8427e section--full-bleed-hero--gray h-u-mobile-hide">
-          <div class="h-c-page">
-            <div class="h-c-grid">
-              <div class="h-c-grid__col h-c-grid__col--6 h-c-grid__col--offset-3 h-c-grid__col--align-middle h-u-s--text-center">
-                <div class=""></div>
-              </div>
+          <div class="slider__left-arrow w-slider-arrow-left" role="button" tabindex="0" aria-controls="w-slider-mask-1" aria-label="previous slide" style="display: none;">
+            <div class="slider__left-arrow-icon w-icon-slider-left"></div>
+          </div>
+          <div class="slider__right-arrow w-slider-arrow-right" role="button" tabindex="0" aria-controls="w-slider-mask-1" aria-label="next slide" style="display: none;">
+            <div class="slider__right-arrow-icon w-icon-slider-right"></div>
+          </div>
+          <div class="slider__nav w-slider-nav w-slider-nav-invert w-round">
+            <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 1" aria-pressed="true" role="button" tabindex="0" style="margin-left: 4px; margin-right: 4px;"></div>
+          </div>
+        </div>
+        <div class="columns-default">
+          <div class="column-default">
+            <div class="inner-section text-centre">
+              <h3 class="heading-4 no-margin-bottom">Take one minute to see which plan best fits your needs</h3>
+              <div class="button-wrapper"><a data-w-id="3efbd64b-f72e-502b-9bd4-504a3ddacc3e" href="https://app.willful.co" class="button app-link w-button">Start for free <span class="button-arrow-right button-arrow-yellow">→</span></a></div>
             </div>
-          </div>
-        </section>
-        <section class="gads--section section--split-hero section3 home-section-3">
-          <div class="h-c-page">
-            <div class="h-c-grid">
-              <div offset_l="1" class="h-c--text-element h-c-grid__col h-c-grid__col--4 h-c-grid__col-s--3 h-c-grid__col--offset-1 h-c-grid__col-l--offset-2 h-c-grid__col--align-middle">
-                <div class="inner-wrapper">
-                  <h2 class="h-c-headline h-c-headline--two">
-                    Show up when people search for what you offer
-                  </h2>
-                  <p class="h-c-copy h-c-copy--one">
-                    Google is where people search for what to do, where to go, and what to buy. Your digital ads can appear on Google at the very moment someone is looking for products or services like yours.
-                  </p>
-                  <p class="h-c-copy h-c-copy--one">
-                    Whether they’re on desktop or mobile, a well-timed ad can turn people into valuable customers.
-                  </p><a class="h-c-link h-c-link--external external-link" href="https://ads.google.com/um/StartNow?subid=us-en-et-g-aw-a-home-awhp_xin1_mid!o2" target="_blank">Start now <svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--link h-c-icon--arrow-external">
-                  <use xlink:href="#mi-arrow-forward"></use></svg></a>
-                </div>
-              </div>
-              <div class="h-c-grid__col gads-general-placeholder h-c-grid__col-s--4 h-c-grid__col--offset-2 h-c-grid__col--5 h-c-grid__col-l--4 h-c-grid__col-l--offset-1"></div>
-            </div>
-          </div>
-        </section>
-        <section class="gads--section section--split-hero section4">
-          <div class="h-c-page">
-            <div class="h-c-grid">
-              <div class="h-c--text-element h-c--text-element-headline h-c-grid__col h-c-grid__col--8 h-c-grid__col-s--3 h-c-grid__col--offset-2 h-c-grid__col--align-middle">
-                <div class="inner-wrapper">
-                  <h2 class="h-c-headline h-c-headline--two">
-                    Get the results that matter to you
-                  </h2>
-                </div>
-              </div>
-              <div class="h-c-grid__col h-c-grid__col--10 h-c-grid__col--offset-1">
-                <div class="repeatable-tiles">
-                  <div class="tile">
-                    <div class="tile_icon-container tile-1" data-animation-add-class="" data-animation-add-class-classname="item-visible" data-animation-scroll-trigger="0.75">
-                      <svg aria-hidden="true" role="img" class="tile-icon">
-                      <use xlink:href="#browser_arrow"></use></svg>
-                    </div>
-                    <p class="tile_headline h-u-font-weight-medium">
-                      Drive website visits
-                    </p>
-                    <p class="tile_description h-c-copy h-c-copy--one">
-                      Grow online sales, bookings, or mailing list signups with online ads that direct people to your website.
-                    </p>
-                  </div>
-                  <div class="tile">
-                    <div class="tile_icon-container tile-2" data-animation-add-class="" data-animation-add-class-classname="item-visible" data-animation-scroll-trigger="0.75">
-                      <svg aria-hidden="true" role="img" class="tile-icon">
-                      <use xlink:href="#phone_call"></use></svg>
-                    </div>
-                    <p class="tile_headline h-u-font-weight-medium">
-                      Get more phone calls
-                    </p>
-                    <p class="tile_description h-c-copy h-c-copy--one">
-                      Increase customer calls with ads that feature your phone number and a click-to-call button.
-                    </p>
-                  </div>
-                  <div class="tile">
-                    <div class="tile_icon-container tile-3" data-animation-add-class="" data-animation-add-class-classname="item-visible" data-animation-scroll-trigger="0.75">
-                      <svg aria-hidden="true" role="img" class="tile-icon">
-                      <use xlink:href="#office_building"></use></svg>
-                    </div>
-                    <p class="tile_headline h-u-font-weight-medium">
-                      Increase store visits
-                    </p>
-                    <p class="tile_description h-c-copy h-c-copy--one">
-                      Get more customers in the door with business ads that help people find your company on the map.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="gads--section section--split-hero section5">
-          <div class="h-c-page">
-            <div class="h-c-grid">
-              <div class="h-c--text-element h-c-grid__col h-c-grid__col--4 h-c-grid__col-s--3 h-c-grid__col--offset-1 h-c-grid__col-l--offset-2 h-c-grid__col--align-middle">
-                <div class="inner-wrapper">
-                  <h2 class="h-c-headline h-c-headline--two">
-                    Set a budget that works for your business
-                  </h2>
-                  <p>
-                    Google Ads can work for almost any advertising budget. Set a monthly budget cap, and never go over it. Plus, you can pause or adjust your spend anytime.
-                  </p><a class="h-c-link h-c-link--internal internal-link" href="../home/pricing/">Learn more about setting a budget <svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--link h-c-icon--arrow-forward h-c-icon--18px h-u-valign-middle">
-                  <use xlink:href="#mi-arrow-forward"></use></svg></a>
-                </div>
-              </div>
-              <div class="h-c-grid__col h-c-grid__col--4 h-c-grid__col--offset-1 h-c-grid__col-s--3 h-c-grid__col-s--offset-1 stackable-card">
-                <div aria-hidden="true" class="gads--stackable-card id--monthly_budget_slider">
-                  <div class="gads-slider__wrapper gads--el gads--has-shadow">
-                    <span class="headline headline-one">Monthly budget cap</span> <span class="headline headline-two">Adjust anytime</span>
-                    <div class="slider-el__wrapper">
-                      <div class="labels">
-                        <span class="label-left">$</span> <span class="label-right">$$$</span>
-                      </div>
-                      <div class="slider-el">
-                        <div class="progress-bar"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="gads--section section--split-hero section6">
-          <div class="h-c-page">
-            <div class="h-c-grid">
-              <div class="h-c-grid__col h-c-grid__col--6 h-c-grid__col--offset-3 h-c-grid__col-s--3">
-                <div class="optimization-module">
-                  <h2 class="optimization-module__headline h-c-headline h-c-headline--two">
-                    Partner with Google to find the right customers
-                  </h2>
-                  <div class="optimization-module__logo" data-animation-scroll-trigger="0.66" data-animation-image-height="70" data-animation-image-width="70" data-animation-image-replacement="/home/static/home/images/gads_logo.gif?cache=a02d723">
-                    <!--[if !IE]> -->
-                     <picture class="lazyload-img"><source sizes="70px" data-srcset="https://lh3.googleusercontent.com/k0Vz-ZCjnRIget0uwxeGCNSYTSDOEgsNsXtC-ABwvp7Nqgf2L-ee9inMiqK5COnt9j0Ne_9C6UT_4fiPA_7mVVnHTGAIr5JbXKOqug=w0 36w, https://lh3.googleusercontent.com/8tieHOEn-Cy8_hhkVEJcylAl3AiYVWICIccMkIPpSLHQtIA6snS90KvPnK16EnROGpco2JhPCfevJkPkRlcy0uLaQUH3RC8IZJ2J8A=w0 71w"> <img class="optimization-module__logo-img" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="></picture> <!-- <![endif]-->
-                    <!--[if IE]>
-<picture class="">
-  <img src="https://lh3.googleusercontent.com/8tieHOEn-Cy8_hhkVEJcylAl3AiYVWICIccMkIPpSLHQtIA6snS90KvPnK16EnROGpco2JhPCfevJkPkRlcy0uLaQUH3RC8IZJ2J8A=w0"
-      class="optimization-module__logo-img "
-      alt=""
-</picture>
-<![endif]-->
-                  </div>
-                  <div class="optimization-module__description">
-                    <p class="h-c-copy h-c-copy--one">
-                      With Google Ads you can reach more relevant customers within your budget. Plus, our smart technology will help you improve your ads over time to get more of the results that matter to your business.
-                    </p>
-                  </div><a href="../home/how-it-works/" class="optimization-module__link-text h-c-link h-c-link--internal">Learn how Google Ads works <svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--link h-c-icon--arrow-forward h-c-icon--18px h-u-valign-middle">
-                  <use xlink:href="#mi-arrow-forward"></use></svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="gads--section ads--section ads--carousel-section">
-          <div class="ads-success-story-bg-video success-story-bgd41d8cd98f00b204e9800998ecf8427e" animation-play-video="" animation-on-screen-trigger="">
-            <video aria-hidden="true" playsinline="" muted="" loop="" poster="https://lh3.googleusercontent.com/1RqQ8XphFVxld8bJhV98H1TVbvAcKMb5oBu0eju6_xN45znAgGIW27MMQVeDb24sGbRQ--kQwOkXzv7cSWQXT1mF6ABq7E4uC9yu8A=w0" class="success-story--bg-video"><source src="/home/static/home/videos/acendance-bg.mp4" type="video/mp4"></video>
-            <div class="h-c-page success-story--wrapper">
-              <div class="content success-story--wrapper">
-                <div class="h-c-grid success-story--wrapper">
-                  <div class="h-c-grid__col h-c-grid__col-s--4 h-c-grid__col--10 h-c-grid__col--offset-1 h-c-grid__col-l--8 h-c-grid__col-l--offset-2">
-                    <div class="success-story--body">
-                      <div class="h-c-eyebrow h-has-bottom-margin success-story--eyebrow">
-                        See real results
-                      </div>
-                      <h2 class="h-c-headline h-c-headline--two h-u-font-weight-regular h-has-bottom-margin h-has-top-margin success-story--quote">
-                        “Advertising on Google has helped us grow our business, and it has allowed me to be able to do what I love.”
-                      </h2><a data-glue-jump-link-disable="" data-glue-modal-disabled-on-mobile="true" data-glue-modal-trigger="modal-WHv7hPJLZBI" href="https://www.youtube.com/watch?v=WHv7hPJLZBI" class="h-c-link h-c-link--video success-story--video-link"><svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--link">
-                      <use xlink:href="#mi-youtube-icon"></use></svg> Watch Ascendance Studio’s Story</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="ads-modal__wrapper ads-modal__youtube">
-          <div data-glue-modal="modal-WHv7hPJLZBI" data-glue-modal-close-label="Close Modal" data-yt-modal="" data-yt-video-id="WHv7hPJLZBI" class="h-c-modal--video">
-            <div class="youtube-embed"></div>
           </div>
         </div>
       </div>
-      <div class="slideover-content" gads-slideover="">
-        <section class="gads--section section--split-hero section1">
-          <div class="h-c-page">
-            <div class="h-c-grid">
-              <div class="h-c-grid__col h-c-grid__col--8 h-c-grid__col--offset-2">
-                <div class="end-cap">
-                  <div aria-hidden="true" class="end-cap__icon h-u-text-center">
-                    <svg aria-hidden="true" role="img" class="end-cap__icon-img">
-                    <use xlink:href="#gads-logo"></use></svg>
-                  </div>
-                  <h2 class="end-cap__headline h-c-headline h-c-headline--one h-u-text-center">
-                    Get more customers with Google&nbsp;Ads
-                  </h2>
-                  <div class="end-cap__link">
-                    <a href="https://ads.google.com/um/StartNow?subid=us-en-et-g-aw-a-home-awhp_xin1_end!o2" target="_blank" class="h-c-button h-c-button--primary">Start now</a>
-                  </div>
-                  <p class="h-c-copy h-c-copy--one h-has-bottom-margin h-u-text-center">
-                    Or call us for help setting up your account.
-                  </p>
-                  <div class="end-cap__eto-container h-u-text-center">
-                    <a href="tel:18442452553" class="h-c-link eto-number"><svg aria-hidden="true" role="img" class="end-cap__eto-phone-icon">
-                    <use xlink:href="#call"></use></svg> <span>1-844-245-2553*</span></a>
-                    <p class="end-cap__eto-availability">
-                      *Mon-Fri, 9am-9pm ET
-                    </p>
-                  </div>
+    </div>
+    <div class="section wf-section">
+      <div class="container-wide">
+        <div class="columns-default">
+          <div class="section-title text-centre">Frequently asked questions</div>
+        </div>
+        <div class="faq_wrapper">
+          <div class="faq-block">
+            <div data-hover="false" data-delay="300" data-w-id="b9854581-d2de-0b1c-9aa8-86145f129d5a" class="dropdown w-dropdown" aria-haspopup="true">
+              <div class="dropdown__toggle w-dropdown-toggle" id="w-dropdown-toggle-1" aria-controls="w-dropdown-list-1" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                <div class="dropdown__toggle-heading">Are online wills legal in Canada?<br></div>
+                <div class="dropdown__toggle-icon"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea6205f808bdf1aab9607b3_plus-circle-24x24.svg" width="24" height="24" loading="lazy" alt="" class="dropdown__toggle-icon-image"></div>
+              </div>
+              <nav class="dropdown__content-wrapper w-dropdown-list" style="height: 0px;" id="w-dropdown-list-1" aria-labelledby="w-dropdown-toggle-1">
+                <p><br>&zwj;Yes. An online will made with a platform like Willful is legal in Canada. However, there are some steps that need to be taken in order for it to meet the criteria for a legal will in Canada. Each Willful will comes with detailed instructions for signing and witnessing so you can feel confident that you have a legally-valid will.</p><a href="https://www.willful.co/learn/online-will" class="link" tabindex="0">Read more about online wills in our Learn Centre</a>
+              </nav>
+            </div>
+            <div data-hover="false" data-delay="300" class="dropdown w-dropdown" aria-haspopup="true">
+              <div class="dropdown__toggle w-dropdown-toggle" id="w-dropdown-toggle-2" aria-controls="w-dropdown-list-2" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                <div class="dropdown__toggle-heading">What happens if I die without a will?<br></div>
+                <div class="dropdown__toggle-icon"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea6205f808bdf1aab9607b3_plus-circle-24x24.svg" width="24" height="24" loading="lazy" alt="" class="dropdown__toggle-icon-image"></div>
+              </div>
+              <nav class="dropdown__content-wrapper w-dropdown-list" id="w-dropdown-list-2" aria-labelledby="w-dropdown-toggle-2">
+                <p>A person who dies without a will is called an intestate, and most people don’t know what happens if you die without one. It’s a common myth that the government can claim your money and assets, but it’s not true. They do have the ability to have a say in how your assets or estate gets divided between family members. Creating a will also means you can control how your assets are distributed to beneficiaries over time, instead of children receiving a lump sum when they turn 18.</p><a href="https://www.willful.co/learn/dying-without-a-will" class="link" tabindex="0">Read the full article in our Learn Centre</a>
+              </nav>
+            </div>
+            <div data-hover="false" data-delay="300" data-w-id="b9854581-d2de-0b1c-9aa8-86145f129d66" class="dropdown w-dropdown" aria-haspopup="true">
+              <div class="dropdown__toggle w-dropdown-toggle" id="w-dropdown-toggle-3" aria-controls="w-dropdown-list-3" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                <div class="dropdown__toggle-heading">Do I need a lawyer to draft my will?<br></div>
+                <div class="dropdown__toggle-icon"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea6205f808bdf1aab9607b3_plus-circle-24x24.svg" width="24" height="24" loading="lazy" alt="" class="dropdown__toggle-icon-image"></div>
+              </div>
+              <nav class="dropdown__content-wrapper w-dropdown-list" style="height: 0px;" id="w-dropdown-list-3" aria-labelledby="w-dropdown-toggle-3">
+                <p>A lawyer does not have to create your will. It’s simply a document that outlines your key end-of-life wishes and distribution of assets. The key is that your will has to be signed by you and two competent adult witnesses who are both present at the same time. The original hard copy of that signed document needs to be stored in a safe place where your executor or a family member can access it.</p><a href="https://www.willful.co/learn/what-are-the-requirements-for-a-will-to-be-legally-valid" tabindex="0">Read the full article in our Learn Centre</a>
+              </nav>
+            </div>
+            <div data-hover="false" data-delay="300" data-w-id="b9854581-d2de-0b1c-9aa8-86145f129d72" class="dropdown w-dropdown" aria-haspopup="true">
+              <div class="dropdown__toggle w-dropdown-toggle" id="w-dropdown-toggle-4" aria-controls="w-dropdown-list-4" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                <div class="dropdown__toggle-heading">Why can’t I sign and store my will online?<br></div>
+                <div class="dropdown__toggle-icon"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea6205f808bdf1aab9607b3_plus-circle-24x24.svg" width="24" height="24" loading="lazy" alt="" class="dropdown__toggle-icon-image"></div>
+              </div>
+              <nav class="dropdown__content-wrapper w-dropdown-list" style="height: 0px;" id="w-dropdown-list-4" aria-labelledby="w-dropdown-toggle-4">
+                <p class="dropdown__content-wrapper" style="height: 0px;">Canadian law dictates that your will has to be printed, signed, and stored as a hard copy. While we’re working to change this, right now all Willful customers will need to follow these steps to ensure their will is legally-binding.</p>
+              </nav>
+            </div>
+            <div data-hover="false" data-delay="300" data-w-id="b9854581-d2de-0b1c-9aa8-86145f129d7d" class="dropdown w-dropdown" aria-haspopup="true">
+              <div class="dropdown__toggle w-dropdown-toggle" id="w-dropdown-toggle-5" aria-controls="w-dropdown-list-5" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                <div class="dropdown__toggle-heading">How do power of attorney and related documents differ from last wills?<br></div>
+                <div class="dropdown__toggle-icon"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea6205f808bdf1aab9607b3_plus-circle-24x24.svg" width="24" height="24" loading="lazy" alt="" class="dropdown__toggle-icon-image"></div>
+              </div>
+              <nav class="dropdown__content-wrapper w-dropdown-list" style="height: 0px;" id="w-dropdown-list-5" aria-labelledby="w-dropdown-toggle-5">
+                <p class="body" style="opacity: 1;">Power of attorney documents govern your personal, medical, legal, and financial life *before* you pass away. In contrast, your Last will and testament only takes effect *after* you die. Willful Power of attorney documents are intended to be used in a personal accident or medical emergency on your behalf. In a legal sense, their powers 'endure' beyond your mental incapacity.</p><a href="https://www.willful.co/learn/power-of-attorney-101" tabindex="0">Read the full article in our Learn Centre</a>
+              </nav>
+            </div>
+            <div data-hover="false" data-delay="300" data-w-id="b9854581-d2de-0b1c-9aa8-86145f129d89" class="dropdown w-dropdown" aria-haspopup="true">
+              <div class="dropdown__toggle w-dropdown-toggle" id="w-dropdown-toggle-6" aria-controls="w-dropdown-list-6" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                <div class="dropdown__toggle-heading">If I have a complex estate can I still use Willful?<br></div>
+                <div class="dropdown__toggle-icon"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea6205f808bdf1aab9607b3_plus-circle-24x24.svg" width="24" height="24" loading="lazy" alt="" class="dropdown__toggle-icon-image"></div>
+              </div>
+              <nav class="dropdown__content-wrapper w-dropdown-list" style="height: 0px;" id="w-dropdown-list-6" aria-labelledby="w-dropdown-toggle-6">
+                <p class="no-margin-bottom">Willful is designed for Canadians who have assets, whether that’s property or something of monetary value. While the majority of Canadians can create a will using Willful, there are situations where your estate would be too complex for our software. An example of this could be if you own homes in multiple countries.</p>
+              </nav>
+            </div>
+            <div data-hover="false" data-delay="300" data-w-id="b9854581-d2de-0b1c-9aa8-86145f129d93" class="dropdown w-dropdown" aria-haspopup="true">
+              <div class="dropdown__toggle w-dropdown-toggle" id="w-dropdown-toggle-7" aria-controls="w-dropdown-list-7" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                <div class="dropdown__toggle-heading">What provinces does Willful support?<br></div>
+                <div class="dropdown__toggle-icon"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea6205f808bdf1aab9607b3_plus-circle-24x24.svg" width="24" height="24" loading="lazy" alt="" class="dropdown__toggle-icon-image"></div>
+              </div>
+              <nav class="dropdown__content-wrapper w-dropdown-list" style="height: 0px;" id="w-dropdown-list-7" aria-labelledby="w-dropdown-toggle-7">
+                <p>Creating a legal will involves abiding with provincial and territorial laws. We are working with our team of estate lawyers to expand across Canada.</p>
+                <p>Right now our wills are &nbsp;available to residents of Ontario, Alberta, Saskatchewan, Nova Scotia, Manitoba, New Brunswick and B.C..</p>
+                <p class="no-margin-bottom">We are also available to residents of Quebec.&nbsp;<br><a href="/en-qc" target="_blank" tabindex="0">Visit our site for Quebec residents →</a><br></p>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-background-image wf-section">
+      <div class="container-wide">
+        <div class="columns-default">
+          <div class="column-default">
+            <div class="text-centre">
+              <h2 class="no-margin-top centre">Get peace of mind for you and your family by<br>creating your will today.</h2>
+              <div class="button-wrapper no-margin-bottom centre-align"><a data-w-id="3a3cebdc-3794-a35a-88c6-f876923aca74" href="https://app.willful.co" class="button app-link w-button">Start for free <span class="button-arrow-right button-arrow-yellow">→</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container-wide margin-72-bottom">
+        <div class="columns-3 w-row">
+          <div class="w-col w-col-6 w-col-stack">
+            <div class="body-large white">Sign up to receive helpful estate planning resources right to your inbox</div>
+          </div>
+          <div class="w-col w-col-6 w-col-stack">
+            <div class="footer__email-form-wrapper w-form">
+              <form id="email-form" name="email-form" data-name="Email Form" action="https://willful.us19.list-manage.com/subscribe/post?u=8f8e3e8ddac4be39d40c5ffc2&amp;amp;id=16d5c12a1b&amp;SIGNUP_SRC=Footer" method="post" class="form-horizontal" aria-label="Email Form"><input type="email" class="input footer-email-signup w-input" maxlength="256" name="Email-address-footer" data-name="Email address footer" placeholder="Enter your email address" id="Email-address-footer" required=""><input type="submit" value="Sign up →" data-wait="Please wait..." class="button button-horizontal footer-email-signup w-button"></form>
+              <div class="success-message w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
+                <div class="success-message-footer"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea5bce08ad6b6fd109949d5_check-mark-blue-24x24.svg" alt="Check mark" class="image-3">
+                  <div class="success-message-text white">Thank you! Your submission has been received!</div>
                 </div>
+              </div>
+              <div class="error-message w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure">
+                <div class="error-message-text">Oops! Something went wrong while submitting the form.</div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+        <div class="footer-divider"></div>
       </div>
-      <div class="h-c--idle-widget" idle-widget="" role="alert" aria-live="polite" animation-add-class="" animation-add-class-classname="h-c--idle-widget__absolute-pos" animation-scroll-trigger="1" animation-scroll-trigger-element=".h-c-footer" animation-scroll-trigger-reverse="true">
-        <div class="h-c--idle-widget_top-bar">
-          <div class="h-c--idle-widget_avatar">
-            <div class="h-c--idle-widget_avatar_img_wrapper">
-              <!--[if !IE]> -->
-               <picture class="lazyload-img"><source sizes="36px" data-srcset="https://lh3.googleusercontent.com/xqgWCY6bC1KAA6tWmgfjTDXClUvWXBrv3sziw17-iqfejfkYRCiLzhx806rL499p9gaFO4VT8BzaFLFSTu_8Mk1qiko1WMZywOY8AQ=w0 60w, https://lh3.googleusercontent.com/ikqd-9JA2DqfpnndUdNA8l0w0VMnSQ4AF2_pnLcNrJLEpmALBoAVJI7fsqPvZysoj15dlQ1eYe4MAWcjFXtkRy-I36Js24-t1WDTyXo=w0 30w"> <img class="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="></picture> <!-- <![endif]-->
-              <!--[if IE]>
-<picture class="">
-  <img src="https://lh3.googleusercontent.com/xqgWCY6bC1KAA6tWmgfjTDXClUvWXBrv3sziw17-iqfejfkYRCiLzhx806rL499p9gaFO4VT8BzaFLFSTu_8Mk1qiko1WMZywOY8AQ=w0"
-      class=" "
-      alt=""
-</picture>
-<![endif]-->
+      <div class="container-wide">
+        <div class="footer-columns">
+          <div class="footer-logo-wrapper"><a href="/" aria-current="page" class="footer__logo-link w-inline-block w--current"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5ea27ec195e67d31c933f613_willful-wordmark-white.svg" width="300" height="50" loading="lazy" alt="Willful logo" class="footer__logo-link-image"></a></div>
+          <div class="columns-4 w-row">
+            <div class="w-col w-col-4 w-col-small-small-stack">
+              <h2 class="footer__small-heading no-margin-top">Our company</h2>
+              <ul role="list" class="list no-margin-top w-list-unstyled">
+                <li><a href="/pricing" class="footer__link">Pricing</a>
+                  <link rel="prefetch" href="/pricing">
+                </li>
+                <li><a href="/team" class="footer__link">Team</a>
+                  <link rel="prefetch" href="/team">
+                </li>
+                <li><a href="/learn" class="footer__link">Learn centre</a>
+                  <link rel="prefetch" href="/learn">
+                </li>
+                <li><a href="/support" class="footer__link">FAQ</a>
+                  <link rel="prefetch" href="/support">
+                </li>
+                <li><a href="/gifts" class="footer__link">Gifts</a>
+                  <link rel="prefetch" href="/gifts"><a href="/partner-programs" class="footer__link">Partner program </a>
+                  <link rel="prefetch" href="/partner-programs">
+                </li>
+              </ul>
+              <h2 class="footer__small-heading margin-top-32">Other Regions</h2>
+              <ul role="list" class="list no-margin-top no-margin-bottom w-list-unstyled">
+                <li class="list-item"><a href="/fr-qc" class="footer__link">Québec (Français)</a>
+                  <link rel="prefetch" href="/fr-qc">
+                </li>
+                <li class="list-item"><a href="/en-qc" class="footer__link">Quebec (English)</a>
+                  <link rel="prefetch" href="/en-qc">
+                </li>
+              </ul>
+            </div>
+            <div class="w-col w-col-4 w-col-small-small-stack">
+              <h2 class="footer__small-heading no-margin-top footer-mobile-adjustment">Resources</h2>
+              <ul role="list" class="list-2 no-margin-top w-list-unstyled">
+                <li><a href="https://www.willful.co/learn/legal-will-basics-101" class="footer__link">Legal wills</a>
+                  <link rel="prefetch" href="https://www.willful.co/learn/legal-will-basics-101">
+                </li>
+                <li><a href="https://www.willful.co/learn/online-will" class="footer__link">Online wills</a>
+                  <link rel="prefetch" href="https://www.willful.co/learn/online-will">
+                </li>
+                <li><a href="https://www.willful.co/learn/power-of-attorney-101" class="footer__link">Power of attorney</a>
+                  <link rel="prefetch" href="https://www.willful.co/learn/power-of-attorney-101">
+                </li>
+                <li><a href="https://www.willful.co/learn-categories/guardians" class="footer__link">Guardians</a>
+                  <link rel="prefetch" href="https://www.willful.co/learn-categories/guardians">
+                </li>
+                <li><a href="https://www.willful.co/learn-categories/executor" class="footer__link">Executors</a>
+                  <link rel="prefetch" href="https://www.willful.co/learn-categories/executor">
+                </li>
+                <li><a href="https://www.willful.co/learn-categories/witnesses" class="footer__link">Witnesses</a>
+                  <link rel="prefetch" href="https://www.willful.co/learn-categories/witnesses">
+                </li>
+                <li><a href="https://www.willful.co/learn-categories/beneficiaries" class="footer__link">Beneficiaries</a>
+                  <link rel="prefetch" href="https://www.willful.co/learn-categories/beneficiaries">
+                </li>
+              </ul>
+              <h2 class="footer__small-heading margin-top-32">Support</h2>
+              <ul role="list" class="list no-margin-top no-margin-bottom w-list-unstyled">
+                <li><a href="/support" class="footer__link">Contact us</a></li>
+              </ul>
+            </div>
+            <div class="w-col w-col-4 w-col-small-small-stack">
+              <h2 class="footer__small-heading no-margin-top footer-mobile-adjustment">Our offices</h2>
+              <ul role="list" class="list-2 no-margin-top w-list-unstyled">
+                <li><a href="https://g.page/WillfulWills?share" rel="noopener" target="_blank" class="footer__link">Toronto</a></li>
+                <li>
+                  <p class="body-small white no-margin-top">488 Wellington St W #204<br>Toronto, ON M5V 1E9</p>
+                  <ul role="list" class="list-2 no-margin-top no-margin-bottom w-list-unstyled">
+                    <li><a href="https://goo.gl/maps/s4XUx9oLcna4xaUG7" rel="noopener" target="_blank" class="footer__link _8px">Montreal</a></li>
+                    <li>
+                      <p class="body-small white no-margin-top">486 Saint-Catherine Street W<br>Suite 409<br>Montreal, QC H3B 1A6<br></p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h2 class="footer__small-heading margin-top-32">Connect with us</h2>
+              <div class="social-icons_wrapper"><a rel="noopener" href="https://www.facebook.com/WillfulWills/" target="_blank" class="social-icon-block w-inline-block"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5f0e8609343f5201bb7845ec_social-icons-facebook.svg" loading="lazy" width="32" height="32" alt="" class="social-icons"></a><a rel="noopener" href="https://twitter.com/willfulwills?lang=en" target="_blank" class="social-icon-block w-inline-block"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5f0e8609aa358d4c65b79ddb_social-icons-twitter.svg" loading="lazy" width="32" height="32" alt="" class="social-icons"></a><a rel="noopener" href="https://www.instagram.com/willfulwills/?hl=en" target="_blank" class="social-icon-block w-inline-block"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5f0e86099fc4fe3148e1e04b_social-icons-insta.svg" loading="lazy" width="32" height="32" alt="" class="social-icons"></a><a rel="noopener" href="https://www.youtube.com/channel/UClQJUwFs8Or1BmLRJoQj1KQ" target="_blank" class="social-icon-block w-inline-block"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5f0e864061ca2c463f6e99d1_social-icons-youtube.svg" loading="lazy" width="32" height="32" alt="" class="social-icons"></a></div>
             </div>
           </div>
-          <h4>
-            Call for help signing up
-          </h4><svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--link">
-          <use xlink:href="#arrow"></use></svg>
         </div>
-        <div class="h-c--idle-widget-bottom-section">
-          <div class="h-c--idle-widget_copy">
-            <ul>
-              <li>Start a new account
-              </li>
-              <li>Create your first campaign
-              </li>
-              <li>Get ongoing support for new accounts in the first 3 months
-              </li>
-            </ul>
+        <div class="footer-divider"></div>
+      </div>
+      <div class="container-wide">
+        <div class="columns-5 w-row">
+          <div class="column-12 w-col w-col-9 w-col-small-9">
+            <div class="footer-lock-icon"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5f10788432b2dbd7ec4f7d72_lock.svg" alt="" class="image-2"></div>
+            <div class="footer__copyright-text">Your data is secure with AES-256, block-level storage encryption. Copyright © 2021 Willful. All Rights Reserved. <a href="/terms-of-service" class="footer__copyright-link">Terms of Service</a> <a href="/privacy-policy" class="footer__copyright-link">Privacy Policy</a></div>
           </div>
-          <div>
-            <a class="h-c--idle-widget_number" href="tel:18442452553"><svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--link">
-            <use xlink:href="#call"></use></svg><span>1-844-245-2553*</span></a>
-          </div>
-          <p class="h-c--idle-widget_availability">
-            *Mon-Fri, 9am-9pm ET
-          </p>
+          <div class="column-13 w-col w-col-3 w-col-small-3"><a href="https://www.bbb.org/ca/on/toronto/profile/legal-information-services/willful-0107-1382153#" target="_blank" class="link-block w-inline-block"><img src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/5fdbdb758201bbfc38d5e474_ab-seal-horizontal.svg" loading="lazy" width="310" height="105" alt="" class="bbb-badge"></a></div>
         </div>
       </div>
-    </main>
-    <footer class="h-c-footer h-c-footer--robust h-has-social">
-      <section class="h-c-footer__upper">
-        <section class="h-c-social">
-          <div class="h-c-social__group">
-            <p class="h-c-social__title h-c-social__title--inline h-u-font-weight-medium">
-              Follow us
-            </p>
-            <p></p>
-            <ul class="h-c-social__list h-no-bullet">
-              <li class="h-c-social__item">
-                <a class="h-c-social__link" href="https://blog.google/products/ads/" aria-label="Follow us on Blogger"><svg class="h-c-icon h-c-icon--social h-c-icon--no-padding h-c-icon--24px">
-                <use xlink:href="#social-blogger"></use></svg></a>
-              </li>
-              <li class="h-c-social__item">
-                <a class="h-c-social__link" href="https://twitter.com/googleads" aria-label="Follow us on Twitter" rel="nofollow"><svg class="h-c-icon h-c-icon--social h-c-icon--no-padding h-c-icon--24px">
-                <use xlink:href="#social-twitter"></use></svg></a>
-              </li>
-              <li class="h-c-social__item">
-                <a class="h-c-social__link" href="https://www.youtube.com/googleads" aria-label="Follow us on YouTube"><svg class="h-c-icon h-c-icon--social h-c-icon--no-padding h-c-icon--24px">
-                <use xlink:href="#social-youtube"></use></svg></a>
-              </li>
-              <li class="h-c-social__item">
-                <a class="h-c-social__link" href="https://www.facebook.com/GoogleAds/" aria-label="Follow us on Facebook" rel="nofollow"><svg class="h-c-icon h-c-icon--social h-c-icon--no-padding h-c-icon--24px">
-                <use xlink:href="#social-facebook"></use></svg></a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </section>
-      <nav class="h-c-footer__site-links">
-        <div data-glue-responsive-accordion-static="" data-ng-cloak="" data-glue-responsive-accordion-static-breakpoints="'s'">
-          <div class="h-c-footer__site-links-grid">
-            <div class="h-c-footer__site-links-column glue-a-zippy--v-smooth-expand" id="footer_col_1">
-              <h4 class="h-c-footer__site-links-header">
-                About Google Ads <svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--32px h-c-icon--footer h-c-footer__expand">
-                <use xlink:href="#mi-expand"></use></svg>
-              </h4>
-              <ul class="h-c-footer__site-links-list h-no-bullet">
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="../home/">Overview</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="../home/how-it-works/">How it works</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="../home/pricing/">Cost</a>
-                </li>
-              </ul>
-            </div>
-            <div class="h-c-footer__site-links-column glue-a-zippy--v-smooth-expand" id="footer_col_2">
-              <h4 class="h-c-footer__site-links-header">
-                Learning & support <svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--32px h-c-icon--footer h-c-footer__expand">
-                <use xlink:href="#mi-expand"></use></svg>
-              </h4>
-              <ul class="h-c-footer__site-links-list h-no-bullet">
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://support.google.com/google-ads/answer/6146252?hl=en&amp;utm_medium=et&amp;utm_campaign=en&amp;utm_source=ww-ww-et-b2bfooter_adwords">Your Guide to Google Ads</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://support.google.com/google-ads/#topic=3119071&amp;utm_source=smb_marketing&amp;utm_medium=referral&amp;utm_campaign=us-en-et-awhp-footer&amp;utm_content=US">Google Ads Help Center</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://support.google.com/google-ads/announcements/9048695">Google Ads Announcements</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://www.en.advertisercommunity.com/t5/Google-Ads/ct-p/google-ads">Google Advertiser Community</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://www.yourprimer.com/?utm_source=digital&amp;utm_medium=embeddedpromo&amp;utm_campaign=adwordsus">Primer</a>
-                </li>
-              </ul>
-            </div>
-            <div class="h-c-footer__site-links-column glue-a-zippy--v-smooth-expand" id="footer_col_3">
-              <h4 class="h-c-footer__site-links-header">
-                Developers & partners <svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--32px h-c-icon--footer h-c-footer__expand">
-                <use xlink:href="#mi-expand"></use></svg>
-              </h4>
-              <ul class="h-c-footer__site-links-list h-no-bullet">
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://developers.google.com/?hl=en">Google Developers Site</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://developers.google.com/adwords/api/docs/guides/start">Google Ads API (AdWords API)</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://developers.google.com/google-ads/scripts/">Google Ads Scripts</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://support.google.com/google-ads/answer/2476688?hl=en">Google Ads Remarketing Tags</a>
-                </li>
-              </ul>
-            </div>
-            <div class="h-c-footer__site-links-column glue-a-zippy--v-smooth-expand" id="footer_col_4">
-              <h4 class="h-c-footer__site-links-header">
-                Related products <svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--32px h-c-icon--footer h-c-footer__expand">
-                <use xlink:href="#mi-expand"></use></svg>
-              </h4>
-              <ul class="h-c-footer__site-links-list h-no-bullet">
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://marketingplatform.google.com/about/analytics/?utm_source=google-growth&amp;utm_medium=referral-internal&amp;utm_campaign=2018-q4-amer-all-gafree-analytics&amp;utm_content=ads-website-footer">Google Analytics</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://www.google.com/intl/en/retail/solutions/shopping-campaigns/">Shopping Campaigns</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://ads.google.com/local-services-ads/">Local Services</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://www.google.com/intl/en/business/">Google My Business</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://www.google.com/intl/en/chrome/">Chrome</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://waze.com/business/">Waze Local ads</a>
-                </li>
-              </ul>
-            </div>
-            <div class="h-c-footer__site-links-column glue-a-zippy--v-smooth-expand" id="footer_col_5">
-              <h4 class="h-c-footer__site-links-header">
-                More solutions <svg aria-hidden="true" role="img" class="h-c-icon h-c-icon--32px h-c-icon--footer h-c-footer__expand">
-                <use xlink:href="#mi-expand"></use></svg>
-              </h4>
-              <ul class="h-c-footer__site-links-list h-no-bullet">
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://www.google.com/intl/en/services/">Business Solutions</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://gsuite.google.com/intl/en/?utm_medium=et&amp;utm_source=gmb&amp;utm_campaign=footer">G Suite</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://www.thinkwithgoogle.com/">Think with Google</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://www.google.com/intl/en/adsense/start/?utm_source=internal&amp;utm_medium=et&amp;utm_campaign=adwords-homepage">AdSense</a>
-                </li>
-                <li class="h-c-footer__site-links-list-item">
-                  <a class="h-c-footer__link" href="https://admob.google.com/home/?utm_source=Internal&amp;utm_medium=et&amp;utm_campaign=google-ads">AdMob</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <section class="h-c-footer__global">
-        <div class="h-c-footer__logo">
-          <a href="https://www.google.com" title="Google"><svg aria-hidden="true" role="img" class="h-c-footer__logo-img">
-          <use xlink:href="#google-logo"></use></svg></a>
-        </div>
-        <ul class="h-c-footer__global-links h-no-bullet">
-          <li class="h-c-footer__global-links-list-item">
-            <a class="h-c-footer__link" href="https://policies.google.com/privacy">Privacy</a>
-          </li>
-          <li class="h-c-footer__global-links-list-item">
-            <a class="h-c-footer__link" href="https://policies.google.com/terms">Terms</a>
-          </li>
-          <li class="h-c-footer__global-links-list-item">
-            <a class="h-c-footer__link" href="https://www.google.com/intl/en/about/">About Google</a>
-          </li>
-          <li class="h-c-footer__global-links-list-item">
-            <a class="h-c-footer__link" href="https://www.google.com/intl/en/about/products/">Google products</a>
-          </li>
-        </ul>
-        <ul class="h-c-footer__global-links h-c-footer__global-links--extra h-no-bullet">
-          <li class="h-c-footer__global-links-list-item h-c-footer__global-links-list-item--extra">
-            <a class="h-c-footer__link" href="https://support.google.com/google-ads/?hl=en#topic=3119071"><svg class="h-c-icon h-c-icon--18px h-c-icon--footer" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="#mi-help"></use></svg> Help</a>
-          </li>
-          <li class="h-c-footer__global-links-list-item h-c-footer__global-links-list-item--extra">
-            <label for="lang-selector" class="h-u-visually-hidden">Change language or region</label> <select name="lang-selector" id="lang-selector" class="h-c-form__dropdown h-c-footer__lang-dropdown">
-              <option value="/intl/fr_dz/home/">
-                Algérie – Français
-              </option>
-              <option value="/intl/es-419_ar/home/">
-                Argentina – Español (Latinoamérica)
-              </option>
-              <option value="/intl/en_au/home/">
-                Australia – English
-              </option>
-              <option value="/intl/az_az/home/">
-                Azərbaycan – Azərbaycanca
-              </option>
-              <option value="/intl/en_bd/home/">
-                Bangladesh – English
-              </option>
-              <option value="/intl/fr_be/home/">
-                Belgique – Français
-              </option>
-              <option value="/intl/nl_be/home/">
-                België – Nederlands
-              </option>
-              <option value="/intl/es-419_bo/home/">
-                Bolivia – Español (Latinoamérica)
-              </option>
-              <option value="/intl/pt-BR_br/home/">
-                Brasil – Português (Brasil)
-              </option>
-              <option value="/intl/en_ca/home/">
-                Canada – English
-              </option>
-              <option value="/intl/fr_ca/home/">
-                Canada – Français
-              </option>
-              <option value="/intl/es-419_cl/home/">
-                Chile – Español (Latinoamérica)
-              </option>
-              <option value="/intl/es-419_co/home/">
-                Colombia – Español (Latinoamérica)
-              </option>
-              <option value="/intl/es-419_cr/home/">
-                Costa Rica – Español (Latinoamérica)
-              </option>
-              <option value="/intl/en_cy/home/">
-                Cyprus – English
-              </option>
-              <option value="/intl/da_dk/home/">
-                Danmark – Dansk
-              </option>
-              <option value="/intl/de_de/home/">
-                Deutschland – Deutsch
-              </option>
-              <option value="/intl/es-419_ec/home/">
-                Ecuador – Español (Latinoamérica)
-              </option>
-              <option value="/intl/et_ee/home/">
-                Eesti – Eesti
-              </option>
-              <option value="/intl/en_eg/home/">
-                Egypt – English
-              </option>
-              <option value="/intl/es-419_sv/home/">
-                El Salvador – Español (Latinoamérica)
-              </option>
-              <option value="/intl/en/home/">
-                English
-              </option>
-              <option value="/intl/ca_es/home/">
-                Espanya – Català
-              </option>
-              <option value="/intl/es_es/home/">
-                España – Español
-              </option>
-              <option value="/intl/es-419_us/home/">
-                Estados Unidos – Español (Latinoamérica)
-              </option>
-              <option value="/intl/fr_fr/home/">
-                France – Français
-              </option>
-              <option value="/intl/es-419_gt/home/">
-                Guatemala – Español (Latinoamérica)
-              </option>
-              <option value="/intl/es-419_hn/home/">
-                Honduras – Español (Latinoamérica)
-              </option>
-              <option value="/intl/en_hk/home/">
-                Hong Kong – English
-              </option>
-              <option value="/intl/hr_hr/home/">
-                Hrvatska – Hrvatski
-              </option>
-              <option value="/intl/en_in/home/">
-                India – English
-              </option>
-              <option value="/intl/id_id/home/">
-                Indonesia – Bahasa Indonesia
-              </option>
-              <option value="/intl/en_id/home/">
-                Indonesia – English
-              </option>
-              <option value="/intl/en_ie/home/">
-                Ireland – English
-              </option>
-              <option value="/intl/it_it/home/">
-                Italia – Italiano
-              </option>
-              <option value="/intl/ky_kg/home/">
-                Kyrgyzstan – Ky
-              </option>
-              <option value="/intl/lv_lv/home/">
-                Latvija – Latviešu
-              </option>
-              <option value="/intl/lt_lt/home/">
-                Lietuva – Lietuvių
-              </option>
-              <option value="/intl/hu_hu/home/">
-                Magyarország – Magyar
-              </option>
-              <option value="/intl/ms_my/home/">
-                Malaysia – Bahasa Melayu
-              </option>
-              <option value="/intl/en_my/home/">
-                Malaysia – English
-              </option>
-              <option value="/intl/es-419_mx/home/">
-                México – Español (Latinoamérica)
-              </option>
-              <option value="/intl/nl_nl/home/">
-                Nederland – Nederlands
-              </option>
-              <option value="/intl/en_np/home/">
-                Nepal – English
-              </option>
-              <option value="/intl/en_nz/home/">
-                New Zealand – English
-              </option>
-              <option value="/intl/es-419_ni/home/">
-                Nicaragua – Español (Latinoamérica)
-              </option>
-              <option value="/intl/en_ng/home/">
-                Nigeria – English
-              </option>
-              <option value="/intl/no_no/home/">
-                Norge – Norsk
-              </option>
-              <option value="/intl/en_pk/home/">
-                Pakistan – English
-              </option>
-              <option value="/intl/es-419_pa/home/">
-                Panamá – Español (Latinoamérica)
-              </option>
-              <option value="/intl/es-419_py/home/">
-                Paraguay – Español (Latinoamérica)
-              </option>
-              <option value="/intl/es-419_pe/home/">
-                Perú – Español (Latinoamérica)
-              </option>
-              <option value="/intl/en_ph/home/">
-                Philippines – English
-              </option>
-              <option value="/intl/fil_ph/home/">
-                Pilipinas – Filipino
-              </option>
-              <option value="/intl/pl_pl/home/">
-                Polska – Polski
-              </option>
-              <option value="/intl/pt-PT_pt/home/">
-                Portugal – Português (Portugal)
-              </option>
-              <option value="/intl/es-419_pr/home/">
-                Puerto Rico – Español (Latinoamérica)
-              </option>
-              <option value="/intl/ro_md/home/">
-                Republica Moldova – Română
-              </option>
-              <option value="/intl/es-419_do/home/">
-                República Dominicana – Español (Latinoamérica)
-              </option>
-              <option value="/intl/ro_ro/home/">
-                România – Română
-              </option>
-              <option value="/intl/en_sa/home/">
-                Saudi Arabia – English
-              </option>
-              <option value="/intl/de_ch/home/">
-                Schweiz – Deutsch
-              </option>
-              <option value="/intl/en_sg/home/">
-                Singapore – English
-              </option>
-              <option value="/intl/sl_si/home/">
-                Slovenija – Slovenščina
-              </option>
-              <option value="/intl/sk_sk/home/">
-                Slovensko – Slovenčina
-              </option>
-              <option value="/intl/en_za/home/">
-                South Africa – English
-              </option>
-              <option value="/intl/en_lk/home/">
-                Sri Lanka – English
-              </option>
-              <option value="/intl/fr_ch/home/">
-                Suisse – Français
-              </option>
-              <option value="/intl/fi_fi/home/">
-                Suomi – Suomi
-              </option>
-              <option value="/intl/sv_se/home/">
-                Sverige – Svenska
-              </option>
-              <option value="/intl/fr_tn/home/">
-                Tunisie – Français
-              </option>
-              <option value="/intl/tr_tr/home/">
-                Türkiye – Türkçe
-              </option>
-              <option value="/intl/en_ae/home/">
-                United Arab Emirates – English
-              </option>
-              <option value="/intl/en_uk/home/">
-                United Kingdom – English
-              </option>
-              <option value="/intl/en_us/home/" selected>
-                United States – English
-              </option>
-              <option value="/intl/es-419_uy/home/">
-                Uruguay – Español (Latinoamérica)
-              </option>
-              <option value="/intl/es-419_ve/home/">
-                Venezuela – Español (Latinoamérica)
-              </option>
-              <option value="/intl/vi_vn/home/">
-                Việt Nam – Tiếng Việt
-              </option>
-              <option value="/intl/de_at/home/">
-                Österreich – Deutsch
-              </option>
-              <option value="/intl/cs_cz/home/">
-                Česká Republika – Čeština
-              </option>
-              <option value="/intl/el_gr/home/">
-                Ελλάδα – Ελληνικά
-              </option>
-              <option value="/intl/ru_by/home/">
-                Беларусь – Русский
-              </option>
-              <option value="/intl/bg_bg/home/">
-                България – Български
-              </option>
-              <option value="/intl/ru_kz/home/">
-                Казахстан – Русский
-              </option>
-              <option value="/intl/mn_mn/home/">
-                Монгол – Монгол
-              </option>
-              <option value="/intl/ru_ru/home/">
-                Россия – Русский
-              </option>
-              <option value="/intl/sr_rs/home/">
-                Србија – Српски
-              </option>
-              <option value="/intl/ru_tj/home/">
-                Таджикистан – Русский
-              </option>
-              <option value="/intl/ru_tm/home/">
-                Туркменистан – Русский
-              </option>
-              <option value="/intl/uk_ua/home/">
-                Україна – Українська
-              </option>
-              <option value="/intl/uz_uz/home/">
-                Ўзбекистон – Ўзбек
-              </option>
-              <option value="/intl/hy_am/home/">
-                Հայաստան – Հայերեն
-              </option>
-              <option value="/intl/hi_in/home/">
-                भारत – हिन्दी
-              </option>
-              <option value="/intl/th_th/home/">
-                ไทย – ไทย
-              </option>
-              <option value="/intl/ka_ge/home/">
-                საქართველო – ქართული
-              </option>
-              <option value="/intl/iw_il/home/">
-                ‫ישראל – עברית‬
-              </option>
-              <option value="/intl/ar_ae/home/">
-                ‫الإمارات العربية المتحدة – العربية‬
-              </option>
-              <option value="/intl/ar_dz/home/">
-                ‫الجزائر – العربية‬
-              </option>
-              <option value="/intl/ar_sa/home/">
-                ‫المملكة العربية السعودية – العربية‬
-              </option>
-              <option value="/intl/ar_tn/home/">
-                ‫تونس – العربية‬
-              </option>
-              <option value="/intl/ar_eg/home/">
-                ‫مصر – العربية‬
-              </option>
-              <option value="/intl/zh-CN_cn/home/">
-                中国 – 中文（简体中文）
-              </option>
-              <option value="/intl/zh-TW_tw/home/">
-                台灣 – 中文（繁體中文）
-              </option>
-              <option value="/intl/ja_jp/home/">
-                日本 – 日本語
-              </option>
-              <option value="/intl/zh-TW_hk/home/">
-                香港 – 中文（繁體中文）
-              </option>
-              <option value="/intl/ko_kr/home/">
-                대한민국 – 한국어
-              </option>
-            </select>
-          </li>
-        </ul>
-      </section>
     </footer>
-    <script type="text/javascript" src="/home/static/js/bs-analytics.min.js?cache=df426cb"></script> 
-    <script src="//www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script> 
-    <script src="https://www.gstatic.com/external_hosted/gsap/TweenMax.min.js"></script> 
-    <script src="https://www.gstatic.com/external_hosted/scrollmagic/ScrollMagic.min.js"></script> 
-    <script src="https://www.gstatic.com/external_hosted/scrollmagic/animation.gsap.min.js"></script> 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.min.js"></script> 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-touch.min.js"></script> 
-    <script src="/home/static/home/js/detect.min.js?cache=1f7ea63"></script> 
-    <script src="/home/static/home/js/index.min.js?cache=2a0ff99"></script> <svg class="svg-assets" xmlns="http://www.w3.org/2000/svg"> <!-- material design icons -->
-    <symbol id="mi-arrow-forward" viewbox="0 0 18 18">
-      <path d="M9,1.5C4.8,1.5,1.5,4.8,1.5,9s3.3,7.5,7.5,7.5s7.5-3.3,7.5-7.5S13.2,1.5,9,1.5z M9,14.5l-1-1 l3.8-3.8H3.5V8.3h8.4L8.1,4.5L9,3.5L14.5,9L9,14.5z"></path>
-    </symbol>
-    <symbol id="mi-help" viewbox="0 0 48 48">
-      <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm2 34h-4v-4h4v4zm4.13-15.49l-1.79 1.84C26.9 25.79 26 27 26 30h-4v-1c0-2.21.9-4.21 2.34-5.66l2.49-2.52C27.55 20.1 28 19.1 28 18c0-2.21-1.79-4-4-4s-4 1.79-4 4h-4c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.76-.71 3.35-1.87 4.51z"></path>
-    </symbol>
-    <symbol id="mi-youtube-icon" viewbox="0 0 86 60">
-      <path d="M83.37 9.387c-.967-3.677-3.87-6.58-7.547-7.597C69.193 0 42.58 0 42.58 0S15.97 0 9.29 1.79c-3.677.968-6.532 3.87-7.548 7.597C0 16.065 0 30 0 30s0 13.935 1.79 20.613c.968 3.677 3.87 6.58 7.55 7.597C15.967 60 42.58 60 42.58 60s26.614 0 33.29-1.79c3.678-.968 6.533-3.87 7.55-7.597C85.16 43.935 85.16 30 85.16 30s0-13.935-1.79-20.613zm-49.5 33.29V17.323L56.13 30 33.87 42.677z" fill-rule="nonzero"></path>
-    </symbol>
-    <symbol id="mi-expand" viewbox="0 0 24 24">
-      <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
-    </symbol><!-- Social icons -->
-    <symbol id="social-blogger" viewbox="2 2 20 20">
-      <path d="M20,2 L4,2 C2.895,2 2.01,2.895 2.01,4 L2,20 C2,21.105 2.895,22 4,22 L20,22 C21.105,22 22,21.105 22,20 L22,4 C22,2.895 21.105,2 20,2 L20,2 Z M16,9 L16,10 C16,10.555 16.445,11 17,11 C17.555,11 18,11.445 18,12 L18,15 C18,16.655 16.655,18 15,18 L9,18 C7.345,18 6,16.655 6,15 L6,8 C6,6.345 7.345,5 9,5 L13,5 C14.655,5 16,6.345 16,8 L16,9 L16,9 Z M9.95,10 L12.55,10 C13.105,10 13.55,9.555 13.55,9 C13.55,8.445 13.105,8 12.55,8 L9.95,8 C9.395,8 8.95,8.445 8.95,9 C8.95,9.555 9.4,10 9.95,10 L9.95,10 Z M14,13 L9.95,13 C9.395,13 8.95,13.445 8.95,14 C8.95,14.555 9.395,15 9.95,15 L14,15 C14.555,15 15,14.555 15,14 C15,13.445 14.555,13 14,13 L14,13 Z"></path>
-    </symbol>
-    <symbol id="social-facebook" viewbox="0 0 20 21">
-      <path d="M18.9,0H1.1C0.5,0,0,0.5,0,1.1v17.8C0,19.5,0.5,20,1.1,20h9.6v-7.7H8.1v-3h2.6V7c0-2.6,1.6-4,3.9-4c1.1,0,2.1,0.1,2.3,0.1 v2.7l-1.6,0c-1.3,0-1.5,0.6-1.5,1.5v1.9h3l-0.4,3h-2.6V20h5.1c0.6,0,1.1-0.5,1.1-1.1V1.1C20,0.5,19.5,0,18.9,0z"></path>
-    </symbol>
-    <symbol id="social-twitter" viewbox="2 4 20 17">
-      <path d="M21.9998024,5.94850271 C21.2639378,6.27899473 20.4732072,6.50243431 19.6431192,6.60281913 C20.4903254,6.08859695 21.1409646,5.27418342 21.4472639,4.3038956 C20.6544849,4.7801123 19.7764073,5.12586577 18.8417079,5.31226298 C18.0932607,4.50466524 17.0268825,4 15.8467486,4 C13.5805579,4 11.7434203,5.86056413 11.7434203,8.15526483 C11.7434203,8.48101542 11.7797051,8.7980981 11.8496412,9.10221596 C8.43952817,8.92893175 5.41611168,7.27461954 3.39235612,4.76062801 C3.03916454,5.37434599 2.83681824,6.08815245 2.83681824,6.84966948 C2.83681824,8.29128441 3.5611975,9.5631712 4.66217788,10.3083896 C3.98959225,10.2868309 3.35687602,10.099841 2.8036791,9.78861106 C2.80338648,9.80594689 2.80331333,9.8233568 2.80331333,9.8408408 C2.80331333,11.8541677 4.21768905,13.5336687 6.09476916,13.9154273 C5.75042931,14.0103299 5.38794707,14.0610779 5.01376005,14.0610779 C4.74930529,14.0610779 4.49231233,14.0350742 4.241757,13.9865487 C4.76393626,15.637453 6.27926567,16.8388111 8.07477813,16.8724456 C6.67042461,17.9869023 4.9012479,18.6511461 2.97881179,18.6511461 C2.64763982,18.6511461 2.32100345,18.6315136 2,18.5931378 C3.81592266,19.7721223 5.97267373,20.4599991 8.28985336,20.4599991 C15.8371653,20.4599991 19.9642689,14.1282728 19.9642689,8.63711197 C19.9642689,8.45693788 19.9602454,8.2777269 19.9524178,8.0995531 C20.7540486,7.51369099 21.449678,6.78180786 21.9998024,5.94850271"></path>
-    </symbol>
-    <symbol id="social-youtube" viewbox="0 4 24 18">
-      <path d="M23.74,7.6062 C23.74,7.6062 23.51,5.9562 22.79,5.2362 C21.88,4.2762 20.86,4.2762 20.39,4.2162 C17.04,3.9712 12,4.0012 12,4.0012 C12,4.0012 6.98,3.9712 3.63,4.2112 C3.17,4.2712 2.15,4.2712 1.24,5.2312 C0.52,5.9512 0.28,7.6012 0.28,7.6012 C0.28,7.6012 0.04,9.5462 0,11.4812 L0,13.5062 C0.04,15.4462 0.28,17.3812 0.28,17.3812 C0.28,17.3812 0.52,19.0312 1.24,19.7612 C2.15,20.7112 3.34,20.6812 3.88,20.7812 C5.76,20.9612 11.79,21.0012 12,21.0012 C12,21.0012 17.05,21.0112 20.4,20.7712 C20.86,20.7112 21.88,20.7112 22.79,19.7512 C23.51,19.0312 23.75,17.3812 23.75,17.3812 C23.75,17.3812 23.99,15.4412 24,13.5062 L24,11.4812 C23.98,9.5462 23.74,7.6062 23.74,7.6062 L23.74,7.6062 Z M9.57,16.0012 L9.57,8.9912 L16,12.6312 L9.57,16.0012 L9.57,16.0012 Z"></path>
-    </symbol>
-    <symbol id="google-logo" viewbox="0 0 396 130">
-      <path d="M51.0745265,101.038701 C23.3283097,101.038701 9.65724009e-07,78.4212338 9.65724009e-07,50.645974 C-0.00548030982,22.8707143 23.3228284,0.253246753 51.0745265,0.253246753 C66.4220981,0.253246753 77.3517615,6.27798701 85.5736748,14.1408766 L75.8718171,23.8528896 C69.9794459,18.3219805 61.9987087,14.0201623 51.0690452,14.0201623 C30.8102508,14.0201623 14.9693645,30.365974 14.9693645,50.645974 C14.9693645,70.925974 30.8102508,87.2717857 51.0690452,87.2717857 C64.2076627,87.2717857 71.6950851,81.9877922 76.48572,77.1921429 C80.4157945,73.2579545 82.991994,67.6063312 83.9731424,59.8641558 L51.0745265,59.8641558 L51.0745265,46.1027273 L97.3638985,46.1027273 C97.8572133,48.5609091 98.0983894,51.5129221 98.0983894,54.7063636 C98.0983894,65.0329221 95.2755325,77.8121753 86.1875777,86.9096429 C77.3462802,96.1223377 66.0548526,101.038701 51.0745265,101.038701 L51.0745265,101.038701 Z"></path>
-      <path d="M167.573556,68.369026 C167.573556,87.0523052 152.965957,100.813734 135.036704,100.813734 C117.112933,100.813734 102.499853,87.0468182 102.499853,68.369026 C102.499853,49.5650325 117.112933,35.9188312 135.036704,35.9188312 C152.965957,35.9188312 167.573556,49.5650325 167.573556,68.369026 L167.573556,68.369026 Z M153.333202,68.369026 C153.333202,56.6926623 144.85915,48.7035714 135.036704,48.7035714 C125.214259,48.7035714 116.740207,56.6926623 116.740207,68.369026 C116.740207,79.9191883 125.214259,88.0344805 135.036704,88.0344805 C144.85915,88.0344805 153.333202,79.9191883 153.333202,68.369026 L153.333202,68.369026 Z"></path>
-      <path d="M238.282011,68.369026 C238.282011,87.0523052 223.674411,100.813734 205.745159,100.813734 C187.821388,100.813734 173.208307,87.0468182 173.208307,68.369026 C173.208307,49.5650325 187.821388,35.9188312 205.745159,35.9188312 C223.674411,35.9188312 238.282011,49.5650325 238.282011,68.369026 L238.282011,68.369026 Z M224.041657,68.369026 C224.041657,56.6926623 215.567605,48.7035714 205.745159,48.7035714 C195.922713,48.7035714 187.448661,56.6926623 187.448661,68.369026 C187.448661,79.9191883 195.922713,88.0344805 205.745159,88.0344805 C215.567605,88.0344805 224.041657,79.9191883 224.041657,68.369026 L224.041657,68.369026 Z"></path>
-      <path d="M306.04702,37.943539 L306.04702,96.1442857 C306.04702,120.111558 291.927254,129.944286 275.231289,129.944286 C259.516472,129.944286 250.061272,119.376299 246.498443,110.772662 L258.897088,105.609383 C261.106042,110.893377 266.51058,117.159545 275.225808,117.159545 C285.908814,117.159545 292.535676,110.52026 292.535676,98.1086364 L292.535676,93.4391883 L292.047842,93.4391883 C288.85774,97.3733766 282.71323,100.813734 274.97915,100.813734 C258.771019,100.813734 243.916762,86.6791883 243.916762,68.4897403 C243.916762,50.1740909 258.771019,35.9188312 274.97915,35.9188312 C282.71323,35.9188312 288.852259,39.3591883 292.047842,43.1726623 L292.535676,43.1726623 L292.535676,37.943539 L306.04702,37.943539 L306.04702,37.943539 Z M293.522306,68.4897403 C293.522306,57.0602922 285.908814,48.7035714 276.212437,48.7035714 C266.389992,48.7035714 258.162597,57.0602922 258.162597,68.4897403 C258.162597,79.798474 266.389992,88.0344805 276.212437,88.0344805 C285.908814,88.0344805 293.522306,79.798474 293.522306,68.4897403 L293.522306,68.4897403 Z"></path>
-      <path d="M329.961825,3.54545455 L329.961825,98.9207143 L315.721472,98.9207143 L315.721472,3.54545455 L329.961825,3.54545455 L329.961825,3.54545455 Z"></path>
-      <path d="M383.755064,79.0577273 L394.805315,86.4322727 C391.242486,91.7162662 382.647846,100.813734 367.793589,100.813734 C349.376503,100.813734 336.002191,86.558474 336.002191,68.369026 C336.002191,49.0712013 349.497091,35.9188312 366.198538,35.9188312 C383.020573,35.9188312 391.247967,49.3181169 393.944755,56.566461 L395.419218,60.2537338 L352.078772,78.1962662 C355.394944,84.7093506 360.552824,88.0289935 367.793589,88.0289935 C375.039836,88.0289935 380.071647,84.4624351 383.755064,79.0577273 L383.755064,79.0577273 Z M349.743749,67.3813636 L378.717771,55.3373701 C377.12272,51.2824675 372.332085,48.4566558 366.686372,48.4566558 C359.445607,48.4511688 349.376503,54.843539 349.743749,67.3813636 L349.743749,67.3813636 Z"></path>
-    </symbol><!-- hercules icons -->
-    <symbol id="h-color-google-logo" viewbox="0 0 74 24">
-      <path fill="#4285F4" d="M9.24 8.19v2.46h5.88c-.18 1.38-.64 2.39-1.34 3.1-.86.86-2.2 1.8-4.54 1.8-3.62 0-6.45-2.92-6.45-6.54s2.83-6.54 6.45-6.54c1.95 0 3.38.77 4.43 1.76L15.4 2.5C13.94 1.08 11.98 0 9.24 0 4.28 0 .11 4.04.11 9s4.17 9 9.13 9c2.68 0 4.7-.88 6.28-2.52 1.62-1.62 2.13-3.91 2.13-5.75 0-.57-.04-1.1-.13-1.54H9.24z"></path>
-      <path fill="#EA4335" d="M25 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z"></path>
-      <path fill="#4285F4" d="M53.58 7.49h-.09c-.57-.68-1.67-1.3-3.06-1.3C47.53 6.19 45 8.72 45 12c0 3.26 2.53 5.81 5.43 5.81 1.39 0 2.49-.62 3.06-1.32h.09v.81c0 2.22-1.19 3.41-3.1 3.41-1.56 0-2.53-1.12-2.93-2.07l-2.22.92c.64 1.54 2.33 3.43 5.15 3.43 2.99 0 5.52-1.76 5.52-6.05V6.49h-2.42v1zm-2.93 8.03c-1.76 0-3.1-1.5-3.1-3.52 0-2.05 1.34-3.52 3.1-3.52 1.74 0 3.1 1.5 3.1 3.54.01 2.03-1.36 3.5-3.1 3.5z"></path>
-      <path fill="#FBBC05" d="M38 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z"></path>
-      <path fill="#34A853" d="M58 .24h2.51v17.57H58z"></path>
-      <path fill="#EA4335" d="M68.26 15.52c-1.3 0-2.22-.59-2.82-1.76l7.77-3.21-.26-.66c-.48-1.3-1.96-3.7-4.97-3.7-2.99 0-5.48 2.35-5.48 5.81 0 3.26 2.46 5.81 5.76 5.81 2.66 0 4.2-1.63 4.84-2.57l-1.98-1.32c-.66.96-1.56 1.6-2.86 1.6zm-.18-7.15c1.03 0 1.91.53 2.2 1.28l-5.25 2.17c0-2.44 1.73-3.45 3.05-3.45z"></path>
-    </symbol>
-    <symbol id="h-white-google-logo" viewbox="0 0 74 24">
-      <path d="M9.24 8.19v2.46h5.88c-.18 1.38-.64 2.39-1.34 3.1-.86.86-2.2 1.8-4.54 1.8-3.62 0-6.45-2.92-6.45-6.54s2.83-6.54 6.45-6.54c1.95 0 3.38.77 4.43 1.76L15.4 2.5C13.94 1.08 11.98 0 9.24 0 4.28 0 .11 4.04.11 9s4.17 9 9.13 9c2.68 0 4.7-.88 6.28-2.52 1.62-1.62 2.13-3.91 2.13-5.75 0-.57-.04-1.1-.13-1.54H9.24zm15.76-2c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52zm28.58-8.03h-.09c-.57-.68-1.67-1.3-3.06-1.3C47.53 6.19 45 8.72 45 12c0 3.26 2.53 5.81 5.43 5.81 1.39 0 2.49-.62 3.06-1.32h.09v.81c0 2.22-1.19 3.41-3.1 3.41-1.56 0-2.53-1.12-2.93-2.07l-2.22.92c.64 1.54 2.33 3.43 5.15 3.43 2.99 0 5.52-1.76 5.52-6.05V6.49h-2.42v1zm-2.93 8.03c-1.76 0-3.1-1.5-3.1-3.52 0-2.05 1.34-3.52 3.1-3.52 1.74 0 3.1 1.5 3.1 3.54.01 2.03-1.36 3.5-3.1 3.5zM38 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52zM58 .24h2.51v17.57H58zm10.26 15.28c-1.3 0-2.22-.59-2.82-1.76l7.77-3.21-.26-.66c-.48-1.3-1.96-3.7-4.97-3.7-2.99 0-5.48 2.35-5.48 5.81 0 3.26 2.46 5.81 5.76 5.81 2.66 0 4.2-1.63 4.84-2.57l-1.98-1.32c-.66.96-1.56 1.6-2.86 1.6zm-.18-7.15c1.03 0 1.91.53 2.2 1.28l-5.25 2.17c0-2.44 1.73-3.45 3.05-3.45z"></path>
-    </symbol>
-    <symbol id="h-burger" viewbox="0 0 24 24">
-      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-    </symbol></svg><svg class="svg-assets" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="gads-logo" viewbox="0 0 192 192">
-      <rect x="8" y="62.52" transform="matrix(0.5 -0.866 0.866 0.5 -46.2127 103.666)" fill="#FBBC04" width="117.33" height="58.67"></rect>
-      <path fill="#4285F4" d="M180.07,127.99L121.4,26.38c-8.1-14.03-26.04-18.84-40.07-10.74c-14.03,8.1-18.84,26.04-10.74,40.07 l58.67,101.61c8.1,14.03,26.04,18.83,40.07,10.74C183.36,159.96,188.16,142.02,180.07,127.99z"></path>
-      <circle fill="#34A853" cx="37.34" cy="142.66" r="29.33"></circle>
-    </symbol>
-    <symbol id="call" viewbox="0 0 24 24">
-      <path d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
-    </symbol>
-    <symbol id="color-mic" viewbox="0 0 14 20">
-      <path fill="#4285f4" d="M7,13c1.7,0,3-1.3,3-3l0-7c0-1.7-1.3-3-3-3S4,1.3,4,3v7C4,11.7,5.3,13,7,13z"></path>
-      <path fill="#34a853" d="M6,16.9h2V20H6V16.9z"></path>
-      <path fill="#f4b400" d="M2,10H0c0,1.9,0.8,3.7,2.1,5l1.4-1.4C2.6,12.6,2,11.4,2,10z"></path>
-      <path fill="#ea4335" d="M7,15c-1.4,0-2.6-0.6-3.5-1.5l-1.4,1.4c1.3,1.3,3,2.1,5,2.1c3.9,0,7-3.1,7-7h-2C12,12.8,9.8,15,7,15z"></path>
-    </symbol>
-    <symbol id="arrow" viewbox="0 0 18 12">
-      <polygon points="2.1,0.4 9,7.3 15.9,0.4 18,2.6 9,11.6 0,2.6"></polygon>
-    </symbol>
-    <symbol id="office_building" viewbox="0 0 101 84">
-      <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Images/Icon06" transform="translate(0.000000, -17.000000)">
-          <g id="Page-1" transform="translate(0.000000, 17.000000)">
-            <polygon id="Fill-1" fill="#FFE6A6" points="83.224 83.1303 100.224 83.1303 100.224 35.1463 83.224 35.1463"></polygon>
-            <polygon id="Fill-2" fill="#FBBC05" points="0.1323 0.0002 0.1323 83.0962 25.4973 83.0962 25.4973 52.0702 57.8643 52.0702 57.8643 83.0962 83.2293 83.0962 83.2293 0.0002"></polygon>
-            <polygon id="Fill-4" fill="#FBBC04" points="0.132 83.0973 83.229 83.0973 83.229 0.0003 0.132 0.0003"></polygon>
-            <polygon id="Fill-5" fill="#FFFFFF" points="10.034 24.2333 19.06 24.2333 19.06 15.2083 10.034 15.2083"></polygon>
-            <polygon id="Fill-6" fill="#FFFFFF" points="28.24 24.2333 37.266 24.2333 37.266 15.2083 28.24 15.2083"></polygon>
-            <polygon id="Fill-7" fill="#FFFFFF" points="46.446 24.2333 55.472 24.2333 55.472 15.2083 46.446 15.2083"></polygon>
-            <polygon id="Fill-8" fill="#FFFFFF" points="64.652 24.2333 73.678 24.2333 73.678 15.2083 64.652 15.2083"></polygon>
-            <polygon id="Fill-9" fill="#FFFFFF" points="10.034 44.1653 19.06 44.1653 19.06 35.1393 10.034 35.1393"></polygon>
-            <polygon id="Fill-10" fill="#FFFFFF" points="28.24 44.1653 37.266 44.1653 37.266 35.1393 28.24 35.1393"></polygon>
-            <polygon id="Fill-11" fill="#FFFFFF" points="46.446 44.1653 55.472 44.1653 55.472 35.1393 46.446 35.1393"></polygon>
-            <polygon id="Fill-12" fill="#FFFFFF" points="64.652 44.1653 73.678 44.1653 73.678 35.1393 64.652 35.1393"></polygon>
-            <polygon id="Fill-13" fill="#FFFFFF" points="10.034 24.2333 19.06 24.2333 19.06 15.2083 10.034 15.2083"></polygon>
-            <polygon id="Fill-14" fill="#FFFFFF" points="28.24 24.2333 37.266 24.2333 37.266 15.2083 28.24 15.2083"></polygon>
-            <polygon id="Fill-15" fill="#FFFFFF" points="46.446 24.2333 55.472 24.2333 55.472 15.2083 46.446 15.2083"></polygon>
-            <polygon id="Fill-16" fill="#FFFFFF" points="64.652 24.2333 73.678 24.2333 73.678 15.2083 64.652 15.2083"></polygon>
-            <polygon id="Fill-17" fill="#FFFFFF" points="10.034 44.1653 19.06 44.1653 19.06 35.1393 10.034 35.1393"></polygon>
-            <polygon id="Fill-18" fill="#FFFFFF" points="28.24 44.1653 37.266 44.1653 37.266 35.1393 28.24 35.1393"></polygon>
-            <polygon id="Fill-19" fill="#FFFFFF" points="46.446 44.1653 55.472 44.1653 55.472 35.1393 46.446 35.1393"></polygon>
-            <polygon id="Fill-20" fill="#FFFFFF" points="64.652 44.1653 73.678 44.1653 73.678 35.1393 64.652 35.1393"></polygon>
-            <path d="M30.6221,68.3799 L30.6221,83.1419 L52.9891,83.1419 L52.9891,68.3799 C52.9891,62.2049 47.9841,57.1979 41.8101,57.1959 L41.8031,57.1959 C35.6271,57.1979 30.6221,62.2049 30.6221,68.3799" id="Fill-21" fill="#FFFFFF"></path>
-          </g>
-        </g>
-      </g>
-    </symbol>
-    <symbol id="browser_arrow" viewbox="0 0 100 83">
-      <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Images/Icon12" transform="translate(0.000000, -17.000000)">
-          <g id="Page-1" transform="translate(0.000000, 17.000000)">
-            <polygon id="Fill-1" fill="#D2E2FC" points="24 83 100 83 100 23 24 23"></polygon>
-            <polygon id="Fill-2" fill="#D2E2FC" points="24 83 100 83 100 23 24 23"></polygon>
-            <polygon id="Fill-3" fill="#D2E2FC" points="24 83 100 83 100 23 24 23"></polygon>
-            <polygon id="Fill-4" fill="#E8F0FE" points="0 83 24 83 24 23 0 23"></polygon>
-            <polygon id="Fill-5" fill="#E8F0FE" points="0 83 24 83 24 23 0 23"></polygon>
-            <polygon id="Fill-6" fill="#E8F0FE" points="0 83 24 83 24 23 0 23"></polygon>
-            <polygon id="Fill-7" fill="#FFFFFF" points="62 37 65.4579644 66 85 54.4473666"></polygon>
-            <polygon id="Fill-8" fill="#FFFFFF" points="85 70.138068 79.3097425 74 70 57.8629253 75.6902575 54"></polygon>
-            <polygon id="Fill-9" fill="#4285F5" points="0 25 100 25 100 0 0 0"></polygon>
-          </g>
-        </g>
-      </g>
-    </symbol>
-    <symbol id="phone_call" viewbox="0 0 100 100">
-      <g fill="none" fill-rule="evenodd">
-        <path d="m91.7530893 54.7565c11.1539997-11.153 11.1539997-29.237 0-40.391-11.154-11.154-29.237-11.154-40.391 0-9.467 9.467-10.894 23.926-4.289 34.904l-1.603 11.38 11.38-1.604c10.977 6.606 25.435 5.179 34.903-4.289" fill="#ceead6"></path>
-        <path d="m33.8468 99.3285c-5.72-1.839-9.757-5.044-13.349-8.822-11.21-11.789-18.029-25.734-20.182-41.886-.66-4.948-.344-9.828 1.508-14.565 1.126-2.879 2.893-5.096 5.637-6.506 1.843-.948 3.68-1.912 5.567-2.764 2.543-1.145 5.316-.476 6.655 1.964 2.45 4.467 4.749 9.026 6.865 13.66 1.273 2.789.222 5.153-2.499 6.596-2.182 1.157-4.387 2.276-6.623 3.323-1.48.691-1.955 1.614-1.449 3.235 2.587 8.29 6.456 15.922 11.498 22.983 1.056 1.478 2.153 1.594 3.663.769 2.097-1.144 4.248-2.195 6.406-3.222 2.793-1.329 5.362-.799 6.816 1.835 2.46 4.461 4.737 9.032 6.865 13.662 1.182 2.568.126 5.2-2.304 6.543-2.09 1.157-4.215 2.276-6.413 3.205-3.092 1.304-6.226 1.056-8.661-.01" fill="#36a854"></path>
-      </g>
-    </symbol></svg>
-  </body>
+  </main>
+  <div class="section section--notification-bar wf-section">
+    <div class="container-wide"></div>
+    <div class="notification-bar__wrapper w-dyn-list">
+      <div class="notification-bar__empty-state w-dyn-empty"></div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e9e13b793cb7451bcaea9df" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://global-uploads.webflow.com/5e9e13b793cb7451bcaea9df/js/webflow.67a81af55.js" type="text/javascript"></script>
+  <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+
+  <script>
+    setTimeout(function() {
+      // Bing UET Tag
+      (function(w, d, t, r, u) {
+        var f, n, i;
+        w[u] = w[u] || [], f = function() {
+          var o = {
+            ti: "17154063"
+          };
+          o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad")
+        }, n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function() {
+          var s = this.readyState;
+          s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null)
+        }, i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i)
+      })(window, document, "script", "//bat.bing.com/bat.js", "uetq");
+    }, 5000);
+  </script>
+
+  <script id="mcjs">
+    setTimeout(function() {
+      // Mailchimp checklist pop-up script
+      ! function(c, h, i, m, p) {
+        m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
+      }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/8f8e3e8ddac4be39d40c5ffc2/9e940dbb24eff9c5c7e859aa8.js");
+    }, 5000);
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      /* UTM tracking code
+       * Takes any query parameters that have affiliate tracking
+       * and adds them to any links to our app.
+       * Note: app links need to have "app-link" css class
+       */
+      var urlParams = new URLSearchParams(window.location.search);
+      var query = urlParams.toString();
+      if (query.length > 0) {
+        var queryParams = '?' + query
+        var appLinks = document.getElementsByClassName('app-link');
+        for (i = 0; i < appLinks.length; i++) {
+          appLinks[i].href += queryParams;
+        }
+      }
+      // accessible dropdown script
+      const ENTER_KEY_CODE = 13,
+        DOWN_ARROW_KEY_CODE = 40,
+        UP_ARROW_KEY_CODE = 38,
+        ESCAPE_KEY_CODE = 27,
+        TAB_KEY_CODE = 9,
+        SHIFT_KEY_CODE = 16,
+        KEYCODE_MOVE_END = 35,
+        KEYCODE_MOVE_HOME = 36;
+
+      function toggleAccessibilityDropdown(o) {
+        $(o).closest(".w-dropdown").find("div.w-dropdown-toggle").toggleClass("w--open"), $(o).closest(".w-dropdown").find("nav.w-dropdown-list").toggleClass("w--open")
+      }
+
+      function removeClassAccessibilityDropdown(o) {
+        $(o).closest("div.w-dropdown-toggle").removeClass("w--open"), $(o).closest("nav.w-dropdown-list").removeClass("w--open")
+      }
+      $(".w-dropdown-toggle").each(function() {
+        $(this).keydown(function(o) {
+          13 == o.which && (console.log("1"), toggleAccessibilityDropdown(this), toggledAriaExpanded()), 9 != o.which || $("div.w-dropdown-toggle").hasClass("w--open") || (console.log("2"), toggledAriaExpanded(this), toggleAccessibilityDropdown(this), $(this).next(".w--open").find(".w-dropdown-link").first().css("background-color", "yellow")), o.shiftKey && 9 == o.which && !$("div.w-dropdown-toggle").hasClass("w--open") && (console.log("3"), toggleAccessibilityDropdown(this), toggledAriaExpanded()), 40 == o.which && (console.log("4"), $(this).closest(".w-dropdown").find("div.w-dropdown-toggle").addClass("w--open"), $(this).closest(".w-dropdown").find("nav.w-dropdown-list").addClass("w--open"), toggledAriaExpanded(), $(".w-dropdown nav a:first-child").focus()), 27 == o.which && $("div.w-dropdown-toggle").hasClass("w--open") && (console.log("5"), toggleAccessibilityDropdown(this), toggledAriaExpanded())
+        })
+      }), $(".w-dropdown-link").keydown(function(o) {
+        35 == o.which && (console.log("6"), $(this).closest("nav").children().last().focus()), 36 == o.which && (console.log("7"), $(this).closest("nav").children().first().focus()), 13 == o.which && (console.log("8"), toggleAccessibilityDropdown(this), toggledAriaExpanded()), 40 == o.which && $(this).not(":last-child") && (console.log("9"), $(this).next().focus()), $(this).is(":last-child") && (9 == o.which && (console.log("10"), toggleAccessibilityDropdown(this), toggledAriaExpanded()), o.shiftKey && 9 == o.which && (console.log("11"), $(this).prev().focus(), toggledAriaExpanded(), toggleAccessibilityDropdown(this)), 40 == o.which && (console.log("12"), $(this).closest(".w-dropdown").next().focus(), toggleAccessibilityDropdown(this))), $(this).not(":first-child") && (console.log("13 - not first child"), 38 == o.which && $(this).prev().focus()), $(this).is(":first-child") && (o.shiftKey && 9 == o.which && (console.log("322222222222"), toggledAriaExpanded(), toggleAccessibilityDropdown(this)), 38 == o.which && (console.log("14"), $(this).closest(".w-dropdown-list").prev().focus(), removeClassAccessibilityDropdown(this), toggledAriaExpanded())), 27 == o.which && $("div.w-dropdown-toggle").hasClass("w--open") && (console.log("15"), toggleAccessibilityDropdown(this), $(this).closest(".w-dropdown").find(".w-dropdown-toggle").focus(), toggledAriaExpanded())
+      }), $(".w-dropdown").attr("aria-haspopup", "true");
+      var toggled = !1;
+
+      function toggledAriaExpanded() {
+        toggled = !toggled, $(".w-dropdown").attr("aria-expanded", toggled)
+      }
+      $(".w-dropdown-toggle").each(function() {
+        $(this).attr("tabindex", "0")
+      }), $("a.w-dropdown-link").each(function() {
+        $(this).attr("tabindex", "0"), $(this).css("outline", "initial")
+      });
+      var slides = document.getElementsByClassName("w-dropdown-link");
+      setTimeout(function() {
+        for (var o = 0; o < slides.length; o++) slides.item(o).setAttribute("tabindex", "0")
+      }, 1e3);
+      // reading time script
+      if ($('#articleContent').length) {
+        $(function() {
+          $('#articleContent').readingTime({
+            //wordCountTarget: '#readTime',
+          });
+        });
+      }
+      // share button script
+      if ($('#facebookShare').length) {
+        var pageUrl = window.location.href;
+        var facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+        $('#facebookShare').attr('href', facebookShareUrl);
+        var twitterShareUrl = `https://twitter.com/home?status=${pageUrl}`;
+        $('#twitterShare').attr('href', twitterShareUrl);
+        var linkedinShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}`
+        $('#linkedinShare').attr('href', linkedinShareUrl);
+        var emailShareUrl = `mailto:info@example.com?&subject=&body=${pageUrl}`
+        $('#emailShare').attr('href', emailShareUrl);
+        var emailShareSidebarUrl = `mailto:info@example.com?&subject=&body=${pageUrl}`
+        $('#emailShareSidebar').attr('href', emailShareUrl);
+      }
+      // section navigation script
+      if ($('#articleContent').length) {
+        if ($('#articleContent>h2').length > 0) {
+          $('#articleContent>h2').each(function(i) {
+            var title = $(this).html();
+            $(this).attr('id', i);
+            $('ul#articleSectionsList').append(`<li class="article-sections-list-item"><a class="article-sections-list-item-link w-inline-block" href="#${i}"><div>${title}</div></a></li>`);
+          });
+        } else {
+          $('.article-sections').hide();
+        }
+      }
+      // notification bar cookie script - all pages
+      $.getScript('https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js', function() {
+        var cookieName = 'notificationClosed';
+        var cookieValue = 'userClosedIt';
+        var cookieExpire = Number($('.notification-cookie-count').text());
+        if (typeof Cookies.get(cookieName) !== 'undefined') $('.notification-bar__wrapper').remove();
+        $('.notification-close').click(function() {
+          Cookies.set(cookieName, cookieValue, {
+            expires: cookieExpire
+          });
+          //$('.notification-bar__wrapper').remove();
+        });
+      });
+    })
+  </script>
+
+  <script>
+    setTimeout(function() {
+      let script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.id = 'hs-script-loader';
+      script.async = true;
+      script.src = '//js.hs-scripts.com/8609466.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }, 5000);
+  </script>
+
+  <script>
+    setTimeout(function() {
+      let script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.id = 'readting-time';
+      script.async = true;
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/reading-time/2.0.0/readingTime.min.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }, 5000);
+  </script>
+
+  <script>
+    setTimeout(function() {
+      let script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.id = 'ze-snippet';
+      script.async = true;
+      script.src = 'https://static.zdassets.com/ekr/snippet.js?key=ecf4b402-9492-4af4-8925-2c3afbc2402a';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }, 5000);
+  </script>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCJSBSZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com -->
+  <script type="text/javascript" src="https://a.omappapi.com/app/js/api.min.js" data-account="135998" data-user="123732" async=""></script>
+  <!-- / https://optinmonster.com -->
+
+  <iframe data-product="web_widget" title="No content" tabindex="-1" aria-hidden="true" src="about:blank" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe>
+  <div>
+    <div role="presentation" style="font-size: initial;">
+      <div style="height: 0px; width: 23.75em; max-height: calc(100vh - 104px); max-width: 100%; border: 0px; overflow: hidden; position: fixed; right: 16px; bottom: 88px; box-shadow: rgba(36, 36, 36, 0.1) 0px 8px 24px 0px, rgba(71, 69, 123, 0.04) 0px 1px 4px 0px; z-index: 999999; transition: height 0.7s cubic-bezier(0.66, 0, 0.1, 1) 0.2s;"><iframe title="Messaging window" style="height: 43.75em; width: 23.75em; max-height: calc(100vh - 104px); max-width: 100%; border: 0px; overflow: hidden; position: absolute; inset: 0px; display: none;"></iframe></div>
+      <style>
+        @-webkit-keyframes launcherOnOpen {
+          0% {
+            -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+          }
+
+          30% {
+            -webkit-transform: translateY(-5px) rotate(2deg);
+            transform: translateY(-5px) rotate(2deg);
+          }
+
+          60% {
+            -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+          }
+
+          90% {
+            -webkit-transform: translateY(-1px) rotate(0deg);
+            transform: translateY(-1px) rotate(0deg);
+          }
+
+          100% {
+            -webkit-transform: translateY(-0px) rotate(0deg);
+            transform: translateY(-0px) rotate(0deg);
+          }
+        }
+
+        @keyframes launcherOnOpen {
+          0% {
+            -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+          }
+
+          30% {
+            -webkit-transform: translateY(-5px) rotate(2deg);
+            transform: translateY(-5px) rotate(2deg);
+          }
+
+          60% {
+            -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+          }
+
+          90% {
+            -webkit-transform: translateY(-1px) rotate(0deg);
+            transform: translateY(-1px) rotate(0deg);
+          }
+
+          100% {
+            -webkit-transform: translateY(-0px) rotate(0deg);
+            transform: translateY(-0px) rotate(0deg);
+          }
+        }
+
+        @keyframes webSDKOnLoad {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity 1;
+          }
+        }
+
+        @-webkit-keyframes webSDKOnLoad {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+      </style><iframe title="Button to launch messaging window" style="height: 64px; width: 64px; position: fixed; bottom: 16px; right: 16px; border: 0px; margin-top: 0px; box-shadow: rgba(36, 36, 36, 0.1) 0px 8px 24px 0px, rgba(71, 69, 123, 0.04) 0px 1px 4px 0px; animation: 0.2s ease-in 0s 1 normal none running webSDKOnLoad, 0s ease 0s 1 normal none running undefined; z-index: 999999; border-radius: 0px;"></iframe>
+    </div>
+  </div>
+</body>
+
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 </html>
