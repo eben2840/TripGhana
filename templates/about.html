@@ -1,11 +1,14 @@
+
+
 {% extends 'base.html' %}
 
 {% block body %}
 
 
 <section id="recent">
-  <div class="container narrow">
-    <h2 class="section-title"><b>Yhaa'sClothing</b></h2>
+  <div class="container narrow" style="display:flex; justify-content: space-between;">
+    <h2 class="section-title" style="font-size:20px;"><b>Yhaa'sClothing</b></h2>
+    <a href="#0">Add Cart +</a>
   </div>
   <div class="container narrow"> 
     <div class="slider">
@@ -18,12 +21,11 @@
             <span class="category blue"><span>Refurbished</span></span>-->
             <span class="category red"><span>PreOrder</span></span><br><br>
             <div class="card-title">Millions of Unique Item. Shop for Top brands Health & Beauty Products, Optimum Quality. Fast delivery. Wide Range of products. </div>
-            +233 26 425 8450
+            Coupon ID: centralmall
           </div>
           <div class="card-title">Phone Numbers:<br>+233 26 425 8450<br>+233 26 425 8450<br>+233 55 573 3350</div>
-         
+          <div class="card-id"><h6>Price Range:</h6></div>
         <div class="card-price">GH₵ 70-120<div class="original-price">GH₵ 210</div></div>
-          <div class="card-id"><h6>Coupon ID: centralmall</h6></div>
         </div>
       </a>
       <a href="#0" class="product-card shadow-1"> <img src="{{url_for('static', filename='images/central mall/men/112.jpg')}}"style=" height:30vh; width:100%; object-fit:cover; "  alt="food" />  
@@ -118,7 +120,7 @@
               <div class="product-box" style="box-shadow:0px 5px 10px 0px #aaa;" id="one"data-aos="fade-up">
                   <div class="product-img">
                       <a href="#" class="add-cart">SNEAKERS</a>
-                      <img src="https://freepngimg.com/thumb/running%20shoes/15-nike-running-shoes-png-image.png" alt="">
+                      <img src="{{url_for('static', filename='images/central mall/men/lucy/se.png')}}">
                   </div>
                   <div class="product-details">
                       <a href="#" class="p-name">Click On It</a>
@@ -136,8 +138,9 @@
 
 
   <section id="recent">
-    <div class="container narrow">
-      <h2 class="section-title"><b>YhaasClothing</b></h2>
+    <div class="container narrow" style="display:flex; justify-content: space-between;">
+      <h2 class="section-title" style="font-size:20px;"><b>Yhaa'sClothing</b></h2>
+      <a href="#0">Add Cart +</a>
     </div>
     <div class="container narrow"> 
       <div class="slider">
@@ -239,6 +242,56 @@
 
 
 
+
+<!--mediaone-->
+<section id="category-cards">
+  <div class="container narrow">
+    <div id="section-header">
+      <h2 class="section-title" style="font-size:20px;"><b>Super Sale</b></h2>
+      <a href="#0">Pre Order +</a>
+    </div>
+  </div>
+  <div class="container narrow">
+    <div class="slider">
+      <a href="#0" class="category-card shadow-1">
+        <div class="card-inner">
+          <div class="card-image"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu1.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
+              <div class="card-title">Wig Stand - GH₵10</div>
+              <div class="original-price">GH₵ 15</div></div>
+        </div>
+      </a>
+      
+      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu10.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
+          <div class="card-title">Bag set - GH₵70</div>
+          <div class="original-price">GH₵ 85</div></a>
+      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu2.jpg')}}"style=" height:30vh; width:100%;  object-fit:cover; "  alt="food" /> 
+          <div class="card-title">Two Piece - GH₵150</div>
+          <div class="original-price">GH₵ 165</div>
+      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu3.jpg')}}"style=" height:30vh; width:100%;  object-fit:cover; "  alt="food" /> 
+          <div class="card-title">Yakki straight - GH₵650</div>
+          <div class="original-price">GH₵ 700</div>
+      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu4.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
+          <div class="card-title">Ladies Bag - GH₵65</div>
+          <div class="original-price">GH₵ 74</div>
+      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu5.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
+          <div class="card-title">Short Bodycon - GH₵90</div>
+       <div class="original-price">GH₵ 100</div>
+      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu6.jpg')}}"style=" height:30vh; width:100%;  object-fit:cover; "  alt="food" /> 
+          <div class="card-title">EGO Heel - GH₵150</div>
+          <div class="original-price">GH₵ 160</div>
+      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu7.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
+          <div class="card-title">Lacoste(Men) - GH₵60</div>
+          <div class="original-price">GH₵ 70</div>
+      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu8.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
+          <div class="card-title">Lacoste(Men) - GH₵60</div>
+          <div class="original-price">GH₵ 70</div>
+      <a href="#0" class="category-card shadow-1"><img src="{{url_for('static', filename='images/central mall/men/lucy/lu9.jpg')}}"style=" height:30vh;  width:100%; object-fit:cover; "  alt="food" /> 
+          <div class="card-title">Lacoste(Men) - GH₵60</div>
+          <div class="original-price">GH₵ 70</div></a>
+     
+      </div>
+    </div>
+</section>
 
 
 
