@@ -55,6 +55,19 @@ def shop():
         return render_template('shop.html')
     return render_template('shop.html')
 
+
+
+@app.route('/kalitexcreatives',methods=['GET','POST'])
+def kalitexcreatives():
+    
+    return render_template('kalitexcreativs.html')
+
+@app.route('/vendor1',methods=['GET','POST'])
+def vendor1():
+    if request.method=='POST':
+        return render_template('vendor1.html')
+    return render_template('vendor1.html')
+    
 @app.route('/product',methods=['GET','POST'])
 def product():
     if request.method=='POST':
