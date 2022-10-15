@@ -26,6 +26,16 @@ class Course(db.Model):
     def __repr__(self):
         return f"Course('{self.id}', {self.email}', {self.comment}')"
 
+class Item(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String())
+    des = db.Column(db.String())
+    incase = db.Column(db.String())
+    image_file =db.Column(db.String())
+    
+    def __repr__(self):
+        return f"Course('{self.id}', {self.name}')"
+
 
 @app.route('/',methods=['GET','POST'])
 def homee():
@@ -43,10 +53,8 @@ def base():
 
 @app.route('/centralmall',methods=['GET','POST'])
 def centralmall():
-    if request.method=='POST':
-        # Handle POST Request here
-        return render_template('about.html')
-    return render_template('about.html')
+    add=Item.query.all()
+    return render_template('about.html',add=add)
 
 @app.route('/shop',methods=['GET','POST'])
 def shop():
@@ -148,11 +156,6 @@ def update(id):
         return redirect(url_for('six'))
     return render_template('signup.html', form=form)
 '''
-@app.route('/comment')
-def comment():
-    persons=Course.query.order_by(Course.id.desc()).all()
-    print(persons)
-    return render_template("comment.html", persons=persons)
 
 @app.route('/heads')
 def heads():
@@ -191,9 +194,32 @@ def index2():
     
     return render_template("index2.html", form=form, persons=persons)
 
+
+@app.route('/additem',methods=['GET','POST'])
+def additem():
+    form=Add()
+  
+    if form.validate_on_submit():
+  
+            new=Item(name=form.name.data,
+                     des=form.des.data,
+                     incase=form.incase.data,   
+               image_file=form.image_file.data
+                  )
+       
+            db.session.add(new)
+            db.session.commit()
+            
+            return redirect('/centralmall')
+    print(form.errors)
+    return render_template("additem.html", form=form)
+ 
+
+
+
 @app.route('/blogg')
 def blogg():
-    return render_template("blogg.html")
+    return render_template("additem.html")
 
 @app.route('/form')
 def form():

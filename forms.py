@@ -10,5 +10,13 @@ class RegistrationForm(FlaskForm):
     name =  StringField('name', validators=[DataRequired()])
     budget = SelectField('budget',  validators=[DataRequired()], choices=[('Pick a budget-Ghc','Pick a budget-Ghc'),('Ghc20-GHc50', 'GHc20-Ghc50'), ('Ghc50-Ghc100','Ghc50-Ghc100'), ('Ghc500-Ghc1000','Ghc500-Ghc1000'), ('Ghc2000 ', 'Ghc2000 '), ('Ghc3000','Ghc3000') ], default=None )
  
+ 
+class Add(FlaskForm):
+    
+    name =  StringField('name')
+    des =  StringField('des')
+    incase =  StringField('incase')
+    image_file =  StringField('image_file')
+    submit = SubmitField('submit')  
    # budget =SelectField('budget', validate_choice=[('Gh<span>&#8373;</span>:10,Gh<span>&#8373;</span>:100')('Gh<span>&#8373;</span>:100,,Gh<span>&#8373;</span>:500,')])
     
