@@ -19,7 +19,6 @@ migrate= Migrate(app, db)
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(), nullable=True, unique=True)
-    name = db.Column(db.String(), nullable=True, unique=True)
     comment = db.Column(db.String(), nullable=True)
     budget =db.Column(db.String())
     
@@ -29,14 +28,17 @@ class Course(db.Model):
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String())
-    des = db.Column(db.String())
-    incase = db.Column(db.String())
-    image_file =db.Column(db.String())
-    
     def __repr__(self):
         return f"Course('{self.id}', {self.name}')"
 
-
+class Central(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    phone = db.Column(db.String())
+    def __repr__(self):
+        return f"Course('{self.id}', {self.phone}')"
+    
+    
+    
 @app.route('/',methods=['GET','POST'])
 def homee():
     if request.method=='POST':
@@ -53,8 +55,19 @@ def base():
 
 @app.route('/centralmall',methods=['GET','POST'])
 def centralmall():
-    add=Item.query.all()
-    return render_template('about.html',add=add)
+    form = Add()
+    if request.method=='POST':
+        print(form.phone.data)
+        newentry=Central(phone=form.phone.data)
+        db.session.add(newentry)
+        db.session.commit()
+        print("successful")
+        return redirect("/centralmall")
+    
+    return render_template('about.html')
+
+
+
 
 @app.route('/shop',methods=['GET','POST'])
 def shop():
@@ -178,12 +191,12 @@ def signinn():
 
 @app.route('/budget', methods=['POST', 'GET'])
 def index2():
-    form = RegistrationForm()
+    form = First()
     if request.method=='POST':
         print(form.name.data)
-        print(form.budget.data)
+        
      
-        newentry=Course(name=form.name.data,budget=form.budget.data)
+        newentry=Item(name=form.name.data)
         db.session.add(newentry)
         db.session.commit()
         print("successful")
@@ -193,27 +206,6 @@ def index2():
     
     
     return render_template("index2.html", form=form, persons=persons)
-
-
-@app.route('/additem',methods=['GET','POST'])
-def additem():
-    form=Add()
-  
-    if form.validate_on_submit():
-  
-            new=Item(name=form.name.data,
-                     des=form.des.data,
-                     incase=form.incase.data,   
-               image_file=form.image_file.data
-                  )
-       
-            db.session.add(new)
-            db.session.commit()
-            
-            return redirect('/centralmall')
-    print(form.errors)
-    return render_template("additem.html", form=form)
- 
 
 
 
@@ -227,11 +219,11 @@ def form():
   
 @app.route('/welcome' , methods=['POST', 'GET'])
 def welcome():
-    form = RegistrationForm()
+    form = First()
     if request.method=='POST':
         print(form.name.data)
      
-        newentry=Course(name=form.name.data)
+        newentry=Item(name=form.name.data)
         db.session.add(newentry)
         db.session.commit()
         print("successful")
