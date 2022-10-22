@@ -1,7 +1,7 @@
 
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, redirect, render_template, url_for,request
-
+import urllib.request, urllib.parse
 from forms import *
 from flask_migrate import Migrate
 
@@ -15,6 +15,11 @@ migrate= Migrate(app, db)
 
 
 
+def sendtelegram(params):
+    url = "https://api.telegram.org/bot5787281305:AAE1S8DSnMAyQuzAnXOHfxLq-iyvPwYJeAo/sendMessage?chat_id=-1001556929308&text=" + urllib.parse.quote(params)
+    content = urllib.request.urlopen(url).read()
+    print(content)
+    return content
 
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -61,9 +66,10 @@ def centralmall():
         newentry=Central(phone=form.phone.data)
         db.session.add(newentry)
         db.session.commit()
-        print("successful")
-        return redirect("/centralmall")
-    
+        print(newentry.phone)
+        
+        sendtelegram("centralmall"+ " " + newentry.phone + " "+ "airtime")
+        return redirect("/centralmal")
     return render_template('about.html')
 
 
@@ -76,6 +82,12 @@ def shop():
         return render_template('shop.html')
     return render_template('shop.html')
 
+@app.route('/centralmal',methods=['GET','POST'])
+def centralmal():
+    if request.method=='POST':
+        # Handle POST Request here
+        return render_template('centralmal.html')
+    return render_template('centralmal.html')
 
 
 @app.route('/kalitexcreatives',methods=['GET','POST'])
