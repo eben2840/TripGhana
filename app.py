@@ -33,11 +33,13 @@ class Course(db.Model):
 class Src(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     srcname = db.Column(db.String())
+    name = db.Column(db.String())
     srcnumb= db.Column(db.String())
     Hoodie =db.Column(db.String())
     sweat =db.Column(db.String())
     bag =db.Column(db.String())
     shirt =db.Column(db.String())
+    
     def __repr__(self):
         return f"Course('{self.id}', {self.number}', {self.name}')"
 
@@ -92,12 +94,16 @@ def shop():
     if request.method=='POST':
         print(form.sweat.data)
         print(form.shirt.data)
+        print(form.name.data)
         print(form.srcname.data)
         print(form.Hoodie.data)
         print(form.srcnumb.data)
         print(form.bag.data)
-        src=Src(srcname=form.srcname.data,shirt=form.shirt.data,
-                srcnumb=form.srcnumb.data,Hoodie=form.Hoodie.data,
+        src=Src(srcname=form.srcname.data,
+                shirt=form.shirt.data,
+                srcnumb=form.srcnumb.data,
+                name=form.name.data,
+                Hoodie=form.Hoodie.data,
                 sweat=form.sweat.data,
               bag=form.bag.data)
         db.session.add(src)
@@ -108,14 +114,16 @@ def shop():
         print(src.srcname)
         print(src.Hoodie)
         print(src.sweat)
+        print(src.name)
         sendtelegram("SRC POP-UP STORE ORDER:" + '\n' + 
                       "Name = " + src.srcname  + '\n' + 
                       "Number = " + src.srcnumb  + '\n' + 
+                      "Hostel = " + src.name  + '\n' + 
                       "Qty Hoodie = " + src.Hoodie  + '\n' + 
                       "Qty Bag = " + src.bag  + '\n' + 
                     "Qty Shirt = " + src.shirt  + '\n' + 
                     "Qty Sweat Shirt = " + src.sweat)
-        flash("Order Confirmed, We will call you for your delievery information in one minute.","success")
+        flash("Order Confirmed, Delivery is in the next 5 minutes","success")
         return redirect("/centralmal")
     return render_template('shop.html')
 
@@ -131,6 +139,14 @@ def centralmal():
 def kalitexcreatives():
     
     return render_template('kalitexcreativs.html')
+
+
+
+@app.route('/trail')
+def trial():
+    
+    return render_template('trail.html')
+
 
 @app.route('/vendor1',methods=['GET','POST'])
 def vendor1():

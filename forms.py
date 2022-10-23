@@ -21,6 +21,7 @@ class SRCC(FlaskForm):
     sweat =  StringField('sweat', validators=[DataRequired()])
     shirt = StringField('shirt', validators=[DataRequired()])
     bag =  StringField('bag', validators=[DataRequired()])
+    name = StringField('name', validators=[DataRequired()])
     submit = SubmitField('submit')  
  
  
