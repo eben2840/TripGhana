@@ -14,7 +14,6 @@ db = SQLAlchemy(app)
 migrate= Migrate(app, db)
 
 
-
 def sendtelegram(params):
     url = "https://api.telegram.org/bot5787281305:AAE1S8DSnMAyQuzAnXOHfxLq-iyvPwYJeAo/sendMessage?chat_id=-1001556929308&text=" + urllib.parse.quote(params)
     content = urllib.request.urlopen(url).read()
