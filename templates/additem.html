@@ -1,203 +1,262 @@
-{% extends 'base.html' %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>mytripghana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-{% block body %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blogg.css')}}">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+
+    
 
 
-<form action='' method="post" enctype="multipart/form-data">
-    {{form.hidden_tag()}}
+<body>
+ 
+  <main class="container">
 
-    <label for="image-picker">
-        <div>
-            {% if editCandidate %}
-            <img id="image-preview" style="height: 30vh; object-fit:contain" src={{candidate.testField}} alt="your image" />
-            {% else %}
-            <img id="image-preview" style="height: 30vh; object-fit:contain" src="{{url_for('static', filename='images/central mall/men/2.jpg')}}" alt="your image" />
-            {% endif %}
-        </div>      
+    <h1 class="heading">
+      <ion-icon name="cart-outline"></ion-icon> POP-UP STORE
+    </h1>
+
+    <div class="item-flex">
+
+      <!--
+       - checkout section
+      -->
+      <section class="checkout">
+
+       <a href="/shop"> 
+          <div class="total">
+            <b><h3><span>Total</span> <span>Gh <span id="subtotal">0.0</span></span></h3></b>
+          </div></a>
+         
        
-    </label>
-    
-    <input style="display:none" id="image-picker" type="file" required="required" accept="image/*" />
-  
-    
+        <a href="/shop"> <button class="btn btn-primary">
+          <div class="total">
+            <span>Confirm Order</span>
+          </div></a>
+         
+        </button>
 
 
-
-<div class="form-floating mb-3" >
-    {{form.name(class="form-control",id="floatingInput")}}
-    <label for="floatingInput" class="text-muted">Full Name</label>
-  </div>
-  
-  <div class="form-floating mb-3">
-    {{form.des(class="form-control",id="floatingInput" )}}
-    <label for="floatingInput" class="text-muted">des</label>
-  </div>
-  <div class="form-floating mb-3">
-    {{form.incase(class="form-control",id="floatingInput" )}}
-    <label for="floatingInput" class="text-muted">incase</label>
-  </div>
+      </section>
 
 
+      <!--
+        - cart section
+      -->
+      <section class="cart">
 
-    
-  <div class="form-floating mb-3" >
-    {{form.image_file (class="form-control", id="firebaseLink" )}}
-    
-  </div>
+        <div class="cart-item-box">
 
+          <h2 class="section-heading">Order Summary</h2>
 
+          <div class="product-card">
 
+            <div class="card">
 
-<button class="btn" style="color: #fff; background: #992621; border: none;" type="submit" id="submitButton">Register</button>
-              
-</form>
+              <div class="img-box">
+                <img src="/static/images/products/src/src1.jpg"  width="150px" class="product-img">
+              </div>
 
-<script>
+              <div class="detail">
 
-$("#image-picker").change(function (event) {
-  readURL(this);
-  console.log ('touch image')
-    document.getElementById('error').style.display = 'none';
+                <h4 class="product-name">SWEAT SHIRT</h4>
 
-});
-    function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        pushImage(input.files[0])
+                <div class="wrapper">
 
-        reader.onload = function (e) {
-            $('#image-preview').attr('src', e.target.result);
-        }
+                  <div class="product-qty">
+                    <button id="decrement">
+                      <ion-icon name="remove-outline">-</ion-icon>
+                    </button>
 
-        reader.readAsDataURL(input.files[0]);
+                    <span id="quantity">0</span>
 
+                    <button id="increment">
+                      <ion-icon name="add-outline">+</ion-icon>
+                    </button>
+                  </div>
 
-    }
-}
-</script>
+                  <div class="price">
+                    Gh<span id="price">110.00</span>
+                  </div>
 
-  
-<script>
+                </div>
 
-  
-  
-  // Push batch images to storage and store references in the database
-  var pushImage = function (file) {
-   document.getElementById('submitButton').innerHTML = `
-         <button class="button" style="background-color: #7272F2;"><i class="fa fa-pause-circle-o" aria-hidden="true" style="color:'white'"></i>Uploading</button>
-         `
-     // var uid = firebase.auth().currentUser.uid;
-     // Create storage reference
-     var ref = firebase.storage().ref(`/alumni/`).child(file.name + ".jpg");
-     //var ref = firebase.storage().ref(``).child(file.name + ".jpg");
- 
-     // Upload file and get task
-     var task = ref.put(file, {contentType: file.type});
-  
-     // Monitor task for progress
-     task.on('state_changed',
-         // Shows progress of task
-         function progress(snapshot) {
-             var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-             console.log(percentage);
-         },
-         // Shows any errors occurring during progress
-         function error(err) {
-             // Handle unsuccessful uploads
-             console.log(err.message);
- 
-         },
-         // Shows when task is completed
-         );  
- };
- 
- 
-   function changeimagesss(event) {
-     console.log(event)
-     // console.log(event.target.files[0])
-     // var uploadItem = event.target.files[0]
-     // console.log(uploadItem)
-     pushImage(event)
- 
-     
-   }
- 
-  </script>
+              </div>
 
-  <script>
+              <button class="product-close-btn">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
 
-    var firebaseLink = document.getElementById("firebaseLink").innerText
-    // Push batch images to storage and store references in the database
-    var pushImage = function (file) {
-        document.getElementById('submitButton').innerHTML = `
-        <button class="button" style="background-color: #da2d2770;"><i class="fa fa-pause-circle-o" aria-hidden="true" style="color:'white'"></i>Please wait while we upload your image</button>
-        `
+            </div>
 
-       // var uid = firebase.auth().currentUser.uid;
-       // Create storage reference
-       var ref = firebase.storage().ref(`/ineruu-142dc-default-rtdb/Images/`).child(file.name + ".jpg");
-   
-       // Upload file and get task
-       var task = ref.put(file, {contentType: file.type});
-    
-       // Monitor task for progress
-       task.on('state_changed',
-           // Shows progress of task
-           function progress(snapshot) {
-               var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-               console.log(percentage);
-           },
-           // Shows any errors occurring during progress
-           function error(err) {
-               // Handle unsuccessful uploads
-               console.log(err.message);
-   
-           },
-           // Shows when task is completed
-           function complete() {
-               // Handle successful uploads on complete
-               var image = task.snapshot.downloadUrl;
-               var secondImage = task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-           console.log('File available at', downloadURL);
-        //    firebaseLink = downloadURL
-           document.getElementById("firebaseLink").value = downloadURL
-        //    console.log("Firebase Link: " + firebaseLink)
-            document.getElementById('submitButton').innerHTML = `{{form.submit (class="button")}}`
+          </div>
+          <div class="product-card">
 
-         });
-            //    console.log(task);
-            //    console.log(image);
-            //    console.log(secondImage.PromiseResult).then(res => {
-            //        console.log("THis is" + res)
-                   
-            //    });
-   
-               // Data model to be uploaded to the database
-               var data = {
-                   imageUrl: image
-               };
+            <div class="card">
+
+              <div class="img-box">
+                <img src="/static/images/products/src/src2.jpg" alt="Green tomatoes" width="150px" class="product-img">
+              </div>
+
+              <div class="detail">
+
+                <h4 class="product-name">Hoodie</h4>
+
+                <div class="wrapper">
+
+                  <div class="product-qty">
+                    <button id="decrement">
+                      <ion-icon name="remove-outline">-</ion-icon>
+                    </button>
+
+                    <span id="quantity">0</span>
+
+                    <button id="increment">
+                      <ion-icon name="add-outline">+</ion-icon>
+                    </button>
+                  </div>
+
+                  <div class="price">
+                    Gh<span id="price">125.00</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <button class="product-close-btn">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+            </div>
+
+          </div><div class="product-card">
+
+            <div class="card">
+
+              <div class="img-box">
+                <img src="/static/images/products/src/src3.jpg" alt="Green tomatoes" width="150px" class="product-img">
+              </div>
+
+              <div class="detail">
+
+                <h4 class="product-name">T-shirt</h4>
+
+                <div class="wrapper">
+
+                  <div class="product-qty">
+                    <button id="decrement">
+                      <ion-icon name="remove-outline">-</ion-icon>
+                    </button>
+
+                    <span id="quantity">0</span>
+
+                    <button id="increment">
+                      <ion-icon name="add-outline">+</ion-icon>
+                    </button>
+                  </div>
+
+                  <div class="price">
+                    Gh<span id="price">50.00</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <button class="product-close-btn">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="product-card">
+
+            <div class="card" >
+
+              <div class="img-box"  style="display:flex;">
+                <img src="/static/images/products/src/src4.jpg" alt="Cabbage" width="150px" class="product-img"> 
+                
                
-               // var db = firebase.database().ref(/GHotelBookMan/Hotels/${uid}/Images).push();
-               // db.set(data).then(() => {
-               //     row.empty();
-               //     loadCurrentHotel(uid);
-               // });
-           });  
-   };
-   
-   
-     function changeimagesss(event) {
-       console.log(event)
-       // console.log(event.target.files[0])
-       // var uploadItem = event.target.files[0]
-       // console.log(uploadItem)
-       pushImage(event)
-   
-       
-     }
-   
-    </script> 
+              </div>
+
+              <div class="detail">
+
+                <h4 class="product-name">Bag</h4>
+
+                <div class="wrapper">
+
+                  <div class="product-qty">
+                    <button id="decrement">-
+                      <ion-icon name="remove-outline">-</ion-icon>
+                    </button>
+
+                    <span id="quantity">0</span>
+
+                    <button id="increment">
+                      <ion-icon name="add-outline">+</ion-icon>
+                    </button>
+                  </div>
+
+                  <div class="price">
+                    Gh <span id="price">50</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <button class="product-close-btn">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="wrapper">
+
+        
+
+
+         
+
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
 
 
 
-{%endblock body%}
+ <!-- End Content -->
+
+  <!--
+    - custom js link
+  -->
+  <script src="./static/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

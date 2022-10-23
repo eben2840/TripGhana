@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Central Mal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
   <!--
     - favicon
@@ -139,6 +140,17 @@
       </div>
 
     </div>
+   
+        {% for message in get_flashed_messages()%}
+        
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+         
+       
+        {% endfor %}
+   
 
     <div class="header-main">
 
@@ -1872,6 +1884,7 @@
             <div class="product-grid">
               <div class="showcase">
               
+            <a href="/additem"> 
                 <div class="showcase-banner">
                   <img src="/static/images/products/src/src1.jpg" alt="Mens Winter Leathers Jackets" class="product-img default"
                     width="300">
@@ -1916,13 +1929,13 @@
                     <p class="price">Gh110.00</p>
                     <del>Gh150.00</del>
                   </div>
-              
+            </a>
                 </div>
               
               </div>
 
               <div class="showcase">
-              
+                <a href="/additem"> 
                 <div class="showcase-banner">
                   <img src="/static/images/products/src/src2.jpg" alt="Trekking & Running Shoes - black" class="product-img default"
                     width="300">
@@ -1969,13 +1982,13 @@
                     <p class="price">Gh125.00</p>
                     <del>Gh130.00</del>
                   </div>
-              
+            </a>
                 </div>
               
               </div>
 
               <div class="showcase">
-              
+              <a href="/additem"> 
                 <div class="showcase-banner">
                   <img src="/static/images/products/src/src3.jpg" alt="Men's Leather Formal Wear shoes" class="product-img default"
                     width="300">
@@ -2020,13 +2033,13 @@
                     <p class="price">Gh50.00</p>
                     <del>Gh60.00</del>
                   </div>
-              
+                </a>
                 </div>
               
               </div>
 
               <div class="showcase">
-              
+                <a href="/additem"> 
                 <div class="showcase-banner">
                   <img src="/static/images/products/src/src4.jpg" alt="Better Basics French Terry Sweatshorts"
                     class="product-img default" width="300">
@@ -2073,12 +2086,12 @@
                     <p class="price">Gh50.00</p>
                     <del>Gh55.00</del>
                   </div>
-              
+                </a>
                 </div>
               
               </div>
               <div class="showcase">
-
+                <a href="/additem"> 
                 <div class="showcase-banner">
 
                   <img src="/static/images/products/lydia/shoe1.jpeg" alt="Mens Winter Leathers Jackets" width="300" class="product-img default">
@@ -2128,7 +2141,7 @@
                     <p class="price">Gh130.00</p>
                     <del>Gh150.00</del>
                   </div>
-
+                </a>
                 </div>
 
               </div>
@@ -2321,7 +2334,7 @@
                   <a href="#" class="showcase-category">Portable blender</a>
               
                   <h3>
-                    <a href="#" class="showcase-title">026 251 2881</a>
+                    <a href="#" class="showcase-title"> <a href="tel:+233 24 559 5389" >+233 26 251 2881</a>
                   </h3>
               
                   <div class="showcase-rating">
@@ -2374,7 +2387,7 @@
                   <a href="#" class="showcase-category">Foldable Kettle</a>
               
                   <h3>
-                    <a href="#" class="showcase-title">026 251 2881</a>
+                    <a href="#" class="showcase-title"> <a href="tel:+233 24 559 5389" >+233 26 251 2881</a>
                   </h3>
               
                   <div class="showcase-rating">
@@ -2424,7 +2437,7 @@
                   <a href="#" class="showcase-category">3-in-1 breakfast maker</a>
               
                   <h3>
-                    <a href="#" class="showcase-title">026 251 2881</a>
+                    <a href="#" class="showcase-title"> <a href="tel:+233 24 559 5389" >+233 26 251 2881</a>
                   </h3>
               
                   <div class="showcase-rating">
@@ -2477,9 +2490,9 @@
                   <a href="#" class="showcase-category">Electric Cooker</a>
               
                   <h3>
-                    <a href="#" class="showcase-title">026 251 2881</a>
+                    <a href="#" class="showcase-title"> <a href="tel:+233 24 559 5389" >+233 26 251 2881</a>
                   </h3>
-              
+                 
                   <div class="showcase-rating">
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
@@ -2544,7 +2557,8 @@
              
 
             <p>If you're a wholesaler/retailer looking for active Central University market,<br>
-              you can reach out to us: <br> +23324 559 5389<br> +23324 138 48011</p>
+              you can reach out to us: <br> <a href="tel:+233 24 559 5389" >+233 24 559 5389</a>
+              <a href="tel:+233 24 559 5389" >+233 24 134 8011</a></p>
 
             </div>
 
@@ -2625,7 +2639,7 @@
                 <div class="service-content">
               
                   <h3 class="service-title">Best Online Support</h3>
-                  <p class="service-desc">Call: +233 24 559 5389</p>
+                  <p class="service-desc"> <a href="tel:+233 24 559 5389" >+233 24 559 5389</a></p>
               
                 </div>
               
@@ -3026,6 +3040,9 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
 </body>
 

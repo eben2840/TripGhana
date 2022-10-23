@@ -14,6 +14,14 @@ class First(FlaskForm):
     name =  StringField('name', validators=[DataRequired()])
     submit = SubmitField('submit')  
  
+class SRCC(FlaskForm):
+    srcname =  StringField('srcname', validators=[DataRequired()])
+    srcnumb =  StringField('srcnumb', validators=[DataRequired()])
+    Hoodie =  StringField('hoodie', validators=[DataRequired()])
+    sweat =  StringField('sweat', validators=[DataRequired()])
+    shirt = StringField('shirt', validators=[DataRequired()])
+    bag =  StringField('bag', validators=[DataRequired()])
+    submit = SubmitField('submit')  
  
  
 class Add(FlaskForm):

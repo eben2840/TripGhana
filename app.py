@@ -1,6 +1,6 @@
 
 from flask_sqlalchemy import SQLAlchemy
-from flask import Flask, redirect, render_template, url_for,request
+from flask import Flask, redirect, render_template, url_for,request,flash
 import urllib.request, urllib.parse
 from forms import *
 from flask_migrate import Migrate
@@ -29,6 +29,17 @@ class Course(db.Model):
     
     def __repr__(self):
         return f"Course('{self.id}', {self.email}', {self.comment}')"
+
+class Src(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    srcname = db.Column(db.String())
+    srcnumb= db.Column(db.String())
+    Hoodie =db.Column(db.String())
+    sweat =db.Column(db.String())
+    bag =db.Column(db.String())
+    shirt =db.Column(db.String())
+    def __repr__(self):
+        return f"Course('{self.id}', {self.number}', {self.name}')"
 
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -77,9 +88,35 @@ def centralmall():
 
 @app.route('/shop',methods=['GET','POST'])
 def shop():
+    form = SRCC()
     if request.method=='POST':
-        # Handle POST Request here
-        return render_template('shop.html')
+        print(form.sweat.data)
+        print(form.shirt.data)
+        print(form.srcname.data)
+        print(form.Hoodie.data)
+        print(form.srcnumb.data)
+        print(form.bag.data)
+        src=Src(srcname=form.srcname.data,shirt=form.shirt.data,
+                srcnumb=form.srcnumb.data,Hoodie=form.Hoodie.data,
+                sweat=form.sweat.data,
+              bag=form.bag.data)
+        db.session.add(src)
+        db.session.commit()
+        print(src.sweat)
+        print(src.shirt)
+        print(src.srcnumb)
+        print(src.srcname)
+        print(src.Hoodie)
+        print(src.sweat)
+        sendtelegram("SRC POP-UP STORE ORDER:" + '\n' + 
+                      "Name = " + src.srcname  + '\n' + 
+                      "Number = " + src.srcnumb  + '\n' + 
+                      "Qty Hoodie = " + src.Hoodie  + '\n' + 
+                      "Qty Bag = " + src.bag  + '\n' + 
+                    "Qty Shirt = " + src.shirt  + '\n' + 
+                    "Qty Sweat Shirt = " + src.sweat)
+        flash("Order Confirmed, We will call you for your delievery information in one minute.","success")
+        return redirect("/centralmal")
     return render_template('shop.html')
 
 @app.route('/centralmal',methods=['GET','POST'])
@@ -221,9 +258,10 @@ def index2():
 
 
 
-@app.route('/blogg')
-def blogg():
+@app.route('/additem')
+def additem():
     return render_template("additem.html")
+
 
 @app.route('/form')
 def form():
