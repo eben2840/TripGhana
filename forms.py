@@ -32,3 +32,9 @@ class Add(FlaskForm):
     submit = SubmitField('submit')  
    # budget =SelectField('budget', validate_choice=[('Gh<span>&#8373;</span>:10,Gh<span>&#8373;</span>:100')('Gh<span>&#8373;</span>:100,,Gh<span>&#8373;</span>:500,')])
     
+    
+class Reviewcomment(FlaskForm):
+    reviewname = StringField('reviewname', validators=[DataRequired()])
+    review =  StringField('review', validators=[DataRequired()])
+    submit = SubmitField('submit')  
+ 

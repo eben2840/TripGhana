@@ -854,20 +854,18 @@
             
             </div>
             
+            <div class="team" style="text-align:center;">
+            <p class="testimonial-name">The Team </p>
+            <p class="testimonial-name">Ohene Mills </p>
 
-         
-            <form >
-            <p class="newsletter-desc">
-              <b>Cant find what you want?</b> <br>Send us what you want, our riders will deliver it to you with ease.
-            </p><br>
-            <input type="text" name="number" class="email-field" placeholder="Phone Number"  style="box-shadow:0 2px 10px -3px #117964;">
-            <input type="text" name="name" class="email-field" placeholder="Name"  style="box-shadow:0 2px 10px -3px #117964;">
+            <p class="testimonial-title">CEO & CTO</p>
 
-          <textarea name="comment" class="email-field"  placeholder="Items"  style=" width:260px; height:100px; border-style:none; box-shadow:0 2px 10px -3px #117964;"></textarea><br>
+           
 
-            <button class="btn" style="color: #fff; background:#117964; border-radius: 10px; padding:10px;" type="submit "  style="box-shadow:0 2px 10px -3px #117964; padding:20px;">Send</button>
-                        
-          </form>  
+          <p>If you're a wholesaler/retailer looking for active Central University market,<br>
+            you can reach out to us: <br> <a href="tel:+233 24 559 5389" >+233 24 559 5389</a>
+            <a href="tel:+233 24 559 5389" >+233 24 134 8011</a></p>
+          </div>
         </div>
 
           <div class="product-showcase">
@@ -1028,28 +1026,29 @@
           <!--
             - TESTIMONIALS
           -->
-
+          
           <div class="testimonial">
-
-            <h2 class="title">The Team</h2>
-
-            <div class="testimonial-card">
-
-             
-
+            <form action="" method="post">
+              <p class="newsletter-desc">
+                <b>Student Reviews</b> <br>We would love to hear your feeback.
+              </p>
               
-                          
-              <p class="testimonial-name">Ohene Mills </p>
-
-              <p class="testimonial-title">CEO & CTO</p>
-
-             
-
-            <p>If you're a wholesaler/retailer looking for active Central University market,<br>
-              you can reach out to us: <br> <a href="tel:+233 24 559 5389" >+233 24 559 5389</a>
-              <a href="tel:+233 24 559 5389" >+233 24 134 8011</a></p>
-
-            </div>
+              <div class="showcase-rating" style="display:flex; color:orange;">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <br>
+              <input type="text" name="reviewname" class="email-field" placeholder="Name"  style="box-shadow:0 2px 10px -3px #117964;">
+              <input type="text" name="review" class="email-field" placeholder="Review"  style="box-shadow:0 2px 10px -3px #117964;">
+  
+            
+            <button type="submit" class="btn-newsletter">post</button>
+            <br><br>
+            </form>  
+         
 
           </div>
 
@@ -1085,71 +1084,20 @@
 
           <div class="service">
 
-            <h2 class="title">Our Services</h2>
+            <h2 class="title">Your Comment</h2>
 
             <div class="service-container">
+              <div class="overflow-hidden">
+              {%for message in persons%}
+              <p class="newsletter-desc">
+                <b>{{message.reviewname}}</b>
+                 <br>{{message.review}}
+              </p>
+              {%endfor%}
+            </div>
+            
 
-              <a href="#" class="service-item">
-
-                <div class="service-icon">
-                  <ion-icon name="boat-outline"></ion-icon>
-                </div>
-
-                <div class="service-content">
-
-                  <h3 class="service-title">Safe Delivery</h3>
-                  <p class="service-desc">For all Orders</p>
-
-                </div>
-
-              </a>
-
-              <a href="#" class="service-item">
-              
-                <div class="service-icon">
-                  <ion-icon name="rocket-outline"></ion-icon>
-                </div>
-              
-                <div class="service-content">
-              
-                  <h3 class="service-title">Next Day delivery</h3>
-                  <p class="service-desc">24/7 Access </p>
-              
-                </div>
-              
-              </a>
-
-              <a href="0245595389" class="service-item">
-              
-                <div class="service-icon">
-                  <ion-icon name="call-outline"></ion-icon>
-                </div>
-              
-                <div class="service-content">
-              
-                  <h3 class="service-title">Best Online Support</h3>
-                  <p class="service-desc"> <a href="tel:+233 24 559 5389" >+233 24 559 5389</a></p>
-              
-                </div>
-              
-              </a>
-
-           
-
-              <a href="#" class="service-item">
-              
-                <div class="service-icon">
-                  <ion-icon name="ticket-outline"></ion-icon>
-                </div>
-              
-                <div class="service-content">
-              
-                  <h3 class="service-title">30% Discount</h3>
-                  <p class="service-desc">For All Campus Order</p>
-              
-                </div>
-              
-              </a>
+                
 
             </div>
 

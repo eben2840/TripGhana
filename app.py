@@ -53,6 +53,12 @@ class Central(db.Model):
     def __repr__(self):
         return f"Course('{self.id}', {self.phone}')"
     
+class Review(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    reviewname= db.Column(db.String())
+    review= db.Column(db.String())
+    def __repr__(self):
+        return f"Course('{self.id}', {self.reviewname},{self.review}')"
     
     
 @app.route('/',methods=['GET','POST'])
@@ -253,10 +259,25 @@ def four():
         return render_template('phone.html')
     return render_template('phone.html')
 
-@app.route('/review')
+@app.route('/review',methods=['GET','POST'])
 def review():
-    
-    return render_template('happy.html')
+    form = Reviewcomment()
+    if request.method=='POST':
+        print(form.reviewname.data)
+        print(form.review.data)
+        src=Review(reviewname=form.review.data,
+                review=form.review.data)
+        db.session.add(src)
+        db.session.commit()        
+        print(src.reviewname)
+        print(src.review)
+        sendtelegram("REVIEWS" + '\n' + 
+                      "Name = " + src.reviewname  + '\n' + 
+                      "Review = " + src.review)
+        return redirect("/review")
+    persons=Review.query.order_by(Review.id.desc()).all()
+    print(persons)
+    return render_template('happy.html', persons=persons)
 
 @app.route('/search',methods=['GET','POST'])
 def search():
