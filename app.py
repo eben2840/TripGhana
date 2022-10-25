@@ -124,7 +124,9 @@ def shop():
                     "Qty Sweat Shirt = " + src.sweat)
         flash("Order Confirmed, Delivery is in the next 5 minutes","success")
         return redirect("/centralmal")
-    return render_template('shop.html')
+    persons=Src.query.order_by(Src.id.desc()).all()
+    print(persons)
+    return render_template('shop.html',persons=persons)
 
 @app.route('/centralmal',methods=['GET','POST'])
 def centralmal():
@@ -145,6 +147,42 @@ def kalitexcreatives():
 def trial():
     
     return render_template('trail.html')
+
+@app.route('/lydia',methods=['GET','POST'])
+def lydia():
+    form = SRCC()
+    if request.method=='POST':
+        print(form.sweat.data)
+       
+        print(form.name.data)
+        print(form.srcname.data)
+       
+        print(form.srcnumb.data)
+       
+        src=Src(srcname=form.srcname.data,
+                
+                srcnumb=form.srcnumb.data,
+                name=form.name.data,
+                
+                sweat=form.sweat.data,
+              )
+        db.session.add(src)
+        db.session.commit()
+        print(src.sweat)
+        
+        print(src.srcnumb)
+        print(src.srcname)
+        
+        
+        print(src.name)
+        sendtelegram("LYNAF CENTRAL ORDER:" + '\n' + 
+                      "Name = " + src.srcname  + '\n' + 
+                      "Number = " + src.srcnumb  + '\n' + 
+                      "Hostel = " + src.name  + '\n' + 
+                    "Quantity Bodycon= " + src.sweat)
+        flash("We will call you in a minute to confirm your order, Preoder ID:CM2840201#.","success")
+        return redirect("/centralmal")
+    return render_template('lydia.html')
 
 
 @app.route('/vendor1',methods=['GET','POST'])
@@ -186,6 +224,11 @@ def four():
         # Handle POST Request here
         return render_template('phone.html')
     return render_template('phone.html')
+
+@app.route('/review')
+def review():
+    
+    return render_template('happy.html')
 
 
 @app.route('/blog')
