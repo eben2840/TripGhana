@@ -160,16 +160,18 @@
          <h1 style="color:#000;">centralmal.com</h1>
         </a>
         <!--
+        <form action="" method="post">
+        
         <div class="header-search-container">
 
-          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <input type="searched" name="search" class="search-field" placeholder="Enter your product name...">
 
-          <button class="search-btn">
+          <button type="submit" class="search-btn">
             <ion-icon name="search-outline"></ion-icon>
           </button>
 
         </div>
-      -->
+      </form>-->
         <div class="header-user-actions">
 <!---
           <button class="action-btn">
@@ -856,18 +858,17 @@
             
 
          
-            <form >
-            <p class="newsletter-desc">
-              <b>Cant find what you want?</b> <br>Send us what you want, our riders will deliver it to you with ease.
-            </p><br>
-            <input type="text" name="number" class="email-field" placeholder="Phone Number"  style="box-shadow:0 2px 10px -3px #117964;">
-            <input type="text" name="name" class="email-field" placeholder="Name"  style="box-shadow:0 2px 10px -3px #117964;">
-
-          <textarea name="comment" class="email-field"  placeholder="Items"  style=" width:260px; height:100px; border-style:none; box-shadow:0 2px 10px -3px #117964;"></textarea><br>
-
-            <button class="btn" style="color: #fff; background:#117964; border-radius: 10px; padding:10px;" type="submit "  style="box-shadow:0 2px 10px -3px #117964; padding:20px;">Send</button>
-                        
-          </form>  
+            <form action="" method="post">
+              <p class="newsletter-desc">
+                <b>Cant find what you want?</b> <br>Send us what you want, our riders will deliver it to you with ease.
+              </p><br>
+              <input type="text" name="srcname" class="email-field" placeholder="Name"  style="box-shadow:0 2px 10px -3px #117964;">
+              <input type="text" name="srcnumb" class="email-field" placeholder="Phone Number"  style="box-shadow:0 2px 10px -3px #117964;">
+  
+            <textarea name="name" class="email-field"  placeholder="Items"  style=" width:260px; height:100px; border-style:none; box-shadow:0 2px 10px -3px #117964;"></textarea><br>
+            
+            <button type="submit" class="btn-newsletter">send</button>
+            </form>  
         </div>
 
           <div class="product-showcase">

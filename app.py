@@ -25,7 +25,6 @@ class Course(db.Model):
     email = db.Column(db.String(), nullable=True, unique=True)
     comment = db.Column(db.String(), nullable=True)
     budget =db.Column(db.String())
-    
     def __repr__(self):
         return f"Course('{self.id}', {self.email}', {self.comment}')"
 
@@ -72,16 +71,38 @@ def base():
 
 @app.route('/centralmall',methods=['GET','POST'])
 def centralmall():
-    form = Add()
+    form = SRCC()
     if request.method=='POST':
-        print(form.phone.data)
-        newentry=Central(phone=form.phone.data)
-        db.session.add(newentry)
-        db.session.commit()
-        print(newentry.phone)
         
-        sendtelegram("centralmall"+ " " + newentry.phone + " "+ "airtime")
-        return redirect("/centralmal")
+       
+        print(form.name.data)
+        print(form.srcname.data)
+        print(form.sweat.data)
+        print(form.srcnumb.data)
+       
+        src=Src(srcname=form.srcname.data,
+sweat=form.data,
+                srcnumb=form.srcnumb.data,
+                name=form.name.data,
+                
+               
+              )
+        db.session.add(src)
+        db.session.commit()
+        print(src.sweat)
+        
+        print(src.srcnumb)
+        print(src.srcname)
+        
+        
+        print(src.name)
+        sendtelegram("REQUEST ITEM" + '\n' + 
+                      "Name = " + src.srcname  + '\n' + 
+                      "Number = " + src.srcnumb  + '\n' + 
+                      "Item = " + src.name
+        )
+        flash("We will call you in a minute, search ID:CM0111#.","success")
+        return redirect("/about")
     return render_template('about.html')
 
 
@@ -130,9 +151,36 @@ def shop():
 
 @app.route('/centralmal',methods=['GET','POST'])
 def centralmal():
+    form = SRCC()
     if request.method=='POST':
-        # Handle POST Request here
-        return render_template('centralmal.html')
+        
+       
+        print(form.name.data)
+        print(form.srcname.data)
+       
+        print(form.srcnumb.data)
+       
+        src=Src(srcname=form.srcname.data,
+                
+                srcnumb=form.srcnumb.data,
+                name=form.name.data,
+                
+               
+              )
+        db.session.add(src)
+        db.session.commit()
+      
+        print(src.srcnumb)
+        print(src.srcname)
+        print(src.name)
+        sendtelegram("REQUEST ITEM" + '\n' + 
+                      "Name = " + src.srcname  + '\n' + 
+                      "Number = " + src.srcnumb  + '\n' + 
+                      "Item = " + src.name  
+                   
+        )
+        flash("We are currently restocking, Our team will call you in a minute.","success")
+        return redirect("/centralmal")
     return render_template('centralmal.html')
 
 
