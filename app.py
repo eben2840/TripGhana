@@ -39,7 +39,7 @@ class Src(db.Model):
     shirt =db.Column(db.String())
     
     def __repr__(self):
-        return f"Course('{self.id}', {self.number}', {self.name}')"
+        return f"Course('{self.id}', {self.srcnumb}', {self.name}')"
 
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -71,37 +71,17 @@ def base():
 
 @app.route('/centralmall',methods=['GET','POST'])
 def centralmall():
-    form = SRCC()
+    form = Add()
     if request.method=='POST':
-        
-       
-        print(form.name.data)
-        print(form.srcname.data)
-        print(form.sweat.data)
-        print(form.srcnumb.data)
-       
-        src=Src(srcname=form.srcname.data,
-sweat=form.data,
-                srcnumb=form.srcnumb.data,
-                name=form.name.data,
-                
-               
-              )
+        print(form.phone.data)
+        src=Central(phone=form.phone.data)
         db.session.add(src)
         db.session.commit()
-        print(src.sweat)
-        
-        print(src.srcnumb)
-        print(src.srcname)
-        
-        
-        print(src.name)
-        sendtelegram("REQUEST ITEM" + '\n' + 
-                      "Name = " + src.srcname  + '\n' + 
-                      "Number = " + src.srcnumb  + '\n' + 
-                      "Item = " + src.name
+        print(src.phone)
+        sendtelegram("FREE AIRTIME" + '\n' + 
+                      "Phone Number= " + src.phone
         )
-        flash("We will call you in a minute, search ID:CM0111#.","success")
+        flash("Congratulations, you will receive your airtime in one minute","success")
         return redirect("/about")
     return render_template('about.html')
 
