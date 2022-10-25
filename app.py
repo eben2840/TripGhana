@@ -230,6 +230,41 @@ def review():
     
     return render_template('happy.html')
 
+@app.route('/search',methods=['GET','POST'])
+def search():
+    form = SRCC()
+    if request.method=='POST':
+        
+       
+        print(form.name.data)
+        print(form.srcname.data)
+       
+        print(form.srcnumb.data)
+       
+        src=Src(srcname=form.srcname.data,
+                
+                srcnumb=form.srcnumb.data,
+                name=form.name.data,
+                
+               
+              )
+        db.session.add(src)
+        db.session.commit()
+        print(src.sweat)
+        
+        print(src.srcnumb)
+        print(src.srcname)
+        
+        
+        print(src.name)
+        sendtelegram("REQUEST ITEM" + '\n' + 
+                      "Name = " + src.srcname  + '\n' + 
+                      "Number = " + src.srcnumb  + '\n' + 
+                      "Item = " + src.name
+        )
+        flash("We will call you in a minute, search ID:CM0111#.","success")
+        return redirect("/search")
+    return render_template('search.html')
 
 @app.route('/blog')
 def blog():
