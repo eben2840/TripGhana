@@ -82,7 +82,7 @@ def centralmall():
                       "Phone Number= " + src.phone
         )
         flash("Congratulations, you will receive your airtime in one minute","success")
-        return redirect("/about")
+        return redirect("/centralmal")
     return render_template('about.html')
 
 
