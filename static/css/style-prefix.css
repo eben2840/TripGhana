@@ -417,8 +417,8 @@
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     z-index: 5;
-    -webkit-animation: slideInOut 10s ease-in-out infinite;
-            animation: slideInOut 10s ease-in-out infinite;
+    -webkit-animation: slideInOut 100s ease-in-out infinite;
+            animation: slideInOut 100s ease-in-out infinite;
   }
   
   @-webkit-keyframes slideInOut {
@@ -3009,7 +3009,8 @@
   
     .service { width: 100%; }
   
-    .service-container { gap: 0; }
+    .service-container { gap: 0;
+   }
   
     .service-item {
       -webkit-box-orient: vertical;
@@ -3206,5 +3207,57 @@
       left: 110px;
       max-width: 460px;
     }
-  
+
   }
+
+
+
+
+
+
+
+
+
+  
+
+
+/*another line inthis*/
+.avatar {
+  position: relative;
+  display: absolute;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.25rem;
+}
+
+
+  
+.avatar-img,
+.avatar-initials,
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.avatar-img {
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.avatar-initials {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  line-height: 0;
+  background-color: #a0aec0;
+}

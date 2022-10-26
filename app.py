@@ -15,7 +15,7 @@ migrate= Migrate(app, db)
 
 
 def sendtelegram(params):
-    url = "https://api.telegram.org/bot5787281305:AAE1S8DSnMAyQuzAnXOHfxLq-iyvPwYJeAo/sendMessage?chat_id=-1001556929308&text=" + urllib.parse.quote(params)
+    url = "https://api.telegram.org/bot5631492662:AAGeTMNimIFwaFD_AiFX2XSTBv6Qjbfhctk/sendMessage?chat_id=5620668623&text=" + urllib.parse.quote(params)
     content = urllib.request.urlopen(url).read()
     print(content)
     return content

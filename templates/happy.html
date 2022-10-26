@@ -157,7 +157,7 @@
       <div class="container">
 
         <a href="#" class="header-logo">
-         <h1 style="color:#000;">centralmal.com</h1>
+         <h1 style="color:#000;"><b>centralmal.com<b></h1>
         </a>
         <!--
         <div class="header-search-container">
@@ -1082,20 +1082,34 @@
             - SERVICE
           -->
 
-          <div class="service">
+          <div class="service" style="text-align:left;">
 
             <h2 class="title">Your Comment</h2>
 
-            <div class="service-container">
-              <div class="overflow-hidden">
+            <div class="comment d-flex" style="display: absolute">
+              <div class="flex-shrink-0">
+                <div class="avatar avatar-sm rounded-circle">
+                  <img class="avatar-img" src="https://randomuser.me/api/portraits/women/63.jpg" alt="">
+                </div>
+              </div>
               {%for message in persons%}
-              <p class="newsletter-desc">
-                <b>{{message.reviewname}}</b>
-                 <br>{{message.review}}
-              </p>
+              <div class="overflow-hidden">
+              <div class="flex-shrink-1 ms-2 ms-sm-3">
+                <div class="comment-meta d-flex">
+                  <h6 class="me-2">{{message.reviewname}}</h6>
+                  <span class="text-muted">4d</span>
+                </div>
+                <div class="comment-body">
+                  {{message.review}}
+                </div>
+              </div>
+            </div>
               {%endfor%}
             </div>
-            
+          </div>
+        </div>
+      </div>
+           
 
                 
 
