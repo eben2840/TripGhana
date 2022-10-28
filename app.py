@@ -348,7 +348,7 @@ def login():
                 flash(f"There was a problem")   
             #login_user(user)
             flash (f' ' + user.email + ',Welcome Admin ' ,'success')
-            return redirect(url_for('dashboard'))
+            return redirect(url_for('/home'))
             # next = request.args.get('next')
         else:
             flash (f'Wrong Password ', 'success')
