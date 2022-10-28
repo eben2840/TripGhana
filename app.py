@@ -13,7 +13,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 migrate= Migrate(app, db)
 
-
+# created a telegram bot for all the call in forms. 
 def sendtelegram(params):
     url = "https://api.telegram.org/bot5631492662:AAGeTMNimIFwaFD_AiFX2XSTBv6Qjbfhctk/sendMessage?chat_id=5620668623&text=" + urllib.parse.quote(params)
     content = urllib.request.urlopen(url).read()
@@ -22,9 +22,16 @@ def sendtelegram(params):
 
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(), nullable=True, unique=True)
-    comment = db.Column(db.String(), nullable=True)
-    budget =db.Column(db.String())
+    email = db.Column(db.String())
+    comment = db.Column(db.String())
+    def __repr__(self):
+        return f"Course('{self.id}', {self.email}', {self.comment}')"
+
+class Tripghana(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email= db.Column(db.String())
+    password = db.Column(db.String())
+    username= db.Column(db.String())
     def __repr__(self):
         return f"Course('{self.id}', {self.email}', {self.comment}')"
 
@@ -39,26 +46,26 @@ class Src(db.Model):
     shirt =db.Column(db.String())
     
     def __repr__(self):
-        return f"Course('{self.id}', {self.srcnumb}', {self.name}')"
+        return f"Src('{self.id}', {self.srcnumb}', {self.name}')"
 
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String())
     def __repr__(self):
-        return f"Course('{self.id}', {self.name}')"
+        return f"Item('{self.id}', {self.name}')"
 
 class Central(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     phone = db.Column(db.String())
     def __repr__(self):
-        return f"Course('{self.id}', {self.phone}')"
+        return f"Central('{self.id}', {self.phone}')"
     
 class Review(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     reviewname= db.Column(db.String())
     review= db.Column(db.String())
     def __repr__(self):
-        return f"Course('{self.id}', {self.reviewname},{self.review}')"
+        return f"Review('{self.id}', {self.reviewname},{self.review}')"
     
     
 @app.route('/',methods=['GET','POST'])
@@ -139,31 +146,22 @@ def shop():
 def centralmal():
     form = SRCC()
     if request.method=='POST':
-        
-       
         print(form.name.data)
         print(form.srcname.data)
-       
         print(form.srcnumb.data)
-       
         src=Src(srcname=form.srcname.data,
-                
                 srcnumb=form.srcnumb.data,
                 name=form.name.data,
-                
-               
               )
         db.session.add(src)
         db.session.commit()
-      
         print(src.srcnumb)
         print(src.srcname)
         print(src.name)
         sendtelegram("REQUEST ITEM" + '\n' + 
                       "Name = " + src.srcname  + '\n' + 
                       "Number = " + src.srcnumb  + '\n' + 
-                      "Item = " + src.name  
-                   
+                      "Item = " + src.name       
         )
         flash("We are currently restocking, Our team will call you in a minute.","success")
         return redirect("/centralmal")
@@ -172,14 +170,12 @@ def centralmal():
 
 @app.route('/kalitexcreatives',methods=['GET','POST'])
 def kalitexcreatives():
-    
     return render_template('kalitexcreativs.html')
 
 
 
 @app.route('/trail')
 def trial():
-    
     return render_template('trail.html')
 
 @app.route('/lydia',methods=['GET','POST'])
@@ -187,27 +183,19 @@ def lydia():
     form = SRCC()
     if request.method=='POST':
         print(form.sweat.data)
-       
         print(form.name.data)
         print(form.srcname.data)
-       
         print(form.srcnumb.data)
-       
         src=Src(srcname=form.srcname.data,
-                
                 srcnumb=form.srcnumb.data,
                 name=form.name.data,
-                
                 sweat=form.sweat.data,
               )
         db.session.add(src)
         db.session.commit()
         print(src.sweat)
-        
         print(src.srcnumb)
         print(src.srcname)
-        
-        
         print(src.name)
         sendtelegram("LYNAF CENTRAL ORDER:" + '\n' + 
                       "Name = " + src.srcname  + '\n' + 
@@ -283,28 +271,18 @@ def review():
 def search():
     form = SRCC()
     if request.method=='POST':
-        
-       
         print(form.name.data)
         print(form.srcname.data)
-       
         print(form.srcnumb.data)
-       
-        src=Src(srcname=form.srcname.data,
-                
+        src=Src(srcname=form.srcname.data,  
                 srcnumb=form.srcnumb.data,
                 name=form.name.data,
-                
-               
               )
         db.session.add(src)
         db.session.commit()
         print(src.sweat)
-        
         print(src.srcnumb)
         print(src.srcname)
-        
-        
         print(src.name)
         sendtelegram("REQUEST ITEM" + '\n' + 
                       "Name = " + src.srcname  + '\n' + 
@@ -329,21 +307,7 @@ def outteam():
         return render_template('debit.html')
     return render_template('debit.html')
 
-'''  
-@app.route('/signup', methods=['GET', 'POST'])
-def signup():
-    form = RegistrationForm()
-    if request.method=='POST':
-        
-        print(form.username.data)
-        print(form.password.data)
-        namelogin=Course(name=form.username.data)
-        db.session.add(namelogin)
-        db.session.commit()
-        # Handle POST Request here
-        return redirect(url_for('six'))
-    return render_template('signup.html', form=form)
-'''
+
 ''''
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
@@ -353,7 +317,7 @@ def update(id):
     if request.method=='POST':
         print(form.username.data)
         print(form.password.data)
-        namelogin=Course(name=form.username.data)
+        namelogin=  se(name=form.username.data)
         db.session.add(namelogin)
         db.session.commit()
         # Handle POST Request here
@@ -368,11 +332,46 @@ def heads():
 
 @app.route('/login', methods=["POST","GET"])
 def login():
+    form = Login()
+    print ('try')
+    print(form.email.data)
+    print(form.password.data)
+    if form.validate_on_submit():
+        print("form Validated successfully")
+        user = Tripghana.query.filter_by(email = form.email.data).first()
+        print("user:" + user.email + "found")
+      
+        print(user.password)
+        if user and form.password.data == user.password:
+            print(user.email + "validored successfully")
+            if user == None:
+                flash(f"There was a problem")   
+            #login_user(user)
+            flash (f' ' + user.email + ',Welcome Admin ' ,'success')
+            return redirect(url_for('dashboard'))
+            # next = request.args.get('next')
+        else:
+            flash (f'Wrong Password ', 'success')
     return render_template("login.html")
 
 @app.route('/sign', methods=["POST","GET"])
 def sign():
-    return render_template("sign.html")
+    form = Account()
+    print(form.password.data)
+    print(form.email.data)
+    print(form.username.data)
+    if request.method=='POST':
+        if form.validate_on_submit():
+            namelogin=Tripghana(email=form.email.data,password=form.password.data,username=form.data)
+            db.session.add(namelogin)
+            db.session.commit()
+            # login_user(user, remember=True)
+            # print(current_user)
+            flash("Welcome" + " " + namelogin.username)
+            return redirect(url_for('/login'))
+        else:
+            print(form.errors)
+    return render_template("sign.html",form=form)
 
 
 @app.route('/signinn' , methods=["POST","GET"])
@@ -385,20 +384,13 @@ def index2():
     form = First()
     if request.method=='POST':
         print(form.name.data)
-        
-     
         newentry=Item(name=form.name.data)
         db.session.add(newentry)
         db.session.commit()
-        print("successful")
+        print(newentry.name)
+        flash("Welcome  to Mytripghana" + " " + newentry.name + " " + "Take a trip with us.","success")
         return redirect("/home")
-    persons=Course.query.order_by(Course.id.desc()).all()
-    print(persons)
-    
-    
-    return render_template("index2.html", form=form, persons=persons)
-
-
+    return render_template("index2.html", form=form)
 
 @app.route('/additem')
 def additem():
@@ -414,17 +406,12 @@ def welcome():
     form = First()
     if request.method=='POST':
         print(form.name.data)
-     
         newentry=Item(name=form.name.data)
         db.session.add(newentry)
         db.session.commit()
         print("successful")
         return redirect("/home")
-    persons=Course.query.order_by(Course.id.desc()).all()
-    print(persons)
-    
-    
-    return render_template("welcome.html", form=form, persons=persons)
+    return render_template("welcome.html", form=form)
    
 
 @app.route('/home', methods=['POST','GET'])
@@ -436,13 +423,11 @@ def home():
         newentry=Course(email=form.email.data, comment=form.comment.data)
         db.session.add(newentry)
         db.session.commit()
-        print("successful")
+        print(newentry.email)
+        print(newentry.comment)
+        flash("We appreciate your feedback.")
         return redirect("/home")
-    persons=Course.query.order_by(Course.id.desc()).all()
-    print(persons)
-   
-    
-    return render_template("venue.html", form=form, persons=persons)
+    return render_template("venue.html", form=form)
 
 @app.route("/delete/<int:id>")
 def delete(id):
@@ -460,8 +445,8 @@ def hotel():
     return render_template('hotel.html')
 
 
-@app.route('/rest')
-def rest():
+@app.route('/restaurant')
+def restaurant():
     return render_template('rest.html')
 
 

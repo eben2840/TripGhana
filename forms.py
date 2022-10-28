@@ -7,13 +7,24 @@ from wtforms.validators import DataRequired, Email, Length, EqualTo, ValidationE
 class RegistrationForm(FlaskForm):
     email = StringField('email', validators=[DataRequired()])
     comment =  StringField('comment', validators=[DataRequired()])
-    budget = SelectField('budget',  validators=[DataRequired()], choices=[('Pick a budget-Ghc','Pick a budget-Ghc'),('Ghc20-GHc50', 'GHc20-Ghc50'), ('Ghc50-Ghc100','Ghc50-Ghc100'), ('Ghc500-Ghc1000','Ghc500-Ghc1000'), ('Ghc2000 ', 'Ghc2000 '), ('Ghc3000','Ghc3000') ], default=None )
+    submit = SubmitField('submit')  
+ 
+ 
+class Account(FlaskForm):
+    email = StringField('email', validators=[DataRequired()])
+    password =  PasswordField('comment', validators=[DataRequired()])
+    username = StringField('username', validators=[DataRequired()])
     submit = SubmitField('submit')  
  
 class First(FlaskForm):
     name =  StringField('name', validators=[DataRequired()])
-    submit = SubmitField('submit')  
-
+    submit = SubmitField('submit')
+    
+class Login(FlaskForm):
+    email = StringField('email', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    submit = SubmitField('submit')
+ 
 
 
 class SRCC(FlaskForm):
