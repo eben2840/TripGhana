@@ -257,7 +257,7 @@ def four():
         return render_template('phone.html')
     return render_template('phone.html')
 
-@app.route('/s',methods=['GET','POST'])
+@app.route('/review',methods=['GET','POST'])
 def review():
     form = Reviewcomment()
     if request.method=='POST':
