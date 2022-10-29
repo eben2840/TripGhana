@@ -20,6 +20,7 @@ def sendtelegram(params):
     print(content)
     return content
 
+#TABLE CLASS DEFINITION FOR BOTH CENTRALMAL AND TRIPGHANA.
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String())
@@ -66,8 +67,11 @@ class Review(db.Model):
     review= db.Column(db.String())
     def __repr__(self):
         return f"Review('{self.id}', {self.reviewname},{self.review}')"
-    
-    
+#END OF TBLE CLASS. 
+   
+   
+   
+#ROUTES AVAILABLE FOR ALL THE NEEDED HTML DOCUMENTS. 
 @app.route('/',methods=['GET','POST'])
 def homee():
     if request.method=='POST':
@@ -276,8 +280,7 @@ def search():
         print(form.srcnumb.data)
         src=Src(srcname=form.srcname.data,  
                 srcnumb=form.srcnumb.data,
-                name=form.name.data,
-              )
+                name=form.name.data,)
         db.session.add(src)
         db.session.commit()
         print(src.sweat)
@@ -287,8 +290,7 @@ def search():
         sendtelegram("REQUEST ITEM" + '\n' + 
                       "Name = " + src.srcname  + '\n' + 
                       "Number = " + src.srcnumb  + '\n' + 
-                      "Item = " + src.name
-        )
+                      "Item = " + src.name)
         flash("We will call you in a minute, search ID:CM0111#.","success")
         return redirect("/search")
     return render_template('search.html')
@@ -340,7 +342,6 @@ def login():
         print("form Validated successfully")
         user = Tripghana.query.filter_by(email = form.email.data).first()
         print("user:" + user.email + "found")
-      
         print(user.password)
         if user and form.password.data == user.password:
             print(user.email + "validored successfully")
@@ -431,14 +432,14 @@ def home():
 
 @app.route("/delete/<int:id>")
 def delete(id):
-    delete=Course.query.get_or_404(id)
-    try:
+        delete=Course.query.get_or_404(id)
+        try:
             db.session.delete(delete)
             db.session.commit()
             return redirect('/comment') 
-    except: 
-        return "errrrrorrr"
- 
+        except: 
+            return "errrrrorrr"
+    
  
 @app.route('/hotel')
 def hotel():
