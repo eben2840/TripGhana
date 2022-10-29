@@ -216,6 +216,12 @@ def vendor1():
     if request.method=='POST':
         return render_template('vendor1.html')
     return render_template('vendor1.html')
+
+
+@app.route('/menu',methods=['GET','POST'])
+def menu():
+    return render_template('menu.html')
+    
     
 @app.route('/product',methods=['GET','POST'])
 def product():
@@ -251,7 +257,7 @@ def four():
         return render_template('phone.html')
     return render_template('phone.html')
 
-@app.route('/review',methods=['GET','POST'])
+@app.route('/s',methods=['GET','POST'])
 def review():
     form = Reviewcomment()
     if request.method=='POST':
