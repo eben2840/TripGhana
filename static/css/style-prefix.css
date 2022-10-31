@@ -2309,7 +2309,8 @@
               align-items: center;
     }
   
-    .header-logo { margin-bottom: 0; }
+    .header-logo { margin-bottom: 0;
+    }
   
     .header-top-actions {
       display: -webkit-box;
