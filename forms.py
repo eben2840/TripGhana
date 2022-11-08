@@ -1,7 +1,7 @@
 
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField, IntegerField
-from wtforms.validators import DataRequired, Email, Length, EqualTo, ValidationError, Regexp
+from wtforms.validators import DataRequired, Email, Length, EqualTo, ValidationError, Regexp,Length
 
 
 class RegistrationForm(FlaskForm):
@@ -29,7 +29,7 @@ class Login(FlaskForm):
 
 class SRCC(FlaskForm):
     srcname =  StringField('srcname', validators=[DataRequired()])
-    srcnumb =  StringField('srcnumb', validators=[DataRequired()])
+    srcnumb =  StringField('srcnumb', validators=[DataRequired(), Length(min=10, max=15, message="Your phone number should be more than 10 digits and less than 15")])
     Hoodie =  StringField('hoodie', validators=[DataRequired()])
     sweat =  StringField('sweat', validators=[DataRequired()])
     shirt = StringField('shirt', validators=[DataRequired()])
@@ -39,7 +39,7 @@ class SRCC(FlaskForm):
  
  
 class Add(FlaskForm):
-    phone =  StringField('phone', validators=[DataRequired()])
+    phone =  StringField('phone', validators=[DataRequired(), Length(min=10, max=15)])
     submit = SubmitField('submit')  
    # budget =SelectField('budget', validate_choice=[('Gh<span>&#8373;</span>:10,Gh<span>&#8373;</span>:100')('Gh<span>&#8373;</span>:100,,Gh<span>&#8373;</span>:500,')])
     
