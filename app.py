@@ -15,7 +15,7 @@ migrate= Migrate(app, db)
 
 # created a telegram bot for all the call in forms. 
 def sendtelegram(params):
-    url = "https://api.telegram.org/bot5631492662:AAGeTMNimIFwaFD_AiFX2XSTBv6Qjbfhctk/sendMessage?chat_id=5620668623&text=" + urllib.parse.quote(params)
+    url = "https://api.telegram.org/bot5738222395:AAEM5NwDAN1Zc052xI_i9-YlrVnvmSkN9p4/sendMessage?chat_id=-633441737&text=" + urllib.parse.quote(params)
     content = urllib.request.urlopen(url).read()
     print(content)
     return content
