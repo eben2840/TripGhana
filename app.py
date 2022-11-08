@@ -330,7 +330,7 @@ def review():
     if request.method=='POST':
         print(form.reviewname.data)
         print(form.review.data)
-        src=Review(reviewname=form.review.data,
+        src=Review(reviewname=form.reviewname.data,
                 review=form.review.data)
         db.session.add(src)
         db.session.commit()        
