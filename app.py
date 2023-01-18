@@ -1,8 +1,9 @@
 
 from flask_sqlalchemy import SQLAlchemy
-from flask import Flask, redirect, render_template, url_for,request,flash
+from flask import Flask, redirect, render_template, url_for,request,flash,make_response,make_response
 import urllib.request, urllib.parse
 from forms import *
+import csv
 from flask_migrate import Migrate
 
 
@@ -35,6 +36,19 @@ class Tripghana(db.Model):
     username= db.Column(db.String())
     def __repr__(self):
         return f"Course('{self.id}', {self.email}', {self.comment}')"
+
+class Studenthalls(db.Model):
+    id= db.Column(db.Integer, primary_key=True)
+    studentName= db.Column(db.String() )
+    regno= db.Column(db.String() )
+    gender= db.Column(db.String() )
+    program= db.Column(db.String() )
+    level= db.Column(db.String()  )
+    email= db.Column(db.String()  )
+    hallname= db.Column(db.String()  )
+    def __repr__(self):
+        return f"Studenthalls('{self.id}', {self.studentName}', {self.regno})"
+  
 
 class Src(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -70,9 +84,73 @@ class Review(db.Model):
 #END OF TBLE CLASS. 
    
    
-   
+#    src ussd
+    
+@app.route("/readcsv",)
+def readcsv():
+    with open('Studenthalls.csv', 'r') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        studentbody=[]
+        for line in csv_reader:
+            studentName=line["StudentName"]
+            regno=line["regno"]
+            gender=line["gender"]
+            program=line["program"]
+            level=line["LEVEL"]
+            email=line["email"]
+            hallname=line['hallname']
+            newStudent = Studenthalls(studentName=studentName, regno=regno, gender=gender,
+                                      program=program, level=level, email=email,hallname=hallname)
+            
+            try:
+                db.session.add(newStudent)
+                db.session.commit()
+            except Exception as e:
+                print(e)
+            
+            print(newStudent.id)
+            print(newStudent.studentName)
+            
+            student={
+                "studentname":studentName,
+                "regno":regno,
+                "gender":gender,
+                "program":program,
+                "level":level,
+                "email":email,
+                "hallname":hallname
+            }
+            studentbody.append(student)
+            
+            # write to db
+            
+    return studentbody
+#another ussd
+@app.route("/findbyid")
+def findbyid():
+    print("input")
+    input=request.args.get('id')
+    print(input)
+    student=Studenthalls.query.filter_by(regno=input).first()   
+    print(student) 
+    
+    if student == None:
+        return make_response("no results found", 404)
+    student={
+        "studentname":student.studentName,
+        "regno":student.regno,
+        "gender":student.gender,
+        "program":student.program,
+        "level":student.level,
+        "email":student.email,
+        "hallname":student.hallname
+    }
+    
+    return student
+
+#end of ussd
 #ROUTES AVAILABLE FOR ALL THE NEEDED HTML DOCUMENTS. 
-@app.route('/',methods=['GET','POST'])
+@app.route('/ent',methods=['GET','POST'])
 def homee():
     if request.method=='POST':
         # Handle POST Request here
@@ -86,7 +164,7 @@ def base():
         return render_template('base.html')
     return render_template('base.html')
 
-@app.route('/centralmall',methods=['GET','POST'])
+@app.route('/',methods=['GET','POST'])
 def centralmall():
     form = Add()
     if request.method=='POST':
@@ -526,4 +604,4 @@ def restaurant():
 
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD
-    app.run(port=3000,debug=True)
+    app.run(host='0.0.0.0',port=3000,debug=True)
